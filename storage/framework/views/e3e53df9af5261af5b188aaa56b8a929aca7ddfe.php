@@ -45,6 +45,10 @@
                 <ul class="quicklinks">
                     <li><a href="<?php echo e(route('index')); ?>"><?php echo e(__('Home')); ?></a></li>
                     <li><a href="<?php echo e(route('contact.us')); ?>"><?php echo e(__('Contact Us')); ?></a></li>
+                    <li><a href="<?php echo e(route('company.listing')); ?>">Partners</a></li>
+                    <li><a href="<?php echo e(route('travel.agent.listing')); ?>"><?php echo e(__('Travel Agents')); ?></a></li>
+                    <li><a href="<?php echo e(route('traveling.to.europe')); ?>"><?php echo e(__('Traveling to Europe')); ?></a></li>
+                    <li><a href="<?php echo e(route('youth.create')); ?>"><?php echo e(__('Youth Support')); ?></a></li>
                     <li class="postad"><a href="<?php echo e(route('post.job')); ?>"><?php echo e(__('Post a Job')); ?></a></li>
                     <li><a href="<?php echo e(route('faq')); ?>"><?php echo e(__('FAQs')); ?></a></li>
                     <?php $__currentLoopData = $show_in_footer_menu; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $footer_menu): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

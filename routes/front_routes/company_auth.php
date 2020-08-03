@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Route;
 
 Route::prefix('company')->name('company.')->group(function () {
     Route::get('/', 'Company\Auth\LoginController@showLoginForm');

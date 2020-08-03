@@ -776,7 +776,7 @@ h6 {
 }
 
 .header .logo img {
-	width: 60%;
+	width: 55%;
 }
 
 .navbar {
@@ -800,7 +800,7 @@ h6 {
 }
 
 .navbar-nav>li {
-	padding: 0 15px;
+	padding: 0 10px;
 }
 
 .navbar-nav>li>a {

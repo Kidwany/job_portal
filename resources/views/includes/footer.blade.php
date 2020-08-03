@@ -42,6 +42,10 @@
                 <ul class="quicklinks">
                     <li><a href="{{ route('index') }}">{{__('Home')}}</a></li>
                     <li><a href="{{ route('contact.us') }}">{{__('Contact Us')}}</a></li>
+                    <li><a href="{{route('company.listing')}}">Partners</a></li>
+                    <li><a href="{{ route('travel.agent.listing') }}">{{__('Travel Agents')}}</a></li>
+                    <li><a href="{{ route('traveling.to.europe') }}">{{__('Traveling to Europe')}}</a></li>
+                    <li><a href="{{ route('youth.create') }}">{{__('Youth Support')}}</a></li>
                     <li class="postad"><a href="{{ route('post.job') }}">{{__('Post a Job')}}</a></li>
                     <li><a href="{{ route('faq') }}">{{__('FAQs')}}</a></li>
                     @foreach($show_in_footer_menu as $footer_menu)

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+Route::get('company/register', 'Company\Auth\RegisterController@showRegistrationForm')->name('company.register');
 /*
 
   |--------------------------------------------------------------------------
@@ -161,5 +163,6 @@ Route::resource('talented', 'TalentedController');
 Route::resource('youth', 'YouthController');
 
 Route::resource('traveler', 'TravelerController');
+
 
 

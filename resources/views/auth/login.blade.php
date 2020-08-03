@@ -13,12 +13,15 @@
             <div class="useraccountwrap">
                 <div class="userccount">
                     <div class="userbtns">
+                        <div class="titleTop">
+                            <h3>Sign In!</h3>
+                        </div>
                         <ul class="nav nav-tabs">
                             <?php
                             $c_or_e = old('candidate_or_employer', 'candidate');
                             ?>
-                            <li class="nav-item"><a class="nav-link {{($c_or_e == 'candidate')? 'active':''}}" data-toggle="tab" href="#candidate" aria-expanded="true">{{__('Candidate')}}</a></li>
-                            <li class="nav-item"><a class="nav-link {{($c_or_e == 'employer')? 'active':''}}" data-toggle="tab" href="#employer" aria-expanded="false">{{__('Employer')}}</a></li>
+                            {{--<li class="nav-item"><a class="nav-link {{($c_or_e == 'candidate')? 'active':''}}" data-toggle="tab" href="#candidate" aria-expanded="true">{{__('Candidate')}}</a></li>
+                            <li class="nav-item"><a class="nav-link {{($c_or_e == 'employer')? 'active':''}}" data-toggle="tab" href="#employer" aria-expanded="false">{{__('Employer')}}</a></li>--}}
                         </ul>
                     </div>
 					
@@ -32,25 +35,28 @@
                                 {{ csrf_field() }}
                                 <input type="hidden" name="candidate_or_employer" value="candidate" />
                                 <div class="formpanel">
-                                    <div class="formrow{{ $errors->has('email') ? ' has-error' : '' }}">
-                                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus placeholder="{{__('Email Address')}}">
+                                    <div class="formrow {{ $errors->has('email') ? ' has-error' : '' }}">
+                                        <input id="email" type="email" class="form-control" name="email"
+                                               value="{{ old('email') }}" required autofocus
+                                               placeholder="{{__('Email Address')}}">
                                         @if ($errors->has('email'))
-                                        <span class="help-block">
+                                            <span class="help-block help-block-error">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                         @endif
                                     </div>
-                                    <div class="formrow{{ $errors->has('password') ? ' has-error' : '' }}">
-                                        <input id="password" type="password" class="form-control" name="password" value="" required placeholder="{{__('Password')}}">
+                                    <div class="formrow {{ $errors->has('password') ? ' has-error' : '' }}">
+                                        <input id="password" type="password" class="form-control" name="password"
+                                               value="" required placeholder="{{__('Password')}}">
                                         @if ($errors->has('password'))
-                                        <span class="help-block">
+                                            <span class="help-block help-block-error">
                                             <strong>{{ $errors->first('password') }}</strong>
                                         </span>
                                         @endif
-                                    </div>            
-                                    <input type="submit" class="btn" value="{{__('Login')}}">
+                                    </div>
+                                    <input type="submit" class="btn btn-amber" value="{{__('Login')}}">
                                 </div>
-                                <!-- login form  end--> 
+                                <!-- login form  end-->
                             </form>
                             <!-- sign up form -->
                     <div class="newuser"><i class="fa fa-user" aria-hidden="true"></i> {{__('New User')}}? <a href="{{route('register')}}">{{__('Register Here')}}</a></div>

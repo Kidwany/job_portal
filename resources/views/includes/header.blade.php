@@ -28,18 +28,20 @@
                                 <li class="nav-item"><a href="{{url('/jobs')}}" class="nav-link">{{__('Jobs')}}</a> </li>
                             @endif
 
+                            <li class="nav-item"><a href="{{route('company.listing')}}" class="nav-link">Partners</a> </li>
+                            <li class="nav-item"><a href="{{ route('travel.agent.listing') }}" class="nav-link">{{__('Travel Agents')}}</a> </li>
+
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {{__('Browse')}}
+                                    Solutions
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a href="{{route('company.listing')}}" class="dropdown-item">{{__('Companies')}}</a>
-                                    <a href="{{ route('travel.agent.listing') }}" class="dropdown-item">{{__('Travel Agents')}}</a>
+                                    {{--<a href="{{route('company.listing')}}" class="dropdown-item">{{__('Companies')}}</a>--}}
                                     <a href="{{ route('traveling.to.europe') }}" class="dropdown-item">{{__('Traveling to Europe')}}</a>
-                                    <a href="{{ route('talented.create') }}" class="dropdown-item">{{__('Talented')}}</a>
+                                    <a href="{{ route('talented.create') }}" class="dropdown-item">Are you Talented?</a>
                                     <a href="{{ route('youth.create') }}" class="dropdown-item">{{__('Youth Support')}}</a>
-                                    <a href="#" class="dropdown-item">{{__('Distance Working')}}</a>
-                                    <a href="#" class="dropdown-item">{{__('the exams')}}</a>
+                                    <a href="#" class="dropdown-item">Remote Working</a>
+                                    <a href="#" class="dropdown-item">Exams</a>
                                 </div>
                             </li>
 
@@ -91,9 +93,9 @@
                                                             <a href="#" class="nav-link">{{__('the exams')}}</a>
                                                         </li> --}}
 
-                            <li class="nav-item {{ Request::url() == route('for.company') ? 'active' : '' }}">
+                            {{--<li class="nav-item {{ Request::url() == route('for.company') ? 'active' : '' }}">
                                 <a href="{{route('for.company')}}" class="nav-link">{{__('For Employers')}}</a>
-                            </li>
+                            </li>--}}
 
 
                             @if(Auth::check())
@@ -182,12 +184,12 @@
                                 </li>
                             @endif
 
-                            @if(!Auth::user() && !Auth::guard('company')->user() &&
-                            !Auth::guard('travel_agent')->user())
+                            @if(!Auth::user() && !Auth::guard('company')->user() && !Auth::guard('travel_agent')->user())
                                 <li class="nav-item"><a href="{{route('login')}}" class="nav-link"><i class="fa fa-sign-in mr-2"></i>{{__('Sign in')}}  </a></li>
-
+                                <li class="nav-item"><a href="{{url('company/register')}}"
+                                                        class="nav-link text-success">Employer?</a> </li>
                                 <li class="nav-item"><a href="{{route('register')}}"
-                                                        class="nav-link register"><i class="fa fa-user-plus mr-2"></i>{{__('Register')}}</a> </li>
+                                                        class="nav-link register"><i class="fa fa-user-plus mr-2"></i>Sign Up</a> </li>
                             @endif
 
                             <li class="nav-item dropdown pr-1 pl-1 userbtn">

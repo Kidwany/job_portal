@@ -28,19 +28,20 @@
                                 <li class="nav-item"><a href="<?php echo e(url('/jobs')); ?>" class="nav-link"><?php echo e(__('Jobs')); ?></a> </li>
                             <?php endif; ?>
 
+                            <li class="nav-item"><a href="<?php echo e(route('company.listing')); ?>" class="nav-link">Partners</a> </li>
+                            <li class="nav-item"><a href="<?php echo e(route('travel.agent.listing')); ?>" class="nav-link"><?php echo e(__('Travel Agents')); ?></a> </li>
+
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <?php echo e(__('Browse')); ?>
-
+                                    Solutions
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a href="<?php echo e(route('company.listing')); ?>" class="dropdown-item"><?php echo e(__('Companies')); ?></a>
-                                    <a href="<?php echo e(route('travel.agent.listing')); ?>" class="dropdown-item"><?php echo e(__('Travel Agents')); ?></a>
+                                    
                                     <a href="<?php echo e(route('traveling.to.europe')); ?>" class="dropdown-item"><?php echo e(__('Traveling to Europe')); ?></a>
-                                    <a href="<?php echo e(route('talented.create')); ?>" class="dropdown-item"><?php echo e(__('Talented')); ?></a>
+                                    <a href="<?php echo e(route('talented.create')); ?>" class="dropdown-item">Are you Talented?</a>
                                     <a href="<?php echo e(route('youth.create')); ?>" class="dropdown-item"><?php echo e(__('Youth Support')); ?></a>
-                                    <a href="#" class="dropdown-item"><?php echo e(__('Distance Working')); ?></a>
-                                    <a href="#" class="dropdown-item"><?php echo e(__('the exams')); ?></a>
+                                    <a href="#" class="dropdown-item">Remote Working</a>
+                                    <a href="#" class="dropdown-item">Exams</a>
                                 </div>
                             </li>
 
@@ -59,9 +60,7 @@
                             </li>
                             
 
-                            <li class="nav-item <?php echo e(Request::url() == route('for.company') ? 'active' : ''); ?>">
-                                <a href="<?php echo e(route('for.company')); ?>" class="nav-link"><?php echo e(__('For Employers')); ?></a>
-                            </li>
+                            
 
 
                             <?php if(Auth::check()): ?>
@@ -154,12 +153,12 @@
                                 </li>
                             <?php endif; ?>
 
-                            <?php if(!Auth::user() && !Auth::guard('company')->user() &&
-                            !Auth::guard('travel_agent')->user()): ?>
+                            <?php if(!Auth::user() && !Auth::guard('company')->user() && !Auth::guard('travel_agent')->user()): ?>
                                 <li class="nav-item"><a href="<?php echo e(route('login')); ?>" class="nav-link"><i class="fa fa-sign-in mr-2"></i><?php echo e(__('Sign in')); ?>  </a></li>
-
+                                <li class="nav-item"><a href="<?php echo e(url('company/register')); ?>"
+                                                        class="nav-link text-success">Employer?</a> </li>
                                 <li class="nav-item"><a href="<?php echo e(route('register')); ?>"
-                                                        class="nav-link register"><i class="fa fa-user-plus mr-2"></i><?php echo e(__('Register')); ?></a> </li>
+                                                        class="nav-link register"><i class="fa fa-user-plus mr-2"></i>Sign Up</a> </li>
                             <?php endif; ?>
 
                             <li class="nav-item dropdown pr-1 pl-1 userbtn">

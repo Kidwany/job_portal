@@ -7,7 +7,8 @@ return [
     'app_title' => '',
     'app_desc' => '',
     'app_desc2' => '',
-    
+    'employer_register' => '',
+
     'join_now' => 'انضم الان',
     'i_already_have_an_account' => 'لدي حساب بالفعل',
 

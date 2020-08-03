@@ -61,6 +61,16 @@ use RegistersUsers;
         return Auth::guard('company');
     }
 
+    /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showRegistrationForm()
+    {
+        return view('company_auth.register');
+    }
+
     public function register(CompanyFrontRegisterFormRequest $request)
     {
         $company = new Company();

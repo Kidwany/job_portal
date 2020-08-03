@@ -29,7 +29,7 @@
                     <div class="userbtns">
 
                         <div class="titleTop">
-                            <h3>Sign Up!</h3>
+                            <h3>Employer Sign Up!</h3>
                         </div>
 
                         <ul class="nav nav-tabs">
@@ -52,35 +52,19 @@
 
                         <div id="candidate" class="formpanel tab-pane {{($c_or_e == 'candidate')? 'active':''}}">
 
-                            <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+                            <form class="form-horizontal" method="POST" action="{{ route('company.register') }}">
 
                                 {{ csrf_field() }}
 
-                                <input type="hidden" name="candidate_or_employer" value="candidate" />
+                                <input type="hidden" name="candidate_or_employer" value="employer" />
 
-                                <div class="formrow {{ $errors->has('first_name') ? ' has-error' : '' }}">
+                                <div class="formrow {{ $errors->has('name') ? ' has-error' : '' }}">
 
-                                    <input type="text" name="first_name" class="form-control" required="required"
-                                           placeholder="{{__('First Name')}}" value="{{old('first_name')}}">
+                                    <input type="text" name="name" class="form-control" required="required"
+                                           placeholder="{{__('Name')}}" value="{{old('name')}}">
 
-                                    @if ($errors->has('first_name')) <span class="help-block help-block-error">
-                                        <strong>{{ $errors->first('first_name') }}</strong> </span> @endif </div>
-
-                                <div class="formrow {{ $errors->has('middle_name') ? ' has-error' : '' }}">
-
-                                    <input type="text" name="middle_name" class="form-control"
-                                           placeholder="{{__('Middle Name')}}" value="{{old('middle_name')}}">
-
-                                    @if ($errors->has('middle_name')) <span class="help-block help-block-error">
-                                        <strong>{{ $errors->first('middle_name') }}</strong> </span> @endif </div>
-
-                                <div class="formrow {{ $errors->has('last_name') ? ' has-error' : '' }}">
-
-                                    <input type="text" name="last_name" class="form-control" required="required"
-                                           placeholder="{{__('Last Name')}}" value="{{old('last_name')}}">
-
-                                    @if ($errors->has('last_name')) <span class="help-block help-block-error">
-                                        <strong>{{ $errors->first('last_name') }}</strong> </span> @endif </div>
+                                    @if ($errors->has('name')) <span class="help-block help-block-error">
+                                        <strong>{{ $errors->first('name') }}</strong> </span> @endif </div>
 
                                 <div class="formrow {{ $errors->has('email') ? ' has-error' : '' }}">
 
@@ -107,8 +91,6 @@
                                         <strong>{{ $errors->first('password_confirmation') }}</strong> </span> @endif
                                 </div>
 
-
-
                                 <div class="formrow {{ $errors->has('is_subscribed') ? ' has-error' : '' }}">
 
                                     @php
@@ -117,7 +99,6 @@
                                         $is_checked = 'checked="checked"';
                                         }
                                     @endphp
-
 
                                     <input type="checkbox" value="1" name="is_subscribed"
                                             {{$is_checked}} />{{__('Subscribe to newsletter')}}
@@ -129,13 +110,11 @@
 
                                     <input type="checkbox" value="1" name="terms_of_use" />
 
-                                    <a href="{{url('cms/terms-of-use')}}">{{__('I accept Terms of Use')}}</a>
+                                    <a href="{{url('terms-of-use')}}">{{__('I accept Terms of Use')}}</a>
 
                                     @if ($errors->has('terms_of_use')) <span class="help-block help-block-error">
                                         <strong>{{ $errors->first('terms_of_use') }}</strong> </span> @endif </div>
-
-                                <input type="submit" class="btn btn-amber" value="{{__('Register')}}">
-
+                                <input type="submit" class="btn btn-amber" value="Join El Adrousi as a Company">
                             </form>
 
                         </div>
