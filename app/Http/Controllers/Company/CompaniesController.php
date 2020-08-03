@@ -59,6 +59,12 @@ class CompaniesController extends Controller
     {
         return view('company_home');
     }
+
+    public function for_company()
+    {
+        return view('for_company');
+    }
+
     public function company_listing(Request $request)
     {
 		$search = $request->get('search');

@@ -10,34 +10,43 @@ if (!isset($seo)) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>{{__($seo->seo_title) }}</title>
     <meta name="Description" content="{!! $seo->seo_description !!}">
     <meta name="Keywords" content="{!! $seo->seo_keywords !!}">
-    {!! $seo->seo_other !!}
-    <!-- Fav Icon -->
+
+{!! $seo->seo_other !!}
+
+<!-- Fav Icon -->
     <link rel="shortcut icon" href="{{asset('/')}}favicon.ico">
-    <!-- Slider -->
+    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Questrial'>
+{{-- <link rel="stylesheet" href="./style.css"> --}}
+
+<!-- Slider -->
     <link href="{{asset('/')}}js/revolution-slider/css/settings.css" rel="stylesheet">
-    <!-- Owl carousel -->
-    <link href="{{asset('/')}}css/owl.carousel.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="{{asset('/')}}css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="{{asset('/')}}css/mdb.css" rel="stylesheet">
+    <!-- Owl carousel -->
+    <link href="{{asset('/')}}css/owl.carousel.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="{{asset('/')}}css/font-awesome.css" rel="stylesheet">
+    <!-- nprogress -->
+    <link href="{{asset('/')}}css/nprogress.css" rel="stylesheet">
     <!-- Custom Style -->
     <link href="{{asset('/')}}css/main.css" rel="stylesheet">
-    @if((session('localeDir', 'ltr') == 'rtl'))
+
+@if((session('localeDir', 'ltr') == 'rtl'))
     <!-- Rtl Style -->
-    <link href="{{asset('/')}}css/rtl-style.css" rel="stylesheet">
+        <link href="{{asset('/')}}css/rtl-style.css" rel="stylesheet">
     @endif
+
     <link href="{{ asset('/') }}admin_assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />
     <link href="{{ asset('/') }}admin_assets/global/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
     <link href="{{ asset('/') }}admin_assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-          <script src="{{asset('/')}}js/html5shiv.min.js"></script>
-          <script src="{{asset('/')}}js/respond.min.js"></script>
-        <![endif]-->
+
     @stack('styles')
 </head>
 

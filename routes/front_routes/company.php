@@ -1,4 +1,9 @@
 <?php
+use Illuminate\Support\Facades\Route;
+
+Route::get('for-company', 'Company\CompaniesController@for_company')->name('for.company');
+Route::get('offers-lite', 'Company\CompaniesController@offers_lite')->name('offers.lite');
+Route::get('company-offers', 'Company\CompaniesController@company_offers')->name('company.offers');
 
 Route::get('company-home', 'Company\CompanyController@index')->name('company.home');
 Route::get('companies', 'Company\CompaniesController@company_listing')->name('company.listing');

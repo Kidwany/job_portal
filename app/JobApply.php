@@ -1,21 +1,9 @@
 <?php
 
-
-
 namespace App;
-
-
-
-use DB;
-
-use App;
-
 use Illuminate\Database\Eloquent\Model;
 
-
-
 class JobApply extends Model
-
 {
 
 

@@ -1,6 +1,6 @@
 <?php
 
-
+use Illuminate\Support\Facades\Route;
 
 /*
 
@@ -102,6 +102,15 @@ include_once($real_path . 'job.php');
 
 include_once($real_path . 'contact.php');
 
+/* * ******** TravelAgentController ************ */
+include_once($real_path . 'travel_agent.php');
+
+/* * ******** ContactController ************ */
+include_once($real_path . 'talented_people.php');
+
+/* * ******** Company Auth ************ */
+include_once($real_path . 'travel_agent_auth.php');
+
 /* * ******** CompanyController ************ */
 
 include_once($real_path . 'company.php');
@@ -145,7 +154,12 @@ Route::get('/sitemap', 'SitemapController@index');
 
 Route::get('/sitemap/companies', 'SitemapController@companies');
 
+Route::get('traveling-to-europe', 'TravelerController@create')->name('traveling.to.europe');
 
+Route::resource('talented', 'TalentedController');
 
+Route::resource('youth', 'YouthController');
+
+Route::resource('traveler', 'TravelerController');
 
 

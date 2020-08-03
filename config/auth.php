@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'companies',
         ],
+        'travel_agent' => [
+            'driver' => 'session',
+            'provider' => 'travel_agents',
+        ],
         'admin' => [
             'driver' => 'session',
             'provider' => 'admins',
@@ -77,6 +81,10 @@ return [
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Admin::class,
+        ],
+        'travel_agents' => [
+            'driver' => 'eloquent',
+            'model' => App\TravelAgent::class,
         ],
     // 'users' => [
     //     'driver' => 'database',

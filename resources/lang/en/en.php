@@ -1,12 +1,12 @@
 <?php
 
 return [
+    '_comment' => 'new languages.',
     'lang_required' => 'Please select language.',
     'career_level_required' => 'Please enter Career Level.',
     'career_level_id_required_if' => 'Please select default/fallback Career Level.',
     'is_default_career_level_required' => 'Is this Career Level default?',
     'is_active_career_level_required' => 'Please select career level status.',
-    'lang_required' => 'Please select language.',
     'is_default_required' => 'Is this default/fallback?',
     'is_active_required' => 'Is this active?',
     'country_id_required' => 'Please select country.',
