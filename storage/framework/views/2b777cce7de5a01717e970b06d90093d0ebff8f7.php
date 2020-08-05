@@ -192,18 +192,7 @@
 
                                     <?php if($errors->has('is_subscribed')): ?> <span class="help-block"> <strong><?php echo e($errors->first('is_subscribed')); ?></strong> </span> <?php endif; ?> </div>
 
-                                <div class="formrow<?php echo e($errors->has('terms_of_use') ? ' has-error' : ''); ?>">
-
-                                    <input type="checkbox" value="1" name="terms_of_use" />
-
-                                    <a href="<?php echo e(url('terms-of-use')); ?>"><?php echo e(__('I accept Terms of Use')); ?></a>
-
-
-
-                                    <?php if($errors->has('terms_of_use')): ?> <span class="help-block"> <strong><?php echo e($errors->first('terms_of_use')); ?></strong> </span> <?php endif; ?> </div>
-
-                            
-
+                                
                                 <input type="submit" class="btn" value="<?php echo e(__('Register')); ?>">
 
                             </form>
@@ -215,11 +204,7 @@
                     <!-- sign up form -->
 
                     <div class="newuser"><i class="fa fa-user" aria-hidden="true"></i> <?php echo e(__('Have Account')); ?>? <a href="<?php echo e(route('login')); ?>"><?php echo e(__('Sign in')); ?></a></div>
-
-                    <!-- sign up form end--> 
-
-
-
+                    <!-- sign up form end-->
                 </div>
 
             </div>

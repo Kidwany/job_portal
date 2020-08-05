@@ -147,6 +147,17 @@ class DataArrayHelper
         return $array;
     }
 
+    public static function arabicLangCountriesArray()
+    {
+        $array = Country::select('countries.country', 'countries.country_id')
+            ->lang()
+            ->active()
+            ->isArabic()
+            ->sorted()
+            ->pluck('countries.country', 'countries.country_id')->toArray();
+        return $array;
+    }
+
     public static function langCountriesArray()
     {
         $array = Country::select('countries.country', 'countries.country_id')->lang()->active()->sorted()->pluck('countries.country', 'countries.country_id')->toArray();

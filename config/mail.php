@@ -48,8 +48,8 @@ return [
       |
      */
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'service@codegurru.com'),
-        'name' => env('MAIL_FROM_NAME', 'Job Portal'),
+        'address' => env('MAIL_FROM_ADDRESS', 'info@eladrousi.com'),
+        'name' => env('MAIL_FROM_NAME', 'El Adrousi'),
     ],
     /*
       |--------------------------------------------------------------------------

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Traits\ProfileStrength;
 use Auth;
 use DB;
 use Input;
@@ -55,6 +56,7 @@ class UserController extends Controller
     use ProfileEducationTrait;
     use ProfileSkillTrait;
     use ProfileLanguageTrait;
+    use ProfileStrength;
     use Skills;
 
     /**
@@ -94,6 +96,7 @@ class UserController extends Controller
 
         $upload_max_filesize = UploadedFile::getMaxFilesize() / (1048576);
         $user = User::findOrFail(Auth::user()->id);
+        $profile_strength = $this->profileStrength($user);
         return view('user.edit_profile')
                         ->with('genders', $genders)
                         ->with('maritalStatuses', $maritalStatuses)
@@ -104,6 +107,7 @@ class UserController extends Controller
                         ->with('industries', $industries)
                         ->with('functionalAreas', $functionalAreas)
                         ->with('user', $user)
+                        ->with('profile_strength', $profile_strength)
                         ->with('upload_max_filesize', $upload_max_filesize);
     }
 

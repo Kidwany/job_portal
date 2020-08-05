@@ -192,18 +192,11 @@
 
                                     @if ($errors->has('is_subscribed')) <span class="help-block"> <strong>{{ $errors->first('is_subscribed') }}</strong> </span> @endif </div>
 
-                                <div class="formrow{{ $errors->has('terms_of_use') ? ' has-error' : '' }}">
+                                {{--<div class="formrow{{ $errors->has('terms_of_use') ? ' has-error' : '' }}">
 
                                     <input type="checkbox" value="1" name="terms_of_use" />
-
                                     <a href="{{url('terms-of-use')}}">{{__('I accept Terms of Use')}}</a>
-
-
-
-                                    @if ($errors->has('terms_of_use')) <span class="help-block"> <strong>{{ $errors->first('terms_of_use') }}</strong> </span> @endif </div>
-
-                            
-
+                                    @if ($errors->has('terms_of_use')) <span class="help-block"> <strong>{{ $errors->first('terms_of_use') }}</strong> </span> @endif </div>--}}
                                 <input type="submit" class="btn" value="{{__('Register')}}">
 
                             </form>
@@ -215,11 +208,7 @@
                     <!-- sign up form -->
 
                     <div class="newuser"><i class="fa fa-user" aria-hidden="true"></i> {{__('Have Account')}}? <a href="{{route('login')}}">{{__('Sign in')}}</a></div>
-
-                    <!-- sign up form end--> 
-
-
-
+                    <!-- sign up form end-->
                 </div>
 
             </div>

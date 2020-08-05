@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Country;
 use App\Traveler;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
@@ -30,8 +31,8 @@ class TravelerController extends Controller
         $genders = DataArrayHelper::langGendersArray();
         $maritalStatuses = DataArrayHelper::langMaritalStatusesArray();
         $nationalities = DataArrayHelper::langNationalitiesArray();
-        $countries = DataArrayHelper::defaultCountriesArray();
-        // $countries = DataArrayHelper::langCountriesArray();
+        $countries = DataArrayHelper::arabicLangCountriesArray();
+        $industries = DataArrayHelper::defaultIndustriesArray();
         $upload_max_filesize = UploadedFile::getMaxFilesize() / (1048576);
         
         return view('traveler.create')
@@ -39,6 +40,7 @@ class TravelerController extends Controller
                 ->with('maritalStatuses', $maritalStatuses)
                 ->with('nationalities', $nationalities)
                 ->with('countries', $countries)
+                ->with('industries', $industries)
                 ->with('upload_max_filesize', $upload_max_filesize);
     }
 
@@ -50,6 +52,8 @@ class TravelerController extends Controller
      */
     public function store(TravelerFrontFormRequest $request)
     {
+
+        //return $request->all();
         $traveler = new Traveler();
 
         $traveler->first_name = $request->input('first_name');
@@ -65,6 +69,7 @@ class TravelerController extends Controller
         $traveler->city_id = $request->input('city_id');
 
         $traveler->nationality_id = $request->input('nationality_id');
+        $traveler->industry_id = $request->input('industry_id');
         $traveler->national_id_card_number = $request->input('national_id_card_number');
         
         $traveler->phone = $request->input('phone');
@@ -72,11 +77,12 @@ class TravelerController extends Controller
         $traveler->street_address = $request->input('street_address');
 
         $traveler->save();
+
+
         
-        flash('Traveler has been added!')->success();
-        return view('traveler.store', compact('traveler'));
-        // return \Redirect::route('traveler.edit', array($traveler->id));
-        
+        flash('Your Information has been saved successfully... We will contact you soon!')->success();
+        return redirect('traveling-to-europe');
+
     }
 
     /**

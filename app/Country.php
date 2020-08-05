@@ -28,4 +28,9 @@ class Country extends Model
         return $this->hasMany('App\State', 'country_id', 'id');
     }
 
+    public function scopeIsArabic($query)
+    {
+        return $query->where('is_arabic', '=', 1);
+    }
+
 }

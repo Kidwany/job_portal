@@ -5,7 +5,7 @@ namespace App\Http\Requests\Front;
 use Auth;
 use App\Http\Requests\Request;
 
-class UserFrontRegisterFormRequest extends Request
+class TravelAgentFrontRegisterFormRequest extends Request
 {
 
     /**
@@ -27,12 +27,10 @@ class UserFrontRegisterFormRequest extends Request
     {
 
         return [
-            'first_name' => 'required|max:80',
-            'middle_name' => 'max:80',
-            'last_name' => 'required|max:80',
-            'email' => 'required|unique:users,email|email|max:100',
+            'name' => 'required|max:150',
+            'email' => 'required|unique:companies,email|email|max:100',
             'password' => 'required|confirmed|min:6|max:50',
-            //'terms_of_use' => 'required',
+            'terms_of_use' => 'required',
             //'g-recaptcha-response' => 'required|captcha',
         ];
     }
@@ -40,9 +38,7 @@ class UserFrontRegisterFormRequest extends Request
     public function messages()
     {
         return [
-            'first_name.required' => __('First Name is required'),
-            'middle_name.required' => __('Middle Name is required'),
-            'last_name.required' => __('Last Name is required'),
+            'name.required' => __('Name is required'),
             'email.required' => __('Email is required'),
             'email.email' => __('The email must be a valid email address'),
             'email.unique' => __('This Email has already been taken'),
