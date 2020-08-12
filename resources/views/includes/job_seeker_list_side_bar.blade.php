@@ -1,4 +1,216 @@
-<div class="col-md-3 col-sm-6"> 
+<aside class="col-lg-3">
+    <div class="eladrousi-typo-wrap">
+        <input type="hidden" name="search" value="{{Request::get('search', '')}}"/>
+        <div class="eladrousi-search-filter-wrap eladrousi-search-filter-toggle">
+            <h2><a href="#" class="eladrousi-click-btn">{{__('By Country')}}</a></h2>
+            <div class="eladrousi-checkbox-toggle">
+                <ul class="eladrousi-checkbox">
+                    @if(isset($countryIdsArray) && count($countryIdsArray))
+                        @foreach($countryIdsArray as $key=>$country_id)
+                            @php
+                                $country = App\Country::where('country_id','=',$country_id)->lang()->active()->first();
+                            @endphp
+                            @if(null !== $country)
+                                @php
+                                    $checked = (in_array($country->country_id, Request::get('country_id', array())))? 'checked="checked"':'';
+                                @endphp
+
+
+                                <li>
+                                    <input type="checkbox" id="country_{{$country->country_id}}" value="{{$country->country_id}}" name="country_id[]" {{$checked}}/>
+                                    <label for="country_{{$country->country_id}}"><span></span>{{$country->country}} ({{App\User::countNumJobSeekers('country_id', $country->country_id)}})</label>
+                                </li>
+
+                            @endif
+                        @endforeach
+                    @endif
+                </ul>
+            </div>
+        </div>
+        <div class="eladrousi-search-filter-wrap eladrousi-search-filter-toggle">
+            <h2><a href="#" class="eladrousi-click-btn">{{__('By State')}}</a></h2>
+            <div class="eladrousi-checkbox-toggle">
+                <ul class="eladrousi-checkbox">
+                    @if(isset($stateIdsArray) && count($stateIdsArray))
+                        @foreach($stateIdsArray as $key=>$state_id)
+                            @php
+                                $state = App\State::where('state_id','=',$state_id)->lang()->active()->first();
+                            @endphp
+                            @if(null !== $state)
+                                @php
+                                    $checked = (in_array($state->state_id, Request::get('state_id', array())))? 'checked="checked"':'';
+                                @endphp
+
+                                <li>
+                                    <input type="checkbox" id="state_{{$state->state_id}}" value="{{$state->state_id}}"  name="state_id[]" {{$checked}}/>
+                                    <label for="state_{{$state->state_id}}"><span></span>{{$state->state}}</label>
+                                    <small>{{App\User::countNumJobSeekers('state_id', $state->state_id)}}</small>
+                                </li>
+
+                            @endif
+                        @endforeach
+                    @endif
+                </ul>
+                {{--<a href="#" class="eladrousi-seemore">+see more</a>--}}
+            </div>
+        </div>
+        <div class="eladrousi-search-filter-wrap eladrousi-search-filter-toggle">
+            <h2><a href="#" class="eladrousi-click-btn">{{__('By Career Level')}}</a></h2>
+            <div class="eladrousi-checkbox-toggle">
+                <ul class="eladrousi-checkbox">
+                    @if(isset($careerLevelIdsArray) && count($careerLevelIdsArray))
+                        @foreach($careerLevelIdsArray as $key=>$career_level_id)
+                            @php
+                                $careerLevel = App\CareerLevel::where('career_level_id','=',$career_level_id)->lang()->active()->first();
+                            @endphp
+                            @if(null !== $careerLevel)
+                                @php
+                                    $checked = (in_array($careerLevel->career_level_id, Request::get('career_level_id', array())))? 'checked="checked"':'';
+                                @endphp
+
+                                <li>
+                                    <input type="checkbox" id="career_level_{{$careerLevel->career_level_id}}" name="career_level_id[]" value="{{$careerLevel->career_level_id}}"/>
+                                    <label for="career_level_{{$careerLevel->career_level_id}}"><span></span>{{$careerLevel->career_level}}</label>
+                                    <small>{{App\User::countNumJobSeekers('career_level_id', $careerLevel->career_level_id)}}</small>
+                                </li>
+                            @endif
+                        @endforeach
+                    @endif
+                </ul>
+            </div>
+        </div>
+        <div class="eladrousi-search-filter-wrap eladrousi-search-filter-toggle">
+            <h2><a href="#" class="eladrousi-click-btn">{{__('By Gender')}}</a></h2>
+            <div class="eladrousi-checkbox-toggle">
+                <ul class="eladrousi-checkbox">
+                    @if(isset($genderIdsArray) && count($genderIdsArray))
+                        @foreach($genderIdsArray as $key=>$gender_id)
+                            @php
+                                $gender = App\Gender::where('gender_id','=',$gender_id)->lang()->active()->first();
+                            @endphp
+                            @if(null !== $gender)
+                                @php
+                                    $checked = (in_array($gender->gender_id, Request::get('gender_id', array())))? 'checked="checked"':'';
+                                @endphp
+
+                                <li>
+                                    <input type="checkbox" id="gender_{{$gender->gender_id}}" name="gender_id[]" value="{{$gender->gender_id}}" {{$checked}}/>
+                                    <label for="gender_{{$gender->gender_id}}"><span></span>{{$gender->gender}}</label>
+                                    <small>{{App\User::countNumJobSeekers('gender_id', $gender->gender_id)}}</small>
+                                </li>
+                            @endif
+                        @endforeach
+                    @endif
+                </ul>
+            </div>
+        </div>
+        <div class="eladrousi-search-filter-wrap eladrousi-search-filter-toggle">
+            <h2><a href="#" class="eladrousi-click-btn">{{__('By Industry')}}</a></h2>
+            <div class="eladrousi-checkbox-toggle">
+                <ul class="eladrousi-checkbox">
+                    @if(isset($industryIdsArray) && count($industryIdsArray))
+                        @foreach($industryIdsArray as $key=>$industry_id)
+                            @php
+                                $industry = App\Industry::where('id','=',$industry_id)->lang()->active()->first();
+                            @endphp
+                            @if(null !== $industry)
+                                @php
+                                    $checked = (in_array($industry->id, Request::get('industry_id', array())))? 'checked="checked"':'';
+                                @endphp
+
+                                <li>
+                                    <input type="checkbox" id="industry_{{$industry->id}}" name="industry_id[]" value="{{$industry->id}}" {{$checked}}/>
+                                    <label for="industry_{{$industry->id}}"><span></span>{{$industry->industry}}</label>
+                                    <small>{{App\User::countNumJobSeekers('industry_id', $industry->id)}}</small>
+                                </li>
+                            @endif
+                        @endforeach
+                    @endif
+                </ul>
+            </div>
+        </div>
+        <div class="eladrousi-search-filter-wrap eladrousi-search-filter-toggle">
+            <h2><a href="#" class="eladrousi-click-btn">{{__('By Skill')}}</a></h2>
+            <div class="eladrousi-checkbox-toggle">
+                <ul class="eladrousi-checkbox">
+                    @if(isset($skillIdsArray) && count($skillIdsArray))
+                        @foreach($skillIdsArray as $key=>$job_skill_id)
+                            @php
+                                $jobSkill = App\JobSkill::where('job_skill_id','=',$job_skill_id)->lang()->active()->first();
+                            @endphp
+                            @if(null !== $jobSkill)
+
+                                @php
+                                    $checked = (in_array($jobSkill->job_skill_id, Request::get('job_skill_id', array())))? 'checked="checked"':'';
+                                @endphp
+
+                                <li>
+                                    <input type="checkbox" id="job_skill_{{$jobSkill->job_skill_id}}" name="job_skill_id[]" value="{{$jobSkill->job_skill_id}}" {{$checked}}/>
+                                    <label for="job_skill_{{$jobSkill->job_skill_id}}"><span></span>{{$jobSkill->job_skill}}</label>
+                                    <small>{{App\User::countNumJobSeekers('job_skill_id', $jobSkill->job_skill_id)}}</small>
+                                </li>
+                            @endif
+                        @endforeach
+                    @endif
+                </ul>
+            </div>
+        </div>
+        <div class="eladrousi-search-filter-wrap eladrousi-search-filter-toggle">
+            <h2><a href="#" class="eladrousi-click-btn">{{__('By Functional Areas')}}</a></h2>
+            <div class="eladrousi-checkbox-toggle">
+                <ul class="eladrousi-checkbox">
+                    @if(isset($functionalAreaIdsArray) && count($functionalAreaIdsArray))
+                        @foreach($functionalAreaIdsArray as $key=>$functional_area_id)
+                            @php
+                                $functionalArea = App\FunctionalArea::where('functional_area_id','=',$functional_area_id)->lang()->active()->first();
+                            @endphp
+                            @if(null !== $functionalArea)
+                                @php
+                                    $checked = (in_array($functionalArea->functional_area_id, Request::get('functional_area_id', array())))? 'checked="checked"':'';
+                                @endphp
+
+                                <li>
+                                    <input type="checkbox" id="functional_area_id_{{$functionalArea->functional_area_id}}" name="functional_area_id[]" value="{{$functionalArea->functional_area_id}}" {{$checked}}/>
+                                    <label for="functional_area_id_{{$functionalArea->functional_area_id}}"><span></span>{{$functionalArea->functional_area}}</label>
+                                    <small>{{App\User::countNumJobSeekers('functional_area_id', $functionalArea->functional_area_id)}}</small>
+                                </li>
+
+                            @endif
+                        @endforeach
+                    @endif
+                </ul>
+            </div>
+            <div class="searchnt">
+                <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i> {{__('Search')}}</button>
+            </div>
+        </div>
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{--
+<div class="col-md-3 col-sm-6">
 	
 	
 	
@@ -253,4 +465,4 @@
         </div>
         <!-- Side Bar end --> 
     </div>
-</div>
+</div>--}}

@@ -141,3 +141,135 @@
 
 
 })(jQuery);
+
+
+
+
+/* ==================================
+    partner slider
+===================================== */
+
+jQuery('.eladrousi-partner-slider').slick({
+	slidesToShow: 6,
+	slidesToScroll: 1,
+	autoplay: true,
+	autoplaySpeed: 5000,
+	infinite: true,
+	dots: false,
+	centerMode: true,
+	centerPadding: '0px',
+	arrows: false,
+	responsive: [{
+		breakpoint: 1024,
+		settings: {
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			infinite: true,
+		}
+	}, {
+		breakpoint: 800,
+		settings: {
+			slidesToShow: 3,
+			slidesToScroll: 1
+		}
+	}, {
+		breakpoint: 400,
+		settings: {
+			slidesToShow: 1,
+			slidesToScroll: 1
+		}
+	}]
+});
+
+/* ==================================
+     click
+===================================== */
+jQuery(".eladrousi-click-btn").on('click', function (e) {
+    jQuery(this).parents('.eladrousi-search-filter-toggle').find('.eladrousi-checkbox-toggle').slideToggle("slow", function () {});
+    jQuery(this).parents('.eladrousi-search-filter-toggle').toggleClass("eladrousi-remove-padding", function () {});
+    return false;
+});
+
+
+// Menu side toggle
+/* ==================================
+      Start dropdown
+===================================== */
+
+$('.dropdown').on('show.bs.dropdown', function (e) {
+	$(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+  });
+  
+  $('.dropdown').on('hide.bs.dropdown', function (e) {
+	$(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+  });
+  
+  /* ==================================
+		Start Navigation Bar
+  ===================================== */
+  $(document).ready(function () {
+	var header = $("#min-header"),
+	  height = header.height(),
+	  yOffset = 0,
+	  triggerPoint = 100;
+	$('.header-height').css('height', height + 'px');
+	$(window).on('scroll', function () {
+	  yOffset = $(window).scrollTop();
+  
+	  if (yOffset >= triggerPoint) {
+		header.removeClass("animated cssanimation fadeIn");
+		header.addClass("navbar-fixed-top  cssanimation animated fadeInDown");
+	  } else {
+		header.removeClass("navbar-fixed-top cssanimation  animated fadeInDown");
+		header.addClass("animated cssanimation fadeIn");
+	  }
+  
+	});
+  });
+  
+  window.onload = function () {
+	window.jQuery ?
+	  $(document).ready(function () {
+		$(".sidebarNavigation .navbar-collapse")
+		  .hide()
+		  .clone()
+		  .appendTo("body")
+		  .removeAttr("class")
+		  .addClass("sideMenu")
+		  .show(),
+		  $("body").append("<div class='overlay'></div>"),
+		  $(".sideMenu").addClass(
+			$(".sidebarNavigation").attr("data-sidebarClass")
+		  ),
+		  $(".navbar-toggle, .navbar-toggler").on("click", function () {
+			$(".sideMenu, .overlay").toggleClass("open"),
+			  $(".overlay").on("click", function () {
+				$(this).removeClass("open"), $(".sideMenu").removeClass("open");
+			  });
+		  }),
+		  $("body").on("click", ".sideMenu.open .nav-item", function () {
+			$(this).hasClass("dropdown") ||
+			  $(".sideMenu, .overlay").toggleClass("open");
+		  }),
+		  $(window).resize(function () {
+			$(".navbar-toggler").is(":hidden") ?
+			  $(".sideMenu, .overlay").hide() :
+			  $(".sideMenu, .overlay").show();
+		  });
+	  }) :
+	  console.log("sidebarNavigation Requires jQuery");
+  };
+  
+  
+  /* ==================================
+		Start sidebarCollapse 
+  ===================================== */
+  
+  $(document).ready(function () {
+	$('#sidebarCollapse').on('click', function () {
+	  $('#sidebar, #content').toggleClass('active');
+	  $('.collapse.in').toggleClass('in');
+	  $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+	});
+  });
+  

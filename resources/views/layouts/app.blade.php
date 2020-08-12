@@ -24,6 +24,7 @@ if (!isset($seo)) {
 {{-- <link rel="stylesheet" href="./style.css"> --}}
 
 <!-- Slider -->
+    <!-- Slider -->
     <link href="{{asset('/')}}js/revolution-slider/css/settings.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="{{asset('/')}}css/bootstrap.min.css" rel="stylesheet">
@@ -35,6 +36,12 @@ if (!isset($seo)) {
     <link href="{{asset('/')}}css/font-awesome.css" rel="stylesheet">
     <!-- nprogress -->
     <link href="{{asset('/')}}css/nprogress.css" rel="stylesheet">
+    <!-- animate -->
+    <link href="{{asset('/')}}css/animate.css" rel="stylesheet">
+    <!-- plugin -->
+    <link href="{{asset('/')}}css/plugin.css" rel="stylesheet">
+    <!-- color -->
+    <link href="{{asset('/')}}css/color.css" rel="stylesheet">
     <!-- Custom Style -->
     <link href="{{asset('/')}}css/main.css" rel="stylesheet">
 
@@ -47,6 +54,8 @@ if (!isset($seo)) {
     <link href="{{ asset('/') }}admin_assets/global/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
     <link href="{{ asset('/') }}admin_assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
 
+    <link href="{{asset('website/')}}css/index.min.css" rel="stylesheet">
+
     @stack('styles')
 </head>
 
@@ -56,6 +65,8 @@ if (!isset($seo)) {
     <script src="{{asset('/')}}js/jquery.min.js"></script>
     <script src="{{asset('/')}}js/bootstrap.min.js"></script>
     <script src="{{asset('/')}}js/popper.js"></script>
+    <script src="{{asset('/')}}js/nprogress.js"></script>
+    <script src='https://vjs.zencdn.net/5.4.6/video.js'></script>
     <!-- Owl carousel -->
     <script src="{{asset('/')}}js/owl.carousel.js"></script>
     <script src="{{ asset('/') }}admin_assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>

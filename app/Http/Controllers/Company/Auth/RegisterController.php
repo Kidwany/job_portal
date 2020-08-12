@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Company\Auth;
 
+use App\Helpers\DataArrayHelper;
 use Auth;
 use App\Company;
 use App\Http\Requests;
@@ -68,7 +69,9 @@ use RegistersUsers;
      */
     public function showRegistrationForm()
     {
-        return view('company_auth.register');
+        $countries = DataArrayHelper::arabicLangCountriesArray();
+        $industries = DataArrayHelper::defaultIndustriesArray();
+        return view('company_auth.register', compact('countries', 'industries'));
     }
 
     public function register(CompanyFrontRegisterFormRequest $request)
@@ -77,7 +80,11 @@ use RegistersUsers;
         $company->name = $request->input('name');
         $company->email = $request->input('email');
         $company->password = bcrypt($request->input('password'));
-        $company->is_active = 0;
+        $company->phone = $request->input('phone');
+        $company->website = $request->input('company_website');
+        $company->country_id = $request->input('country_id');
+        $company->industry_id = $request->input('industry_id');
+        $company->is_active = 1;
         $company->verified = 0;
         $company->save();
         /*         * ******************** */
@@ -85,11 +92,11 @@ use RegistersUsers;
         $company->update();
         /*         * ******************** */
 
-        event(new Registered($company));
-        event(new CompanyRegistered($company));
+        /*event(new Registered($company));
+        event(new CompanyRegistered($company));*/
         $this->guard()->login($company);
-        UserVerification::generate($company);
-        UserVerification::send($company, 'Company Verification', config('mail.recieve_to.address'), config('mail.recieve_to.name'));
+        /*UserVerification::generate($company);
+        UserVerification::send($company, 'Company Verification', config('mail.recieve_to.address'), config('mail.recieve_to.name'));*/
         return $this->registered($request, $company) ?: redirect($this->redirectPath());
     }
 

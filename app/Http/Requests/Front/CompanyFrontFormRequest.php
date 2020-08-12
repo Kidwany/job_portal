@@ -49,7 +49,7 @@ class CompanyFrontFormRequest extends Request
                         "logo" => 'image',
                         "country_id" => "required",
                         "state_id" => "required",
-                        "city_id" => "required",
+                        /*"city_id" => "required",*/
                     ];
                 }
             default:break;

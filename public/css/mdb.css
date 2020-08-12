@@ -16589,9 +16589,7 @@ label.btn input[type="radio"]:checked+label:after .disabled-material {
 
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
-    position: absolute;
-    pointer-events: none;
-    opacity: 0
+    margin: 0px 5px;
 }
 
 .form-check-input[type="checkbox"]+label,

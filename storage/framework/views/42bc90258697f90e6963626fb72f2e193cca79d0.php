@@ -4,31 +4,40 @@
 <h5><?php echo e(__('Personal Information')); ?></h5>
 
 <div class="row">
-    <div class="col-md-4 col-sm-12">
+    
+    <div class="col-md-6 col-sm-12">
         <div class="form-group <?php echo APFrmErrHelp::hasError($errors, 'first_name'); ?>">
-            <label class="py-2" for="first_name"><?php echo e(__('First Name')); ?></label>
+            <label class="py-2" for="first_name">Name</label>
             <?php echo Form::text('first_name', null, array('class'=>'form-control', 'id'=>'first_name',
-            'placeholder'=>__('First Name'))); ?>
+            'placeholder'=> 'Enter Your Name')); ?>
 
             <?php echo APFrmErrHelp::showErrors($errors, 'first_name'); ?> </div>
     </div>
 
-    <div class="col-md-4 col-sm-12">
-        <div class="form-group <?php echo APFrmErrHelp::hasError($errors, 'last_name'); ?>">
-            <label class="py-2" for="last_name"><?php echo e(__('Last Name')); ?></label>
-            <?php echo Form::text('last_name', null, array('class' => 'form-control', 'id' => 'last_name',
-            'placeholder' => __('Last Name'))); ?>
-
-            <?php echo APFrmErrHelp::showErrors($errors, 'last_name'); ?></div>
-    </div>
-
-    <div class="col-md-4 col-sm-12">
+    
+    <div class="col-md-6 col-sm-12">
         <div class="form-group <?php echo APFrmErrHelp::hasError($errors, 'email'); ?>">
             <label class="py-2" for="email"><?php echo e(__('Email')); ?></label>
-            <?php echo Form::text('email', null, array('class'=>'form-control', 'id'=>'email',
-             'placeholder' => __('Email'))); ?>
+            <?php echo Form::text('email', null, array('class'=>'form-control', 'id'=>'email', 'placeholder'=>__('Email'))); ?>
 
             <?php echo APFrmErrHelp::showErrors($errors, 'email'); ?> </div>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+        <div class="form-group <?php echo APFrmErrHelp::hasError($errors, 'phone'); ?>">
+            <label class="py-2" for="phone"><?php echo e(__('Phone')); ?></label>
+            <?php echo Form::text('phone', null, array('class'=>'form-control', 'id'=>'phone', 'placeholder'=>__('Phone'))); ?>
+
+            <?php echo APFrmErrHelp::showErrors($errors, 'phone'); ?> </div>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+        <div class="form-group <?php echo APFrmErrHelp::hasError($errors, 'date_of_birth'); ?>">
+            <label class="py-2" for="date_of_birth"><?php echo e(__('Date of Birth')); ?></label>
+            <?php echo Form::text('date_of_birth', null, array('class'=>'form-control datepicker', 'id'=>'date_of_birth',
+            'placeholder'=>__('Date of Birth'), 'autocomplete'=>'off')); ?>
+
+            <?php echo APFrmErrHelp::showErrors($errors, 'date_of_birth'); ?> </div>
     </div>
 
     <div class="col-md-6 col-sm-12">
@@ -46,7 +55,9 @@
             <?php echo Form::select('marital_status_id', [''=>__('Select Marital Status')]+$maritalStatuses, null,
             array('class'=>'form-control', 'id'=>'marital_status_id')); ?>
 
-            <?php echo APFrmErrHelp::showErrors($errors, 'marital_status_id'); ?> </div>
+            <?php echo APFrmErrHelp::showErrors($errors, 'marital_status_id'); ?>
+
+        </div>
     </div>
 
     <div class="col-md-6 col-sm-12">
@@ -56,24 +67,32 @@
             <?php echo Form::select('country_id', [''=>__('Select Country')]+$countries, $country_id,
             array('class'=>'form-control', 'id'=>'country_id')); ?>
 
-            <?php echo APFrmErrHelp::showErrors($errors, 'country_id'); ?> </div>
+            <?php echo APFrmErrHelp::showErrors($errors, 'country_id'); ?>
+
+        </div>
     </div>
 
-    <div class="col-md-6 col-sm-12">
-        <div class="form-group <?php echo APFrmErrHelp::hasError($errors, 'state_id'); ?>">
-            <label class="py-2" for="state_id"><?php echo e(__('State')); ?></label>
-            <span id="state_dd"> <?php echo Form::select('state_id', [''=>__('Select State')], null,
-                array('class'=>'form-control', 'id'=>'state_id')); ?> </span> <?php echo APFrmErrHelp::showErrors($errors,
-            'state_id'); ?> </div>
-    </div>
+    
 
     <div class="col-md-6 col-sm-12">
         <div class="form-group <?php echo APFrmErrHelp::hasError($errors, 'city_id'); ?>">
             <label class="py-2" for="city_id"><?php echo e(__('City')); ?></label>
             <span id="city_dd"> <?php echo Form::select('city_id', [''=>__('Select City')], null,
                 array('class'=>'form-control', 'id'=>'city_id')); ?> </span> <?php echo APFrmErrHelp::showErrors($errors,
-            'city_id'); ?> </div>
+            'city_id'); ?>
+
+        </div>
     </div>
+
+    <div class="col-md-6 col-sm-12">
+        <div class="form-group <?php echo APFrmErrHelp::hasError($errors, 'street_address'); ?>">
+            <label class="py-2" for="street_address"><?php echo e(__('Street')); ?></label>
+            <?php echo Form::text('street_address', null, array('class'=>'form-control', 'id'=>'street_address',
+            'placeholder'=> 'Enter Your Address')); ?>
+
+            <?php echo APFrmErrHelp::showErrors($errors, 'street_address'); ?> </div>
+    </div>
+
     <div class="col-md-6 col-sm-12">
         <div class="form-group <?php echo APFrmErrHelp::hasError($errors, 'nationality_id'); ?>">
             <label class="py-2" for="nationality_id"><?php echo e(__('Nationality')); ?></label>
@@ -84,12 +103,14 @@
     </div>
 
     <div class="col-md-6 col-sm-12">
-        <div class="form-group <?php echo APFrmErrHelp::hasError($errors, 'date_of_birth'); ?>">
-            <label class="py-2" for="date_of_birth"><?php echo e(__('Date of Birth')); ?></label>
-            <?php echo Form::text('date_of_birth', null, array('class'=>'form-control datepicker', 'id'=>'date_of_birth',
-            'placeholder'=>__('Date of Birth'), 'autocomplete'=>'off')); ?>
+        <div class="form-group <?php echo APFrmErrHelp::hasError($errors, 'industry_id'); ?>">
+            <label class="py-2" for="industry_id">Industry</label>
+            <?php echo Form::select('industry_id', [''=> 'Select Industry']+$industries, null,
+            array('class'=>'form-control', 'id'=>'industry_id')); ?>
 
-            <?php echo APFrmErrHelp::showErrors($errors, 'date_of_birth'); ?> </div>
+            <?php echo APFrmErrHelp::showErrors($errors, 'industry_id'); ?>
+
+        </div>
     </div>
 
     <div class="col-md-6 col-sm-12">
@@ -101,31 +122,8 @@
             <?php echo APFrmErrHelp::showErrors($errors, 'national_id_card_number'); ?> </div>
     </div>
 
-    <div class="col-md-6 col-sm-12">
-        <div class="form-group <?php echo APFrmErrHelp::hasError($errors, 'phone'); ?>">
-            <label class="py-2" for="phone"><?php echo e(__('Phone')); ?></label>
-            <?php echo Form::text('phone', null, array('class'=>'form-control', 'id'=>'phone', 'placeholder'=>__('Phone'))); ?>
+    
 
-            <?php echo APFrmErrHelp::showErrors($errors, 'phone'); ?> </div>
-    </div>
-
-    <div class="col-md-6 col-sm-12">
-        <div class="form-group <?php echo APFrmErrHelp::hasError($errors, 'mobile_num'); ?>">
-            <label class="py-2" for="mobile_num"><?php echo e(__('Mobile')); ?></label>
-            <?php echo Form::text('mobile_num', null, array('class'=>'form-control', 'id'=>'mobile_num',
-            'placeholder'=>__('Mobile Number'))); ?>
-
-            <?php echo APFrmErrHelp::showErrors($errors, 'mobile_num'); ?> </div>
-    </div>
-
-    <div class="col-md-12">
-        <div class="form-group <?php echo APFrmErrHelp::hasError($errors, 'street_address'); ?>">
-            <label class="py-2" for="street_address"><?php echo e(__('Street Address')); ?></label>
-            <?php echo Form::textarea('street_address', null, array('class'=>'form-control', 'id'=>'street_address',
-            'placeholder'=>__('Street Address'))); ?>
-
-            <?php echo APFrmErrHelp::showErrors($errors, 'street_address'); ?> </div>
-    </div>
 </div>
 
 <div class="row">

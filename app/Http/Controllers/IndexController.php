@@ -63,7 +63,7 @@ class IndexController extends Controller
 		$sliders = Slider::langSliders();
 
         $seo = SEO::where('seo.page_title', 'like', 'front_index_page')->first();
-        return view('welcome')
+        return view('website.welcome')
                         ->with('topCompanyIds', $topCompanyIds)
                         ->with('topFunctionalAreaIds', $topFunctionalAreaIds)
                         ->with('topCityIds', $topCityIds)

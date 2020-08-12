@@ -1,10 +1,10 @@
 @extends('layouts.app')
-@section('content') 
-<!-- Header start --> 
-@include('includes.header') 
-<!-- Header end --> 
-<!-- Inner Page Title start --> 
-@include('includes.inner_page_title', ['page_title'=>__('Job Seekers')]) 
+@section('content')
+<!-- Header start -->
+@include('includes.header')
+<!-- Header end -->
+<!-- Inner Page Title start -->
+@include('includes.inner_page_title', ['page_title'=>__('Job Seekers')])
 <!-- Inner Page Title end -->
 
 @include('flash::message')
@@ -64,14 +64,94 @@
 
 <div class="listpgWraper">
     <div class="container">
-        
         <form action="{{route('job.seeker.list')}}" method="get">
             <!-- Search Result and sidebar start -->
-            <div class="row"> @include('includes.job_seeker_list_side_bar')                
-                <div class="col-lg-6"> 
+            <div class="row">
+                @include('includes.job_seeker_list_side_bar')
+                <div class="col-lg-9">
+                    <div class="eladrousi-typo-wrap">
+
+                        <div class="eladrousi-filterable">
+                            <h2>20 Candidates Found </h2>
+                            <ul>
+                                <li>
+                                    <i class="eladrousi-icon eladrousi-sort"></i>
+                                    <div class="eladrousi-filterable-select">
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="eladrousi-icon eladrousi-sort"></i>
+                                    <div class="eladrousi-filterable-select">
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="eladrousi-candidate eladrousi-candidate-default">
+                            <ul class="eladrousi-row">
+                                @if(isset($jobSeekers) && count($jobSeekers))
+                                    @foreach($jobSeekers as $jobSeeker)
+
+                                        <li class="col-lg-12">
+                                            <div class="eladrousi-candidate-default-wrap">
+                                                {{--<span class="promotepof-badge"><i class="fa fa-star" title="Featured"></i></span>--}}
+                                                <figure><a href="#"><img src="{{asset('user_images/' . $jobSeeker->image)}}" alt=""></a></figure>
+                                                <div class="eladrousi-candidate-default-text">
+                                                    <div class="eladrousi-candidate-default-left">
+                                                        <h2><a href="{{route('user.profile', $jobSeeker->id)}}">{{$jobSeeker->getName()}}</a> <i class="eladrousi-icon eladrousi-check-mark"></i></h2>
+                                                        <ul>
+                                                            <li>{{$jobSeeker->getIndustry('industry')}} </li>
+                                                            <li><i class="fa fa-map-marker"></i> {{$jobSeeker->getLocation()}}</li>
+                                                        </ul>
+                                                    </div>
+                                                    <a href="{{route('user.profile', $jobSeeker->id)}}" class="eladrousi-candidate-default-btn"><i
+                                                                class="eladrousi-icon eladrousi-add-list"></i> {{__('View Profile')}} </a>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    @endforeach
+                                @endif
+                            </ul>
+                        </div>
+
+                        {{--<div class="eladrousi-pagination-blog">
+                            <ul class="page-numbers">
+                                <li><a class="prev page-numbers" href="#"><span><i
+                                                    class="eladrousi-icon eladrousi-arrows4"></i></span></a></li>
+                                <li><span class="page-numbers current">01</span></li>
+                                <li><a class="page-numbers" href="#">02</a></li>
+                                <li><a class="page-numbers" href="#">03</a></li>
+                                <li><a class="page-numbers" href="#">04</a></li>
+                                <li><a class="next page-numbers" href="#"><span><i
+                                                    class="eladrousi-icon eladrousi-arrows4"></i></span></a></li>
+                            </ul>
+                        </div>--}}
+                    </div>
+                </div>
+            </div>
+            {{--<div class="row"> @include('includes.job_seeker_list_side_bar')
+                <div class="col-lg-6">
                     <!-- Search List -->
                     <ul class="searchList">
-                        <!-- job start --> 
+                        <!-- job start -->
                         @if(isset($jobSeekers) && count($jobSeekers))
                         @foreach($jobSeekers as $jobSeeker)
                         <li>
@@ -90,7 +170,7 @@
                             </div>
                             <p>{{str_limit($jobSeeker->getProfileSummary('summary'),150,'...')}}</p>
                         </li>
-                        <!-- job end --> 
+                        <!-- job end -->
                         @endforeach
                         @endif
                     </ul>
@@ -110,7 +190,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Pagination end --> 
+                    <!-- Pagination end -->
                     <div class=""><br />{!! $siteSetting->listing_page_horizontal_ad !!}</div>
 
                 </div>
@@ -121,7 +201,7 @@
                         <div class="gad">{!! $siteSetting->listing_page_vertical_ad !!}</div>
                     </div>
                 </div>
-            </div>
+            </div>--}}
         </form>
     </div>
 </div>
@@ -144,7 +224,7 @@
     }
 </style>
 @endpush
-@push('scripts') 
+@push('scripts')
 <script>
     $(document).ready(function ($) {
         $("form").submit(function () {

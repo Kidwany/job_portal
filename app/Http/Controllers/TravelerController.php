@@ -35,7 +35,7 @@ class TravelerController extends Controller
         $industries = DataArrayHelper::defaultIndustriesArray();
         $upload_max_filesize = UploadedFile::getMaxFilesize() / (1048576);
         
-        return view('traveler.create')
+        return view('website.travelEurope')
                 ->with('genders', $genders)
                 ->with('maritalStatuses', $maritalStatuses)
                 ->with('nationalities', $nationalities)

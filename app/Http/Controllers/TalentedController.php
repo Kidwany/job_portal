@@ -31,6 +31,7 @@ class TalentedController extends Controller
         $maritalStatuses = DataArrayHelper::langMaritalStatusesArray();
         $nationalities = DataArrayHelper::langNationalitiesArray();
          $countries = DataArrayHelper::defaultCountriesArray();
+        $industries = DataArrayHelper::defaultIndustriesArray();
         // $countries = DataArrayHelper::langCountriesArray();
         $upload_max_filesize = UploadedFile::getMaxFilesize() / (1048576);
         
@@ -39,6 +40,7 @@ class TalentedController extends Controller
                 ->with('maritalStatuses', $maritalStatuses)
                 ->with('nationalities', $nationalities)
                 ->with('countries', $countries)
+                ->with('industries', $industries)
                 ->with('upload_max_filesize', $upload_max_filesize);
     }
 
@@ -66,6 +68,7 @@ class TalentedController extends Controller
         $talented->city_id = $request->input('city_id');
 
         $talented->nationality_id = $request->input('nationality_id');
+        $talented->industry_id = $request->input('industry_id');
         $talented->national_id_card_number = $request->input('national_id_card_number');
         
         $talented->phone = $request->input('phone');

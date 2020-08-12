@@ -4,28 +4,43 @@
 <h5>{{__('Personal Information')}}</h5>
 
 <div class="row">
-    <div class="col-md-4 col-sm-12">
+    {{--@include('includes.messages')--}}
+    <div class="col-md-6 col-sm-12">
         <div class="form-group {!! APFrmErrHelp::hasError($errors, 'first_name') !!}">
-            <label class="py-2" for="first_name">{{__('First Name')}}</label>
+            <label class="py-2" for="first_name">Name</label>
             {!! Form::text('first_name', null, array('class'=>'form-control', 'id'=>'first_name',
-            'placeholder'=>__('First Name'))) !!}
+            'placeholder'=> 'Enter Your Name')) !!}
             {!! APFrmErrHelp::showErrors($errors, 'first_name') !!} </div>
     </div>
 
-    <div class="col-md-4 col-sm-12">
+    {{--<div class="col-md-4 col-sm-12">
         <div class="form-group {!! APFrmErrHelp::hasError($errors, 'last_name') !!}">
             <label class="py-2" for="last_name">{{__('Last Name')}}</label>
-            {!! Form::text('last_name', null, array('class' => 'form-control', 'id' => 'last_name',
-            'placeholder' => __('Last Name'))) !!}
+            {!! Form::text('last_name', null, array('class'=>'form-control', 'id' => 'last_name',
+            'placeholder'=>__('Last Name'))) !!}
             {!! APFrmErrHelp::showErrors($errors, 'last_name') !!}</div>
     </div>
-
-    <div class="col-md-4 col-sm-12">
+--}}
+    <div class="col-md-6 col-sm-12">
         <div class="form-group {!! APFrmErrHelp::hasError($errors, 'email') !!}">
             <label class="py-2" for="email">{{__('Email')}}</label>
-            {!! Form::text('email', null, array('class'=>'form-control', 'id'=>'email',
-             'placeholder' => __('Email'))) !!}
+            {!! Form::text('email', null, array('class'=>'form-control', 'id'=>'email', 'placeholder'=>__('Email'))) !!}
             {!! APFrmErrHelp::showErrors($errors, 'email') !!} </div>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+        <div class="form-group {!! APFrmErrHelp::hasError($errors, 'phone') !!}">
+            <label class="py-2" for="phone">{{__('Phone')}}</label>
+            {!! Form::text('phone', null, array('class'=>'form-control', 'id'=>'phone', 'placeholder'=>__('Phone'))) !!}
+            {!! APFrmErrHelp::showErrors($errors, 'phone') !!} </div>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+        <div class="form-group {!! APFrmErrHelp::hasError($errors, 'date_of_birth') !!}">
+            <label class="py-2" for="date_of_birth">{{__('Date of Birth')}}</label>
+            {!! Form::text('date_of_birth', null, array('class'=>'form-control datepicker', 'id'=>'date_of_birth',
+            'placeholder'=>__('Date of Birth'), 'autocomplete'=>'off')) !!}
+            {!! APFrmErrHelp::showErrors($errors, 'date_of_birth') !!} </div>
     </div>
 
     <div class="col-md-6 col-sm-12">
@@ -41,7 +56,8 @@
             <label class="py-2" for="marital_status_id">{{__('Marital Status')}}</label>
             {!! Form::select('marital_status_id', [''=>__('Select Marital Status')]+$maritalStatuses, null,
             array('class'=>'form-control', 'id'=>'marital_status_id')) !!}
-            {!! APFrmErrHelp::showErrors($errors, 'marital_status_id') !!} </div>
+            {!! APFrmErrHelp::showErrors($errors, 'marital_status_id') !!}
+        </div>
     </div>
 
     <div class="col-md-6 col-sm-12">
@@ -50,24 +66,36 @@
             <?php $country_id = old('country_id', $siteSetting->default_country_id); ?>
             {!! Form::select('country_id', [''=>__('Select Country')]+$countries, $country_id,
             array('class'=>'form-control', 'id'=>'country_id')) !!}
-            {!! APFrmErrHelp::showErrors($errors, 'country_id') !!} </div>
+            {!! APFrmErrHelp::showErrors($errors, 'country_id') !!}
+        </div>
     </div>
 
-    <div class="col-md-6 col-sm-12">
+    {{--<div class="col-md-6 col-sm-12">
         <div class="form-group {!! APFrmErrHelp::hasError($errors, 'state_id') !!}">
             <label class="py-2" for="state_id">{{__('State')}}</label>
             <span id="state_dd"> {!! Form::select('state_id', [''=>__('Select State')], null,
                 array('class'=>'form-control', 'id'=>'state_id')) !!} </span> {!! APFrmErrHelp::showErrors($errors,
-            'state_id') !!} </div>
-    </div>
+            'state_id') !!}
+        </div>
+    </div>--}}
 
     <div class="col-md-6 col-sm-12">
         <div class="form-group {!! APFrmErrHelp::hasError($errors, 'city_id') !!}">
             <label class="py-2" for="city_id">{{__('City')}}</label>
             <span id="city_dd"> {!! Form::select('city_id', [''=>__('Select City')], null,
                 array('class'=>'form-control', 'id'=>'city_id')) !!} </span> {!! APFrmErrHelp::showErrors($errors,
-            'city_id') !!} </div>
+            'city_id') !!}
+        </div>
     </div>
+
+    <div class="col-md-6 col-sm-12">
+        <div class="form-group {!! APFrmErrHelp::hasError($errors, 'street_address') !!}">
+            <label class="py-2" for="street_address">{{__('Street')}}</label>
+            {!! Form::text('street_address', null, array('class'=>'form-control', 'id'=>'street_address',
+            'placeholder'=> 'Enter Your Address')) !!}
+            {!! APFrmErrHelp::showErrors($errors, 'street_address') !!} </div>
+    </div>
+
     <div class="col-md-6 col-sm-12">
         <div class="form-group {!! APFrmErrHelp::hasError($errors, 'nationality_id') !!}">
             <label class="py-2" for="nationality_id">{{__('Nationality')}}</label>
@@ -77,11 +105,12 @@
     </div>
 
     <div class="col-md-6 col-sm-12">
-        <div class="form-group {!! APFrmErrHelp::hasError($errors, 'date_of_birth') !!}">
-            <label class="py-2" for="date_of_birth">{{__('Date of Birth')}}</label>
-            {!! Form::text('date_of_birth', null, array('class'=>'form-control datepicker', 'id'=>'date_of_birth',
-            'placeholder'=>__('Date of Birth'), 'autocomplete'=>'off')) !!}
-            {!! APFrmErrHelp::showErrors($errors, 'date_of_birth') !!} </div>
+        <div class="form-group {!! APFrmErrHelp::hasError($errors, 'industry_id') !!}">
+            <label class="py-2" for="industry_id">Industry</label>
+            {!! Form::select('industry_id', [''=> 'Select Industry']+$industries, null,
+            array('class'=>'form-control', 'id'=>'industry_id')) !!}
+            {!! APFrmErrHelp::showErrors($errors, 'industry_id') !!}
+        </div>
     </div>
 
     <div class="col-md-6 col-sm-12">
@@ -92,28 +121,14 @@
             {!! APFrmErrHelp::showErrors($errors, 'national_id_card_number') !!} </div>
     </div>
 
-    <div class="col-md-6 col-sm-12">
-        <div class="form-group {!! APFrmErrHelp::hasError($errors, 'phone') !!}">
-            <label class="py-2" for="phone">{{__('Phone')}}</label>
-            {!! Form::text('phone', null, array('class'=>'form-control', 'id'=>'phone', 'placeholder'=>__('Phone'))) !!}
-            {!! APFrmErrHelp::showErrors($errors, 'phone') !!} </div>
-    </div>
-
-    <div class="col-md-6 col-sm-12">
+    {{--<div class="col-md-6 col-sm-12">
         <div class="form-group {!! APFrmErrHelp::hasError($errors, 'mobile_num') !!}">
             <label class="py-2" for="mobile_num">{{__('Mobile')}}</label>
             {!! Form::text('mobile_num', null, array('class'=>'form-control', 'id'=>'mobile_num',
             'placeholder'=>__('Mobile Number'))) !!}
             {!! APFrmErrHelp::showErrors($errors, 'mobile_num') !!} </div>
-    </div>
+    </div>--}}
 
-    <div class="col-md-12">
-        <div class="form-group {!! APFrmErrHelp::hasError($errors, 'street_address') !!}">
-            <label class="py-2" for="street_address">{{__('Street Address')}}</label>
-            {!! Form::textarea('street_address', null, array('class'=>'form-control', 'id'=>'street_address',
-            'placeholder'=>__('Street Address'))) !!}
-            {!! APFrmErrHelp::showErrors($errors, 'street_address') !!} </div>
-    </div>
 </div>
 
 <div class="row">

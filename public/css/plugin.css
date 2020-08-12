@@ -1,0 +1,4421 @@
+
+.eladrousi-typo-wrap * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.eladrousi-typo-wrap h1,
+.eladrousi-typo-wrap h2,
+.eladrousi-typo-wrap h3,
+.eladrousi-typo-wrap h4,
+.eladrousi-typo-wrap h5,
+.eladrousi-typo-wrap h6 {
+    margin-bottom: 8px
+}
+
+.eladrousi-plugin-default-container {
+    width: 1110px;
+    margin: 0 auto
+}
+
+
+.eladrousi-typo-wrap h1,
+.eladrousi-typo-wrap h2,
+.eladrousi-typo-wrap h3,
+.eladrousi-typo-wrap h4 .eladrousi-typo-wrap h5,
+.eladrousi-typo-wrap h6 {
+    clear: inherit;
+    font-weight: 600
+}
+
+.eladrousi-typo-wrap li {
+    line-height: 28px
+}
+
+.widget a,
+.widget a:hover,
+.widget ul li a:hover {
+    box-shadow: inherit
+}
+
+.eladrousi-select-style select {
+    padding: 8px 18px;
+    background: #fff;
+    color: #666;
+    height: 60px;
+    border: 1px solid #f2f2f2;
+    border-left: none;
+    font-size: 12px;
+    font-weight: 400;
+    outline: none;
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer
+}
+
+.eladrousi-select-style select option {
+    padding: 8px 18px
+}
+
+.eladrousi-select-style {
+    position: relative
+}
+
+.eladrousi-select-style:after {
+    content: "\e964";
+    font-family: icomoon;
+    color: #999;
+    right: 20px;
+    top: 17px;
+    position: absolute;
+    pointer-events: none
+}
+
+.eladrousi-banner-search input[type=submit] {
+    height: 60px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    z-index: 3
+}
+
+.eladrousi-banner-search ul li.eladrousi-banner-submit i {
+    color: #fff;
+    font-size: 26px;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    padding-top: 18px
+}
+
+.eladrousi-banner-btn {
+    display: inline-block
+}
+
+.eladrousi-banner-btn a {
+    float: left;
+    padding: 12px 20px;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, .5);
+    margin: 10px 6px 0;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-banner-btn a i {
+    font-size: 24px;
+    margin: 0 6px 0 0;
+    display: inline-block;
+    vertical-align: sub
+}
+
+.categories-list {
+    float: left;
+    width: 100%
+}
+
+.categories-list ul li {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 50px
+}
+
+.categories-list ul li i {
+    font-size: 50px;
+    display: block;
+    margin-bottom: 28px;
+    color: #ffa000;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.categories-list ul li:hover i {
+    -webkit-transform: rotateY(160deg);
+    -moz-transform: rotateY(160deg);
+    -ms-transform: rotateY(160deg);
+    -o-transform: rotateY(160deg);
+    transform: rotateY(160deg)
+}
+
+.categories-list ul li a {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 4px
+}
+
+.categories-list ul li span {
+    font-size: 12px
+}
+
+.eladrousi-plain-btn {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px
+}
+
+.eladrousi-plain-btn a {
+    display: inline-block;
+    background-color: #ffa000;
+    padding: 17px 25px;
+    line-height: 1;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 2px
+}
+
+.eladrousi-job-listing {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-job-listing ul li,
+.jobsearch-job-listing ul li {
+    list-style: none
+}
+
+.eladrousi-featured-listing>ul>li {
+    margin-bottom: 30px
+}
+
+.eladrousi-featured-listing {
+    margin-bottom: 25px
+}
+
+.eladrousi-table-layer {
+    display: table;
+    width: 100%
+}
+
+.eladrousi-table-row {
+    display: table-row
+}
+
+.eladrousi-table-cell {
+    display: table-cell;
+    line-height: 26px
+}
+
+.eladrousi-featured-listing figure,
+.eladrousi-featured-listing-text {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.eladrousi-featured-listing .eladrousi-table-layer {
+    border: 1px solid #ececec
+}
+
+.eladrousi-featured-listing figure a {
+    display: inline-block
+}
+
+.eladrousi-featured-listing figure~.eladrousi-featured-listing-text {
+    border-left: 1px solid #ececec
+}
+
+.eladrousi-featured-listing-text {
+    padding: 11px 19px 3px
+}
+
+.eladrousi-option-btn.eladrousi-blue {
+    background-color: #186fc9
+}
+
+.eladrousi-option-btn.eladrousi-red {
+    background-color: #e12335
+}
+
+.eladrousi-option-btn.eladrousi-green {
+    background-color: #f1630d
+}
+
+.eladrousi-featured-listing figure {
+    margin-bottom: 0;
+    text-align: center;
+    width: 119px;
+    padding: 20px
+}
+
+.eladrousi-featured-listing-text h2 {
+    font-size: 16px;
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 1px
+}
+
+.eladrousi-like-list {
+    float: right;
+    color: #8eb507
+}
+
+.eladrousi-featured-listing-text time {
+    display: block;
+    line-height: 1;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 19px
+}
+
+.eladrousi-featured-listing-options {
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid #eee;
+    padding-top: 12px
+}
+
+.eladrousi-featured-listing-options ul {
+    float: left;
+    width: 70%;
+    margin: 0
+}
+
+.eladrousi-featured-listing-options ul li {
+    float: left;
+    list-style: none;
+    margin-right: 14px
+}
+
+.eladrousi-featured-listing-options ul li a {
+    color: #b1b7c1;
+    font-size: 12px
+}
+
+.eladrousi-featured-listing-options ul li i {
+    font-size: 10px;
+    color: #b1b7c1;
+    margin-right: 3px
+}
+
+.eladrousi-option-btn {
+    float: right;
+    padding: 8px 17px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #53b427;
+    text-transform: uppercase;
+    line-height: 1
+}
+
+.eladrousi-subheader-form {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 52px
+}
+
+.eladrousi-subheader-form .eladrousi-banner-search {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1)
+}
+
+.eladrousi-subheader-form .eladrousi-banner-search ul li:first-child input[type=text] {
+    border-left: 1px solid #f2f2f2
+}
+
+.eladrousi-filterable {
+    float: left;
+    width: 100%;
+    margin-bottom: 33px
+}
+
+.eladrousi-filterable h2 {
+    float: left;
+    font-size: 18px;
+    margin-bottom: 0
+}
+
+.eladrousi-filterable ul {
+    float: right
+}
+
+.eladrousi-filterable ul li {
+    float: left;
+    list-style: none;
+    padding: 0 20px;
+    border-left: 1px solid #eceff1
+}
+
+.eladrousi-filterable ul li:first-child {
+    border-left: none
+}
+
+.eladrousi-filterable ul li:last-child {
+    padding-right: 0
+}
+
+.eladrousi-filterable ul li i {
+    margin-right: 0;
+}
+
+.eladrousi-filterable ul li:hover a {
+    color: #ffa000
+}
+
+.eladrousi-filterable ul li a {
+    color: #8d8d8d
+}
+
+.eladrousi-filterable ul li i {
+    font-size: 16px;
+    margin-right: 7px;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.eladrousi-filterable ul li a i {
+    color: #999
+}
+
+.eladrousi-filterable ul li:hover a i {
+    color: #ffa000
+}
+
+.eladrousi-filterable-select select {
+    padding: 4px 0;
+    background: #fff;
+    color: #ffa000;
+    height: 26px;
+    width: 110px;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer
+}
+
+.eladrousi-filterable-select select option {
+    padding: 4px 3px
+}
+
+.eladrousi-filterable-select {
+    position: relative;
+    display: inline-block
+}
+
+.eladrousi-filterable-select:after {
+    content: "\e964";
+    font-family: icomoon;
+    color: #ffa000;
+    right: 0;
+    top: 1px;
+    position: absolute;
+    pointer-events: none;
+    font-size: 11px
+}
+
+.eladrousi-job,
+.eladrousi-job-grid figure,
+.eladrousi-job-time,
+.eladrousi-job-grid figure>a,
+.eladrousi-job-grid-wrap,
+.eladrousi-jobgrid-text,
+.eladrousi-job-tag {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-job ul li {
+    list-style: none
+}
+
+.eladrousi-job>ul>li {
+    margin-bottom: 30px
+}
+
+.eladrousi-job-grid ul li {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px
+}
+
+.eladrousi-job-grid-wrap {
+    border: 1px solid #ececec
+}
+
+.eladrousi-job-grid figure a,
+.eladrousi-job-grid figure img {
+    height: 100%
+}
+
+.eladrousi-job-time li:first-child {
+    padding-left: 0
+}
+
+.eladrousi-job-time li:first-child:before {
+    display: none
+}
+
+.eladrousi-job-time li a {
+    color: #999
+}
+
+.eladrousi-jobgrid-text {
+    padding: 10px 18px 11px
+}
+
+.eladrousi-job-grid figure {
+    background-color: #fcfcfc;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 44px 40px;
+    border-bottom: 1px solid #efefef;
+    height: 190px
+}
+
+.eladrousi-jobtype-label {
+    position: absolute;
+    left: -5px;
+    top: 13px;
+    background-color: #53b427;
+    font-size: 12px;
+    color: #fff;
+    padding: 5px 8px 6px;
+    line-height: 1
+}
+
+.eladrousi-jobtype-label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    border-top: 5px solid #666;
+    border-left: 5px solid transparent
+}
+
+.eladrousi-featured-label {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    padding: 4px 10px;
+    background-color: #ffa000;
+    line-height: 1;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 10px
+}
+
+.eladrousi-jobgrid-text h2 {
+    font-size: 16px;
+    margin-bottom: 0;
+    line-height: 1.4
+}
+
+.eladrousi-job-tag a {
+    color: #ffa000;
+    font-size: 12px;
+    margin-bottom: 4px
+}
+
+.eladrousi-job-time {
+    margin: 0 0 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ececec
+}
+
+.eladrousi-job-time li {
+    float: left;
+    color: #999;
+    font-size: 12px;
+    padding: 0 9px;
+    position: relative;
+    margin-bottom: 4px
+}
+
+.eladrousi-job-time li:before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 13px;
+    width: 3px;
+    height: 3px;
+    background-color: #e0e0e0;
+    border-radius: 100%
+}
+
+.eladrousi-job-location {
+    float: left;
+    color: #999;
+    font-size: 12px
+}
+
+.eladrousi-job-location i {
+    font-size: 11px;
+    color: #999;
+    margin-right: 5px
+}
+
+.eladrousi-job-like {
+    float: right;
+    width: 27px;
+    height: 27px;
+    border-radius: 100%;
+    border: 1px solid #ededed;
+    text-align: center;
+    color: #8bb300;
+    font-size: 12px;
+    line-height: 1;
+    padding-top: 6px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-job-like:hover {
+    background-color: #ffa000;
+    color: #fff
+}
+
+.eladrousi-jobtype-label.jobtype-label-green {
+    background-color: #f1630d
+}
+
+.eladrousi-jobtype-label.jobtype-label-blue {
+    background-color: #186fc9
+}
+
+.eladrousi-jobtype-label.jobtype-label-red {
+    background-color: #e12335
+}
+
+.eladrousi-pagination-blog {
+    float: left;
+    width: 100%;
+    margin: 25px 0 60px
+}
+
+.eladrousi-pagination-blog ul li {
+    float: left;
+    list-style: none;
+    margin: 0 22px 10px 0;
+    line-height: 1
+}
+
+.eladrousi-pagination-blog ul li a,
+.eladrousi-pagination-blog ul li span {
+    float: left;
+    width: 49px;
+    height: 49px;
+    background-color: #26272b;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 100%;
+    text-align: center;
+    padding: 17px 0 0;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-pagination-blog ul li:hover a,
+.eladrousi-pagination-blog ul li:hover span,
+.eladrousi-pagination-blog ul li span.current {
+    background-color: #ffa000;
+    color: #fff
+}
+
+.eladrousi-pagination-blog ul li a i {
+    font-size: 19px
+}
+
+.eladrousi-pagination-blog ul li a.next span {
+    padding-top: 14px
+}
+
+.eladrousi-pagination-blog ul li a.prev span {
+    padding-top: 14px
+}
+
+.eladrousi-pagination-blog ul li a.prev i {
+    display: inline-block;
+    -webkit-transform: scale(-1);
+    -moz-transform: scale(-1);
+    -ms-transform: scale(-1);
+    -o-transform: scale(-1);
+    transform: scale(-1)
+}
+
+.eladrousi-pagination-blog .prev.page-numbers,
+.eladrousi-pagination-blog .next.page-numbers {
+    padding: 0;
+    background-color: transparent !important
+}
+
+.eladrousi-checkbox,
+.eladrousi-checkbox li,
+.eladrousi-search-filter-wrap,
+.eladrousi-search-filter,
+.eladrousi-search-box,
+.eladrousi-seemore,
+.eladrousi-search-box input[type=text],
+.eladrousi-search-filter-wrap h2,
+.eladrousi-checkbox-toggle {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-search-filter-wrap {
+    padding: 3px 19px 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ececec5c;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    border-top: 2px solid #ffa000;
+    border-radius: 5px;
+}
+.eladrousi-search-filter-wrap.eladrousi-remove-padding {
+    padding-bottom: 0
+}
+
+.eladrousi-search-filter-wrap h2 {
+    color: #666;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0
+}
+
+.eladrousi-search-filter-wrap h2 a {
+    color: #666;
+    float: left;
+    width: 100%;
+    padding: 12px 0 15px;
+    position: relative
+}
+
+.eladrousi-without-toggle.eladrousi-search-filter-wrap h2 a:before {
+    display: none
+}
+
+.eladrousi-search-filter-wrap h2 a:before {
+    content: "\e964";
+    font-family: icomoon;
+    position: absolute;
+    right: 0;
+    top: 14px;
+    font-size: 13px;
+    color: #9d9d9d
+}
+
+.eladrousi-remove-padding h2 a:before {
+    content: "\e94c"
+}
+
+.eladrousi-checkbox li {
+    list-style: none;
+    margin-bottom: 2px;
+    position: relative
+}
+
+.eladrousi-checkbox li small {
+    position: absolute;
+    right: 0;
+    top: 7px;
+    font-size: 13px;
+    color: #c8c8c8;
+    line-height: 1
+}
+
+.eladrousi-checkbox input[type=checkbox],
+.eladrousi-checkbox input[type=radio] {
+    display: none
+}
+
+.eladrousi-checkbox input[type=checkbox]+label,
+.eladrousi-checkbox input[type=radio]+label {
+    color: #838383;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+    margin: 0;
+    display: inline-block
+}
+
+.eladrousi-checkbox input[type=checkbox]+label span,
+.eladrousi-checkbox input[type=radio]+label span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 12px 0 0;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #c2d1d3
+}
+
+.eladrousi-checkbox input[type=checkbox]:checked+label span,
+.eladrousi-checkbox input[type=checkbox]+label:hover span,
+.eladrousi-checkbox input[type=radio]:checked+label span,
+.eladrousi-checkbox input[type=radio]+label:hover span {
+    border-color: #ffa000;
+    background-color: #ffa000;
+    box-shadow: 0 0 0 3px #fff inset
+}
+
+.eladrousi-search-box {
+    position: relative;
+    margin-bottom: 11px
+}
+
+.eladrousi-search-box input[type=text] {
+    border: 1px solid #ebebeb;
+    border-radius: 2px;
+    height: 39px;
+    padding: 7px 14px;
+    color: #999;
+    font-size: 13px;
+    background-color: #fff
+}
+
+.eladrousi-search-box input[type=submit] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 39px;
+    height: 39px;
+    border: none;
+    background-color: transparent;
+    z-index: 2
+}
+
+.eladrousi-search-box i {
+    position: absolute;
+    right: 14px;
+    top: 12px;
+    color: #cbd7d9;
+    font-size: 14px
+}
+
+.eladrousi-seemore {
+    font-size: 13px;
+    color: #ffa000;
+    font-style: italic;
+    font-weight: 400;
+    text-decoration: underline;
+    margin-top: 6px
+}
+
+.eladrousi-location-box {
+    position: relative;
+    margin-bottom: 11px;
+    float: left;
+    width: 100%
+}
+
+.eladrousi-job-userlist .like-btn {
+    float: right
+}
+
+.eladrousi-location-box input[type=text],
+.eladrousi-checkbox input[type=number],
+.eladrousi-checkbox input[type=text] {
+    border: 1px solid #ebebeb;
+    border-radius: 2px;
+    height: 39px;
+    padding: 7px 14px;
+    color: #999;
+    font-size: 13px;
+    background-color: #fff;
+    float: left;
+    width: 100%
+}
+
+.eladrousi-location-box i {
+    position: absolute;
+    right: 14px;
+    top: 12px;
+    color: #cbd7d9;
+    font-size: 14px
+}
+
+.eladrousi-joblisting-classic figure a,
+.eladrousi-joblisting-classic-wrap {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-joblisting-classic figure {
+    float: left;
+    width: 42px;
+    border: 1px solid #eee;
+    margin-bottom: 0
+}
+
+.eladrousi-joblisting-classic>ul>li {
+    margin-bottom: 20px
+}
+
+.eladrousi-joblisting-classic figure~.eladrousi-joblisting-text {
+    margin-left: 59px
+}
+
+.eladrousi-job-userlist .eladrousi-job-like {
+    border-color: #8bb300
+}
+
+.eladrousi-list-option ul li i {
+    margin-right: 6px;
+    color: #999
+}
+
+.eladrousi-list-option ul li a {
+    color: #ffa000
+}
+
+.eladrousi-list-option {
+    float: left
+}
+
+.eladrousi-list-option h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    line-height: 1
+}
+
+.eladrousi-list-option h2 span {
+    display: inline-block;
+    padding: 3px 10px;
+    color: #fff;
+    background-color: #67cc66;
+    font-size: 10px;
+    font-weight: 300;
+    border-radius: 60px;
+    vertical-align: top
+}
+
+.eladrousi-list-option ul {
+    display: inline-block;
+    width: 100%;
+    margin: 0
+}
+
+.eladrousi-list-option ul li {
+    float: left;
+    padding: 2px 15px;
+    border-left: 1px solid #e0e0e0;
+    line-height: 1;
+    font-size: 12px
+}
+
+.eladrousi-list-option ul li:first-child {
+    padding-left: 0;
+    border-left: none
+}
+
+.eladrousi-job-userlist .eladrousi-option-btn {
+    float: left;
+    margin-right: 15px;
+    min-width: 104px;
+    text-align: center
+}
+
+.eladrousi-job-userlist {
+    float: right;
+    margin-top: 10px
+}
+
+.eladrousi-joblisting-classic-wrap {
+    background-color: #fff;
+    border: 1px solid #ececec;
+    padding: 20px 19px 13px 14px
+}
+
+.eladrousi-jobdetail-list {
+    float: left;
+    width: 100%;
+    margin: 0;
+    background-color: #fff;
+    padding: 40px;
+    border: 1px solid #efefef;
+    margin-bottom: 30px;
+    position: relative
+}
+
+.eladrousi-jobdetail-listthumb {
+    float: left;
+    width: 200px;
+    border: 1px solid #efefef;
+    text-align: center;
+    padding: 40px 20px;
+    height: 200px
+}
+
+.eladrousi-jobdetail-listthumb~figcaption {
+    margin-left: 230px;
+    padding-top: 5px
+}
+
+.eladrousi-jobdetail-list figcaption h2 {
+    margin-bottom: 13px;
+    font-size: 26px;
+    line-height: 1
+}
+
+.eladrousi-jobdetail-list figcaption span {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 11px
+}
+
+.eladrousi-jobdetail-type {
+    display: inline-block;
+    background-color: #53b427;
+    font-size: 12px;
+    color: #fff;
+    padding: 5px 8px 6px;
+    line-height: 1;
+    margin-right: 5px;
+    font-weight: 400
+}
+
+.eladrousi-jobdetail-postinfo {
+    font-style: italic;
+    color: #ffa000;
+    font-size: 11px;
+    margin-left: 5px;
+    font-weight: 400
+}
+
+.eladrousi-jobdetail-options {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px
+}
+
+.eladrousi-jobdetail-options li {
+    float: left;
+    list-style: none;
+    margin-right: 20px;
+    margin-bottom: 3px
+}
+
+.eladrousi-jobdetail-options li:first-child {
+    width: 100%;
+    font-size: 16px
+}
+
+.eladrousi-jobdetail-options li a {
+    color: #999
+}
+
+.eladrousi-jobdetail-options li a.eladrousi-jobdetail-view {
+    color: #fff
+}
+
+.eladrousi-jobdetail-options li:first-child i {
+    color: #999
+}
+
+.eladrousi-jobdetail-btn i {
+    margin-right: 3px
+}
+
+.eladrousi-jobdetail-media li a[data-original-title=facebook] {
+    color: #3b5998
+}
+
+.eladrousi-jobdetail-media li a[data-original-title=twitter] {
+    color: #3ac1f1
+}
+
+.eladrousi-jobdetail-media li a[data-original-title=linkedin] {
+    color: #007ab9
+}
+
+.eladrousi-jobdetail-media li a {
+    font-size: 22px
+}
+
+.eladrousi-jobdetail-options li i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #ffa000
+}
+
+.eladrousi-jobdetail-view {
+    font-size: 10px;
+    background-color: #ffa000;
+    padding: 1px 9px;
+    border-radius: 40px;
+    margin-left: 4px
+}
+
+.eladrousi-jobdetail-btn.active {
+    border: 1px solid #ffa000;
+    margin-right: 9px
+}
+
+.eladrousi-jobdetail-btn {
+    float: left;
+    color: #ffa000;
+    font-weight: 500;
+    padding: 9px 11px 8px;
+    line-height: 1
+}
+
+.eladrousi-jobdetail-media {
+    float: left;
+    margin-left: 20px
+}
+
+.eladrousi-jobdetail-media li {
+    float: left;
+    list-style: none;
+    margin-right: 12px;
+    line-height: 2;
+    padding-top: 5px
+}
+
+.eladrousi-jobdetail-media li span {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-right: 3px
+}
+
+.eladrousi-jobdetail-content {
+    float: left;
+    width: 100%;
+    padding: 30px;
+    border: 1px solid #efefef;
+    margin-bottom: 31px;
+    background-color: #fff
+}
+
+.eladrousi-content-title {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px
+}
+
+.eladrousi-content-title h2 {
+    font-size: 20px;
+    margin-bottom: 0
+}
+
+.eladrousi-jobdetail-services {
+    float: left;
+    width: 100%;
+    margin: 8px 0
+}
+
+.eladrousi-jobdetail-services ul li {
+    list-style: none;
+    margin-bottom: 24px
+}
+
+.eladrousi-jobdetail-services i {
+    font-size: 32px;
+    color: #ffa000;
+    float: left;
+    padding-top: 10px
+}
+
+.eladrousi-jobdetail-services .eladrousi-services-text {
+    padding-left: 53px;
+    color: #666
+}
+
+.eladrousi-jobdetail-services small {
+    display: block;
+    font-size: 14px;
+    line-height: 1
+}
+
+.eladrousi-description {
+    float: left;
+    width: 100%;
+    margin-bottom: 23px
+}
+
+.eladrousi-description p {
+    font-size: 15px;
+    margin-bottom: 0;
+    font-weight: 300
+}
+
+.eladrousi-list-style-icon {
+    margin-top: 10px
+}
+
+.eladrousi-jobdetail-joblisting {
+    margin-bottom: 40px
+}
+
+.eladrousi-list-style-icon,
+.eladrousi-list-style-icon li {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-list-style-icon li {
+    list-style: none;
+    color: #333;
+    font-weight: 300;
+    font-size: 15px;
+    margin-bottom: 5px
+}
+
+.eladrousi-list-style-icon li i {
+    margin: 8px 15px 0 0;
+    color: #ffa000;
+    float: left;
+    font-size: 13px
+}
+
+.eladrousi-jobdetail-tags {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-jobdetail-tags a {
+    float: left;
+    padding: 10px 14px;
+    background-color: #eaeaea;
+    border-radius: 20px;
+    line-height: 1;
+    margin: 10px 14px 0 0;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-jobdetail-tags a:hover {
+    background-color: #ffa000;
+    color: #fff
+}
+
+.eladrousi-section-title {
+    float: left;
+    width: 100%;
+    margin-bottom: 8px
+}
+
+.eladrousi-main-content .widget {
+    float: left;
+    width: 100%;
+    margin-bottom: 30px
+}
+
+.widget_apply_job_wrap {
+    float: left;
+    width: 100%;
+    padding: 19px;
+    border: 1px solid #efefef;
+    text-align: center
+}
+
+.eladrousi-typo-wrap .eladrousi-applyjob-btn:hover,
+.eladrousi-typo-wrap .eladrousi-sendmessage-btn:hover {
+    color: #fff
+}
+
+.eladrousi-applyjob-btn {
+    float: left;
+    width: 100%;
+    background-color: #53b427;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 16px 10px 17px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 12px
+}
+
+.widget_apply_job span {
+    display: block;
+    color: #ffa000;
+    font-weight: 500;
+    margin-bottom: 15px
+}
+
+.eladrousi-applywith-title {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 8px
+}
+
+.eladrousi-applywith-title small {
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500
+}
+
+.eladrousi-applywith-title small:before,
+.eladrousi-applywith-title small:after {
+    background-color: #efefef;
+    content: "";
+    height: 1px;
+    left: 100%;
+    margin: 11px 0 0 10px;
+    position: absolute;
+    top: 0%;
+    width: 9999px
+}
+
+.eladrousi-applywith-title small:after {
+    left: auto;
+    margin: 11px 10px 0 0;
+    right: 100%
+}
+
+.widget_apply_job_wrap p {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 21px
+}
+
+.widget_apply_job ul {
+    float: left;
+    width: 100%
+}
+
+.widget_apply_job ul li {
+    float: left;
+    list-style: none;
+    padding: 0 10px 10px;
+    width: 50%
+}
+
+.widget_apply_job ul li:first-child {
+    padding-left: 0
+}
+
+.widget_apply_job ul li:last-child {
+    padding-right: 0
+}
+
+.widget_apply_job ul li a {
+    float: left;
+    width: 100%;
+    background-color: #3b5998;
+    padding: 9px 17px 5px;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    text-align: center
+}
+
+.eladrousi-typo-wrap .widget_apply_job ul li a:hover {
+    color: #fff
+}
+
+.widget_apply_job ul li a i {
+    display: inline-block;
+    margin: 2px 6px 0 0;
+    font-size: 18px
+}
+
+.widget_apply_job ul li:last-child a {
+    background-color: #007ab9
+}
+
+.eladrousi-sendmessage-btn {
+    float: left;
+    width: 100%;
+    background-color: #ffb14a;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 16px 10px 17px;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 12px
+}
+
+.eladrousi-sendmessage-btn i {
+    font-size: 25px;
+    margin: 0 6px 0 0;
+    display: inline-block;
+    vertical-align: sub
+}
+
+.jobsearch_widget_map iframe {
+    float: left;
+    width: 100%;
+    height: 406px
+}
+
+.widget_add img {
+    width: 100%
+}
+
+.eladrousi-widget-title {
+    float: left;
+    width: 100%;
+    margin-bottom: 17px
+}
+
+.eladrousi-widget-title h2 {
+    font-size: 20px;
+    margin-bottom: 0
+}
+
+.widget_view_jobs ul {
+    float: left;
+    width: 100%;
+    padding: 20px 24px 0;
+    border: 1px solid #efefef
+}
+
+.widget_view_jobs ul li {
+    float: left;
+    width: 100%;
+    list-style: none;
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 18px;
+    margin-bottom: 20px
+}
+
+.widget_view_jobs ul li span {
+    margin-bottom: 6px
+}
+
+.widget_view_jobs ul li span,
+.widget_view_jobs ul li small {
+    display: block;
+    font-size: 12px;
+    line-height: 1
+}
+
+.widget_view_jobs ul li:last-child {
+    border-bottom: none;
+    padding-bottom: 0
+}
+
+.widget_view_jobs_btn {
+    float: left;
+    width: 100%;
+    background-color: #fafcfc;
+    padding: 18px 20px;
+    text-align: center;
+    color: #ffa000;
+    border: 1px solid #efefef;
+    border-top: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1
+}
+
+.widget_view_jobs_btn i {
+    display: inline-block;
+    font-size: 11px;
+    vertical-align: middle;
+    margin: -1px 0 0 3px
+}
+
+.eladrousi-employer {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-employer ul li {
+    list-style: none
+}
+
+.eladrousi-employer>ul>li {
+    margin-bottom: 30px
+}
+
+.eladrousi-employer-list .eladrousi-table-cell {
+    vertical-align: middle
+}
+
+.eladrousi-employer-list figure a,
+.eladrousi-employer-list figure img {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-employer-list figure {
+    float: left;
+    width: 80px;
+    margin-bottom: 0
+}
+
+.eladrousi-employer-list small {
+    font-size: 12px;
+    color: #ffa000
+}
+
+.eladrousi-employer-list h2 {
+    margin-bottom: 0;
+    line-height: 1;
+    font-size: 18px
+}
+
+.eladrousi-employer-list span {
+    font-size: 12px;
+    color: #999
+}
+
+.eladrousi-employer-list span i {
+    margin-right: 4px
+}
+
+.eladrousi-employer-thumblist {
+    float: left;
+    margin: 0
+}
+
+.eladrousi-employer-thumblist li {
+    float: left;
+    width: 33px;
+    list-style: none;
+    margin-left: -9px
+}
+
+.eladrousi-employer-thumblist li a,
+.eladrousi-employer-thumblist li img {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-employer-thumblist li img {
+    border-radius: 100%;
+    border: 2px solid #fff
+}
+
+.eladrousi-employer-thumblist-size {
+    display: inline-block;
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
+    margin-left: 13px
+}
+
+.eladrousi-employer-list-btn {
+    float: right;
+    padding: 9px 16px;
+    border: 1px solid #ffa000;
+    color: #ffa000;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 4px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-employer-list-btn:hover {
+    background-color: #ffa000;
+    color: #fff
+}
+
+.eladrousi-employer-list .eladrousi-table-layer {
+    padding: 20px;
+    border: 1px solid #ececec
+}
+
+.eladrousi-employer-grid-wrap,
+.eladrousi-employer-grid figure {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-employer-grid-wrap {
+    border: 1px solid #ececec;
+    padding: 20px 20px 18px
+}
+
+.eladrousi-employer-grid figure {
+    margin: 0 0 25px
+}
+
+.eladrousi-employer-grid-image {
+    float: left;
+    width: 60px
+}
+
+.eladrousi-employer-grid .eladrousi-employer-grid-image~figcaption {
+    margin-left: 75px
+}
+
+.eladrousi-employer-grid figcaption {
+    line-height: 1
+}
+
+.eladrousi-employer-grid figcaption small {
+    display: inline-block;
+    font-size: 12px;
+    color: #ffa000;
+    margin-bottom: 5px
+}
+
+.eladrousi-employer-grid figcaption h2 {
+    font-size: 15px;
+    margin-bottom: 7px;
+    line-height: 1
+}
+
+.eladrousi-employer-grid figcaption span {
+    font-size: 12px;
+    color: #999
+}
+
+.eladrousi-employer-grid .eladrousi-employer-thumblist {
+    margin-left: 9px
+}
+
+.eladrousi-employer-grid .eladrousi-employer-thumblist-size {
+    margin-top: 3px
+}
+
+.eladrousi-employer-grid-btn {
+    float: left;
+    width: 100%;
+    border: 1px solid #ececec;
+    border-top: none;
+    background-color: #fcfcfc;
+    color: #ffa000;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    padding: 11px 7px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+ul li:hover .eladrousi-employer-grid-btn {
+    background-color: #ffa000;
+    color: #fff
+}
+
+.eladrousi-rating-info {
+    display: inline-block;
+    font-size: 18px;
+    color: #ffaf00;
+    vertical-align: super;
+    margin-right: 4px
+}
+
+.eladrousi-rating {
+    display: inline-block;
+    height: 22px;
+    position: relative;
+    width: 122px
+}
+
+.eladrousi-rating:before,
+.eladrousi-rating-box:before {
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 122px;
+    height: 22px;
+    background: url(../images/rating-star.png)
+}
+
+.eladrousi-rating-box:before {
+    content: "";
+    background-position: 0 100%
+}
+
+.eladrousi-rating-box {
+    height: 22px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0
+}
+
+.eladrousi-employerdetail-btn {
+    float: left;
+    color: #ffa000;
+    font-weight: 500;
+    padding: 13px 15px;
+    line-height: 1;
+    border: 1px solid #ffa000;
+    margin-right: 9px;
+    font-size: 14px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-employerdetail-btn:hover {
+    background-color: #ffa000;
+    color: #fff
+}
+
+.eladrousi-employerdetail-btn i {
+    font-size: 12px;
+    margin-right: 4px
+}
+
+.eladrousi-add-space {
+    margin-top: 6px
+}
+
+.eladrousi-employerdetail-content {
+    padding: 30px 30px 0;
+    margin-bottom: 0
+}
+
+.eladrousi-employerdetail-content .eladrousi-jobdetail-services .eladrousi-services-text {
+    font-weight: 500
+}
+
+.eladrousi-employerdetail-content .eladrousi-jobdetail-services small {
+    font-weight: 400
+}
+
+.eladrousi-employer-wrap-section {
+    float: left;
+    width: 100%;
+    border: 1px solid #efefef;
+    border-top: none;
+    padding: 27px 29px 15px
+}
+
+.eladrousi-gallery,
+.eladrousi-simple-gallery ul li a,
+.eladrousi-simple-gallery ul li a img {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-simple-gallery ul li {
+    list-style: none;
+    margin-bottom: 20px
+}
+
+.eladrousi-simple-gallery ul li a {
+    border: 1px solid #efefef
+}
+
+.eladrousi-simple-gallery ul.eladrousi-row {
+    margin: 0 -10px
+}
+
+.eladrousi-simple-gallery ul li[class*=eladrousi-column-] {
+    padding: 0 10px
+}
+
+.eladrousi-addmore-space {
+    margin-bottom: 23px
+}
+
+.eladrousi-company-review,
+.eladrousi-company-review figure,
+.company-review-thumb img,
+.eladrousi-company-review-text {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-company-review ul li {
+    list-style: none
+}
+
+.eladrousi-company-review>ul>li {
+    margin-bottom: 30px
+}
+
+.eladrousi-company-review figure {
+    margin-bottom: 17px
+}
+
+.company-review-thumb img {
+    border-radius: 100%
+}
+
+.eladrousi-company-review-left h6 a {
+    color: #666
+}
+
+.eladrousi-company-review-text h6 a {
+    color: #666
+}
+
+.eladrousi-company-review ul li:last-child {
+    margin-bottom: 0
+}
+
+.eladrousi-company-review-text h6 {
+    margin-bottom: 4px
+}
+
+.eladrousi-margin-bottom {
+    margin-bottom: 25px
+}
+
+.company-review-thumb {
+    float: left;
+    width: 60px
+}
+
+.company-review-thumb~figcaption {
+    margin-left: 84px;
+    padding-top: 7px
+}
+
+.eladrousi-company-review-left {
+    float: left
+}
+
+.eladrousi-company-review-left h6 {
+    font-size: 18px;
+    margin-bottom: 6px;
+    line-height: 1
+}
+
+.eladrousi-company-review figure figcaption time {
+    float: right;
+    font-size: 14px;
+    color: #666;
+    margin-top: 2px
+}
+
+.eladrousi-company-rating {
+    display: inline-block;
+    height: 14px;
+    line-height: 10px;
+    position: relative;
+    width: 85px
+}
+
+.eladrousi-company-rating:before,
+.eladrousi-company-rating-box:before {
+    color: #f1f2f2;
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: FontAwesome;
+    font-size: 14px;
+    left: 0;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 0
+}
+
+.eladrousi-company-rating-box:before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: #ffaf00
+}
+
+.eladrousi-company-rating-box {
+    height: 14px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0
+}
+
+.eladrousi-company-review-left small {
+    display: inline-block;
+    font-size: 14px;
+    color: #ffaf00;
+    line-height: 1;
+    vertical-align: super;
+    margin-left: 7px
+}
+
+.eladrousi-company-review-text {
+    border-bottom: 1px dashed #efefef;
+    padding-bottom: 11px
+}
+
+.eladrousi-company-review ul li:last-child .eladrousi-company-review-text {
+    padding-bottom: 0;
+    border-bottom: none
+}
+
+.widget_contact_form form,
+.widget_contact_form input[type=text],
+.widget_contact_form ul,
+.widget_contact_form ul li,
+.widget_contact_form p,
+.widget_contact_form textarea,
+.widget_contact_form input[type=submit] {
+    float: left;
+    width: 100%
+}
+
+.widget_contact_form form {
+    border: 1px solid #efefef;
+    padding: 15px 24px 8px
+}
+
+.widget_contact_form ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    position: relative
+}
+
+.widget_contact_form input[type=text] {
+    height: 42px;
+    border: 1px solid #efefef;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #999;
+    background-color: #fff;
+    padding: 6px 14px
+}
+
+.widget_contact_form textarea {
+    height: 154px;
+    border: 1px solid #efefef;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #999;
+    background-color: #fff;
+    padding: 6px 14px;
+    margin-bottom: 5px
+}
+
+.widget_contact_form label {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 3px
+}
+
+.widget_contact_form i {
+    position: absolute;
+    right: 14px;
+    bottom: 12px;
+    color: #aaa;
+    font-size: 17px
+}
+
+.widget_contact_form input[type=submit] {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    padding: 14px 10px 13px;
+    border-radius: 3px;
+    border: none;
+    background-color: #ffa000;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1;
+    margin: 10px 0 8px
+}
+
+.widget_contact_form p {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    margin-bottom: 0
+}
+
+.eladrousi-employer-dashboard-nav,
+.eladrousi-employer-dashboard-nav figure,
+.eladrousi-employer-dashboard-nav ul li a,
+.eladrousi-employer-dashboard-nav ul,
+.eladrousi-employer-dashboard-nav ul li {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-employer-dashboard-nav {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .08);
+    padding: 30px 0 0;
+    margin-bottom: 50px
+}
+
+.eladrousi-employer-dashboard-nav figure {
+    text-align: center;
+    margin-bottom: 10px
+}
+
+.employer-dashboard-thumb {
+    border: 1px solid #efefef;
+    width: 140px;
+    height: 140px;
+    display: inline-block;
+    border-radius: 100%;
+    padding: 3px;
+    margin-bottom: 22px
+}
+
+.employer-dashboard-thumb img {
+    border-radius: 100%
+}
+
+.eladrousi-dashboard-subtitle {
+    display: block;
+    font-size: 14px;
+    color: #4e565d;
+    line-height: 1;
+    margin-bottom: 13px
+}
+
+.eladrousi-fileUpload {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 12px
+}
+
+.eladrousi-fileUpload span {
+    float: left;
+    padding: 11px 13px;
+    line-height: 1;
+    color: #ffa000;
+    font-size: 12px;
+    border: 1px solid #ffa000;
+    border-radius: 40px;
+    font-weight: 500;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-fileUpload span i {
+    font-size: 13px;
+    margin-right: 3px
+}
+
+.eladrousi-fileUpload:hover span {
+    color: #fff;
+    background-color: #ffa000
+}
+
+.eladrousi-fileUpload input.eladrousi-upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0)
+}
+
+.eladrousi-employer-dashboard-nav figcaption h2 {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #333
+}
+
+.eladrousi-employer-dashboard-nav ul li {
+    list-style: none;
+    border-top: 1px solid #eceeef
+}
+
+.eladrousi-employer-dashboard-nav ul li a {
+    padding: 16px 24px;
+    line-height: 1;
+    color: #333;
+    font-size: 16px;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-employer-dashboard-nav ul li i {
+    color: #aaa;
+    display: inline-block;
+    margin: -1px 14px 0 0;
+    font-size: 20px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-employer-dashboard-nav ul li:hover i,
+.eladrousi-employer-dashboard-nav ul li.active i,
+.eladrousi-employer-dashboard-nav ul li:hover a,
+.eladrousi-employer-dashboard-nav ul li.active a {
+    color: #ffa000
+}
+
+.eladrousi-employer-dashboard-nav ul li:hover a,
+.eladrousi-employer-dashboard-nav ul li.active a {
+    background-color: #f7f7f7
+}
+
+.eladrousi-employer-dashboard-nav ul li:last-child a {
+    border: none
+}
+
+.eladrousi-employer-box-section {
+    float: left;
+    width: 100%;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .08);
+    padding: 30px 30px 18px;
+    margin-bottom: 30px
+}
+
+.eladrousi-profile-title {
+    float: left;
+    width: 100%;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #efefef
+}
+
+.eladrousi-profile-title h2 {
+    margin-top: 8px;
+    margin-bottom: 17px;
+    line-height: 1;
+    font-size: 22px;
+    color: #ffa000;
+    font-weight: 400;
+    float: left
+}
+
+.eladrousi-employer-profile-form li {
+    list-style: none;
+    margin-bottom: 18px;
+    line-height: 28px
+}
+
+.eladrousi-employer-profile-form label {
+    font-size: 14px;
+    margin-bottom: 13px;
+    font-weight: 500;
+    color: #333;
+    float: left;
+    width: 100%;
+    line-height: 1
+}
+
+.eladrousi-employer-profile-form li input[type=text],
+.eladrousi-employer-profile-form li input[type=password],
+.eladrousi-employer-profile-form li textarea,
+.eladrousi-employer-profile-form li input[type=email],
+.eladrousi-employer-profile-form li input[type=number] {
+    float: left;
+    width: 100%;
+    height: 41px;
+    border: 1px solid #eceeef;
+    border-radius: 2px;
+    background-color: #fff;
+    padding: 6px 13px;
+    margin: 0;
+    font-size: 12px;
+    color: #777
+}
+
+.eladrousi-employer-profile-form li textarea {
+    height: 147px;
+    line-height: 26px
+}
+
+.eladrousi-profile-select select {
+    padding: 8px 14px;
+    width: 100%;
+    background: #fff;
+    color: #777;
+    height: 41px;
+    border: 1px solid #f2f2f2;
+    font-size: 12px;
+    font-weight: 400;
+    outline: none;
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer
+}
+
+.eladrousi-profile-select select option {
+    padding: 8px 18px
+}
+
+.eladrousi-profile-select {
+    position: relative;
+    float: left;
+    width: 100%
+}
+
+.eladrousi-profile-select:after {
+    content: "\e964";
+    font-family: icomoon;
+    color: #aaa;
+    right: 15px;
+    top: 6px;
+    position: absolute;
+    pointer-events: none
+}
+
+.eladrousi-employer-profile-form.eladrousi-row {
+    margin: 0 -10px
+}
+
+.eladrousi-employer-profile-form [class*=eladrousi-column-] {
+    padding: 0 10px;
+    float: none;
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: bottom
+}
+
+.eladrousi-typo-wrap .eladrousi-findmap-btn {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: #ffa000;
+    padding: 12px 5px 13px;
+    line-height: 1;
+    border-radius: 2px;
+    border: 1px solid #ffa000;
+    background-color: transparent
+}
+
+.eladrousi-typo-wrap button,
+.eladrousi-typo-wrap input[type=button],
+.eladrousi-typo-wrap input[type=submit] {
+    font-weight: 400
+}
+
+.eladrousi-profile-map {
+    float: left;
+    width: 100%;
+    margin: 18px 0 6px
+}
+
+.eladrousi-profile-map iframe {
+    height: 206px
+}
+
+.eladrousi-short-message {
+    color: #777;
+    font-size: 12px
+}
+
+.eladrousi-field-loader {
+    position: absolute;
+    right: 15px;
+    top: 7px;
+    background-color: #fff;
+    z-index: 7;
+    color: #aaa
+}
+
+.eladrousi-company-photo {
+    float: left;
+    width: 100%;
+    background-color: #f6f7f9;
+    border: 1px dashed #b8c0cc;
+    text-align: center;
+    padding: 60px 20px 51px;
+    margin-bottom: 12px
+}
+
+.eladrousi-company-photo img {
+    margin-bottom: 16px
+}
+
+.eladrousi-company-photo h2 {
+    font-size: 18px;
+    color: #666f80;
+    margin-bottom: 5px;
+    line-height: 1;
+    display: block
+}
+
+.eladrousi-company-photo small {
+    font-size: 10px;
+    color: #999;
+    display: block;
+    margin-bottom: 13px
+}
+
+.eladrousi-company-photo .eladrousi-fileUpload span {
+    background-color: #ffa000;
+    border: 1px solid #0585af;
+    border-radius: 4px;
+    color: #fff
+}
+
+.eladrousi-typo-wrap .eladrousi-employer-profile-submit {
+    float: left;
+    background-color: #ffa000;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 4px;
+    padding: 13px 24px;
+    line-height: 1;
+    border: 1px solid #ffa000
+}
+
+.eladrousi-typo-wrap .main-tab-section .eladrousi-employer-profile-submit:hover {
+    background-color: transparent;
+    color: #ffa000
+}
+
+.eladrousi-typo-wrap button,
+.eladrousi-typo-wrap input[type=button],
+.eladrousi-typo-wrap input[type=submit] {
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-typo-wrap button:hover,
+.eladrousi-typo-wrap button:focus,
+.eladrousi-typo-wrap input[type=button]:hover,
+.eladrousi-typo-wrap input[type=button]:focus,
+.eladrousi-typo-wrap input[type=submit]:hover,
+.eladrousi-typo-wrap input[type=submit]:focus {
+    background-color: #ffa000;
+    color: #fff
+}
+
+.eladrousi-employer-dasboard {
+    float: left;
+    width: 100%;
+    margin-bottom: 50px
+}
+
+.eladrousi-company-gallery,
+.eladrousi-company-gallery figure>a,
+.eladrousi-company-gallery figure>a img,
+.eladrousi-company-gallery figcaption {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-company-gallery ul {
+    margin: 0 -10px
+}
+
+.eladrousi-company-gallery ul li {
+    list-style: none;
+    padding: 0 10px;
+    margin-bottom: 20px
+}
+
+.eladrousi-company-gallery figcaption span {
+    font-size: 12px;
+    color: #666;
+    float: left;
+    line-height: 1
+}
+
+.eladrousi-company-gallery figure>a {
+    padding: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1)
+}
+
+.eladrousi-company-links {
+    float: right
+}
+
+.eladrousi-company-gallery figcaption {
+    padding-top: 13px
+}
+
+.eladrousi-company-links a {
+    float: left;
+    font-size: 11px;
+    color: #ff6d4a;
+    margin-left: 10px
+}
+
+.eladrousi-employer-search {
+    float: right;
+    width: 35%;
+    position: relative;
+    margin-bottom: 15px
+}
+
+.eladrousi-employer-search input[type=text] {
+    float: left;
+    width: 100%;
+    height: 32px;
+    font-size: 12px;
+    color: #b8bcbe;
+    padding: 6px 12px;
+    border: 1px solid #dfe2e3;
+    background-color: #fff
+}
+
+.eladrousi-employer-search input[type=submit] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    z-index: 2
+}
+
+.eladrousi-employer-search i {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    z-index: 1;
+    color: #bbc4c9
+}
+
+.eladrousi-managejobs-list {
+    float: left;
+    width: 100%;
+    margin-bottom: 40px
+}
+
+.eladrousi-managejobs-thead {
+    background-color: #f2f2f2
+}
+
+.eladrousi-managejobs-list .eladrousi-table-cell:first-child {
+    width: 49%;
+    padding-left: 15px
+}
+
+.eladrousi-managejobs-list .eladrousi-table-cell:nth-child(3) {
+    text-align: center
+}
+
+.eladrousi-managejobs-list .eladrousi-table-cell {
+    width: 13%;
+    padding: 10px 0
+}
+
+.eladrousi-managejobs-list ul li a {
+    color: #999
+}
+
+.eladrousi-managejobs-tbody .eladrousi-table-cell {
+    vertical-align: middle
+}
+
+.eladrousi-managejobs-list h6 {
+    margin-bottom: 0
+}
+
+.eladrousi-managejobs-option {
+    font-size: 13px;
+    color: #fcd116
+}
+
+.eladrousi-managejobs-option.active {
+    color: #53b427
+}
+
+.eladrousi-managejobs-option.expired {
+    color: #e81123
+}
+
+.eladrousi-managejobs-tbody {
+    border-bottom: 1px solid #ececec
+}
+
+.eladrousi-managejobs-tbody:nth-child(odd) {
+    background-color: #fafcfc
+}
+
+.eladrousi-managejobs-links a.eladrousi-view {
+    font-size: 20px
+}
+
+.eladrousi-managejobs-links a.eladrousi-edit {
+    color: #aaa
+}
+
+.eladrousi-managejobs-links a.eladrousi-rubbish {
+    color: #ff6d4a
+}
+
+.eladrousi-managejobs-links a:first-child {
+    margin-left: 0
+}
+
+.eladrousi-employer-box-section .eladrousi-pagination-blog {
+    margin: 0
+}
+
+.eladrousi-managejobs-thead .eladrousi-table-cell {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500
+}
+
+.eladrousi-managejobs-list ul {
+    margin: 0;
+    float: left;
+    width: 100%
+}
+
+.eladrousi-managejobs-list ul li {
+    float: left;
+    list-style: none;
+    font-size: 12px;
+    color: #999;
+    margin-right: 14px;
+    line-height: 28px
+}
+
+.eladrousi-managejobs-list ul li span {
+    color: #666;
+    font-weight: 500
+}
+
+.eladrousi-managejobs-list ul li i {
+    float: left;
+    font-size: 11px;
+    color: #aaa;
+    margin: 8px 7px 0 0
+}
+
+.eladrousi-managejobs-appli {
+    color: #ffa000;
+    font-size: 12px
+}
+
+.eladrousi-managejobs-links a {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #77eb9f;
+    margin-left: 10px
+}
+
+.eladrousi-employer-transactions {
+    float: left;
+    width: 100%;
+    margin-bottom: 40px
+}
+
+.eladrousi-transactions-thead {
+    background-color: #f2f2f2
+}
+
+.eladrousi-transactions-thead .eladrousi-table-cell:nth-child(2) {
+    width: 22%
+}
+
+.eladrousi-transactions-thead .eladrousi-table-cell:nth-child(5) {
+    width: 18%
+}
+
+.eladrousi-transactions-thead .eladrousi-table-cell {
+    width: 15%
+}
+
+.eladrousi-transactions-tbody .eladrousi-table-cell:nth-child(2) {
+    width: 22%
+}
+
+.eladrousi-transactions-tbody .eladrousi-table-cell:nth-child(5) {
+    width: 18%
+}
+
+.eladrousi-transactions-tbody .eladrousi-table-cell {
+    width: 15%
+}
+
+.eladrousi-transactions-tbody {
+    border-bottom: 1px solid #ececec
+}
+
+.eladrousi-transactions-tbody:nth-child(odd) {
+    background-color: #fafcfc
+}
+
+.eladrousi-transactions-tbody i.eladrousi-transactions-pending {
+    color: #fbba43
+}
+
+.eladrousi-transactions-thead .eladrousi-table-cell {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 9px 16px
+}
+
+.eladrousi-transactions-tbody .eladrousi-table-cell {
+    padding: 9px 16px;
+    font-size: 12px;
+    color: #999
+}
+
+.eladrousi-transactions-tbody span {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500
+}
+
+.eladrousi-transactions-tbody small {
+    color: #ffa000;
+    font-size: 12px
+}
+
+.eladrousi-transactions-tbody i {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 8px;
+    margin-right: 7px;
+    color: #3dbf4f
+}
+
+.eladrousi-employer-packages {
+    float: left;
+    width: 100%;
+    margin-bottom: 40px
+}
+
+.eladrousi-packages-thead {
+    background-color: #f2f2f2
+}
+
+.eladrousi-packages-thead .eladrousi-table-cell:nth-child(3) {
+    width: 19%
+}
+
+.eladrousi-packages-thead .eladrousi-table-cell:nth-child(6) {
+    width: 16%
+}
+
+.eladrousi-packages-thead .eladrousi-table-cell {
+    width: 13%
+}
+
+.eladrousi-packages-tbody .eladrousi-table-cell:nth-child(3) {
+    width: 19%
+}
+
+.eladrousi-packages-tbody .eladrousi-table-cell:nth-child(6) {
+    width: 16%
+}
+
+.eladrousi-packages-tbody .eladrousi-table-cell {
+    width: 13%
+}
+
+.eladrousi-packages-tbody {
+    border-bottom: 1px solid #ececec
+}
+
+.eladrousi-packages-tbody:nth-child(odd) {
+    background-color: #fafcfc
+}
+
+.eladrousi-packages-tbody i.eladrousi-packages-pending {
+    color: #fbba43
+}
+
+.eladrousi-packages-thead .eladrousi-table-cell {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 9px 16px
+}
+
+.eladrousi-packages-tbody .eladrousi-table-cell {
+    padding: 9px 16px;
+    font-size: 12px;
+    color: #999
+}
+
+.eladrousi-packages-tbody span {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500
+}
+
+.eladrousi-packages-tbody i {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 8px;
+    margin-right: 7px;
+    color: #3dbf4f
+}
+
+.eladrousi-employer-resumes,
+.eladrousi-employer-resumes-wrap,
+.eladrousi-employer-resumes figure,
+.eladrousi-resumes-options {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-employer-resumes {
+    margin-bottom: 20px
+}
+
+.eladrousi-employer-resumes>ul {
+    margin: 0 -10px
+}
+
+.eladrousi-employer-resumes>ul>li {
+    padding: 0 10px
+}
+
+.eladrousi-employer-resumes ul li {
+    list-style: none
+}
+
+.eladrousi-employer-resumes>ul>li {
+    margin-bottom: 20px
+}
+
+.eladrousi-employer-resumes-wrap {
+    border: 1px solid #ececec
+}
+
+.eladrousi-resumes-thumb img {
+    border-radius: 100%
+}
+
+.eladrousi-employer-resumes figure {
+    padding: 18px 18px 2px
+}
+
+.eladrousi-resumes-download i {
+    margin-right: 3px
+}
+
+.eladrousi-resumes-subtitle a {
+    color: #ffa000
+}
+
+.eladrousi-employer-resumes figcaption ul li:first-child {
+    padding-left: 0
+}
+
+.eladrousi-resumes-options {
+    border-top: 1px solid #ececec
+}
+
+.eladrousi-resumes-options li:first-child {
+    border-left: none
+}
+
+.eladrousi-employer-resumes .eladrousi-resumes-thumb~figcaption {
+    margin-left: 62px;
+    margin-top: 2px
+}
+
+.eladrousi-employer-resumes .eladrousi-resumes-thumb {
+    float: left;
+    width: 48px
+}
+
+.eladrousi-employer-resumes figcaption h2 {
+    margin-bottom: 0;
+    font-size: 16px;
+    display: block;
+    line-height: 1
+}
+
+.eladrousi-resumes-download {
+    float: right;
+    color: #3abd69;
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: 2px
+}
+
+.eladrousi-resumes-subtitle {
+    display: block;
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 6px
+}
+
+.eladrousi-employer-resumes figcaption ul {
+    display: inline-block;
+    width: 100%;
+    margin: 0
+}
+
+.eladrousi-employer-resumes figcaption ul li {
+    float: left;
+    width: 50%;
+    font-size: 12px;
+    color: #999;
+    line-height: 1;
+    padding-left: 20px;
+    margin-bottom: 10px
+}
+
+.eladrousi-employer-resumes figcaption ul li span {
+    display: block;
+    font-size: 12px;
+    color: #555;
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 7px
+}
+
+.eladrousi-resumes-options li {
+    float: left;
+    width: 33.333%;
+    line-height: 1;
+    border-left: 1px solid #ececec
+}
+
+.eladrousi-resumes-options li a {
+    background-color: #fcfcfc;
+    float: left;
+    width: 100%;
+    padding: 16px 9px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    font-weight: 400;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-resumes-options li:hover a {
+    background-color: #ffa000;
+    color: #fff
+}
+
+.eladrousi-resumes-options li a i {
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: sub;
+    margin: 0 5px 0 0
+}
+
+.eladrousi-employer-jobnav {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 40px
+}
+
+.eladrousi-employer-jobnav ul {
+    display: inline-block;
+    margin: 0
+}
+
+.eladrousi-employer-jobnav ul li {
+    float: left;
+    list-style: none;
+    line-height: 1;
+    position: relative;
+    margin-bottom: 20px
+}
+
+.eladrousi-employer-jobnav ul li:before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    background-color: #d4d4d4;
+    width: 100%;
+    height: 3px;
+    margin-top: -19px;
+    z-index: 1
+}
+
+.eladrousi-employer-jobnav ul li.active~li:nth-child(2):after {
+    content: '';
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    background-color: #ffa000;
+    width: 80%;
+    height: 3px;
+    margin-top: -19px;
+    z-index: 1
+}
+
+.eladrousi-employer-jobnav ul li.active:nth-child(2):after {
+    content: '';
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    background-color: #ffa000;
+    width: 80%;
+    height: 3px;
+    margin-top: -19px;
+    z-index: 1
+}
+
+.eladrousi-employer-jobnav ul li.active:nth-child(3):after {
+    content: '';
+    position: absolute;
+    left: -120px;
+    top: 50%;
+    background-color: #ffa000;
+    width: 150%;
+    height: 3px;
+    margin-top: -19px;
+    z-index: 1
+}
+
+.eladrousi-employer-jobnav ul li:last-child:before {
+    left: -15px
+}
+
+.eladrousi-employer-jobnav ul li:first-child a {
+    padding-left: 0
+}
+
+.eladrousi-employer-jobnav ul li:last-child a {
+    padding-right: 0
+}
+
+.eladrousi-employer-jobnav ul li a {
+    float: left;
+    padding: 0 50px;
+    position: relative;
+    z-index: 2
+}
+
+.eladrousi-employer-jobnav ul li:hover i,
+.eladrousi-employer-jobnav ul li.active i {
+    background-color: #ffa000
+}
+
+.eladrousi-employer-jobnav ul li i {
+    display: inline-block;
+    width: 66px;
+    height: 66px;
+    color: #fff;
+    background-color: #d4d4d4;
+    font-size: 36px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .05);
+    padding-top: 13px;
+    margin-bottom: 20px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-employer-jobnav ul li span {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500
+}
+
+.eladrousi-employer-payments {
+    float: left;
+    width: 100%;
+    margin-bottom: 43px
+}
+
+.eladrousi-employer-payments h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 23px
+}
+
+.eladrousi-employer-payments table>thead>tr>th,
+.eladrousi-employer-payments table>tbody>tr>th,
+.eladrousi-employer-payments table>tfoot>tr>th,
+.eladrousi-employer-payments table>thead>tr>td,
+.eladrousi-employer-payments table>tbody>tr>td,
+.eladrousi-employer-payments table>tfoot>tr>td {
+    border: none;
+    text-align: left;
+    vertical-align: middle
+}
+
+.eladrousi-typo-wrap table>thead>tr>th,
+.eladrousi-typo-wrap table>tbody>tr>th,
+.eladrousi-typo-wrap table>tfoot>tr>th,
+.eladrousi-typo-wrap table>thead>tr>td,
+.eladrousi-typo-wrap table>tbody>tr>td,
+.eladrousi-typo-wrap table>tfoot>tr>td {
+    line-height: 2.5
+}
+
+.eladrousi-employer-payments table th {
+    padding: 4px 15px
+}
+
+.eladrousi-employer-payments table>thead {
+    background-color: #f2f2f2
+}
+
+.eladrousi-employer-payments table th {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500
+}
+
+.eladrousi-employer-payments table tr {
+    border-bottom: 1px solid #ececec
+}
+
+.eladrousi-employer-payments table tr:nth-child(even) {
+    background-color: #fafcfc
+}
+
+.eladrousi-employer-payments table td {
+    padding: 5px 15px;
+    font-size: 12px;
+    color: #999
+}
+
+.eladrousi-employer-payments table td span {
+    color: #333;
+    font-weight: 500;
+    font-size: 14px
+}
+
+
+.eladrousi-payment-method-wrap {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #e8eef2;
+    padding: 0 22px 15px 0;
+    margin-bottom: 23px
+}
+
+.eladrousi-payment-method-wrap a {
+    float: left;
+    margin: 0 10px 10px 0
+}
+
+.eladrousi-payment-method-wrap i {
+    float: right;
+    color: #45c386;
+    font-size: 29px
+}
+
+.eladrousi-payment-method-wrap.eladrousi-light i {
+    color: #f2f2f2
+}
+
+.eladrousi-employer-confitmation {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 55px
+}
+
+.eladrousi-employer-confitmation img {
+    margin-bottom: 32px
+}
+
+.eladrousi-employer-confitmation h2 {
+    font-size: 36px;
+    color: #666f80;
+    margin-bottom: 15px;
+    line-height: 1
+}
+
+.eladrousi-employer-confitmation p {
+    line-height: 24px;
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 90%
+}
+
+.eladrousi-employer-confitmation a {
+    display: inline-block;
+    padding: 11px 22px 12px;
+    font-size: 12px;
+    color: #ffa000;
+    border: 1px solid #ffa000;
+    border-radius: 3px;
+    line-height: 1;
+    margin: 0 6px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+
+.eladrousi-candidate,
+.eladrousi-candidate-default-wrap,
+.eladrousi-candidate-default figure a,
+.eladrousi-candidate-default figure img {
+    float: left;
+    width: 100%
+}
+
+
+.eladrousi-candidate ul li {
+    list-style: none
+}
+
+.eladrousi-candidate>ul>li {
+    margin-bottom: 20px
+}
+
+.eladrousi-candidate-default {
+    margin-bottom: 20px
+}
+
+.eladrousi-candidate-default figure img {
+    border-radius: 100%
+}
+
+.eladrousi-candidate-default figure~.eladrousi-candidate-default-text {
+    margin-left: 98px;
+    padding-top: 17px
+}
+
+.eladrousi-candidate-default-left {
+    float: left
+}
+
+.eladrousi-candidate-default-text ul {
+    margin: 0
+}
+
+.eladrousi-candidate-default-text ul li a.eladrousi-candidate-default-studio {
+    color: #ffa000
+}
+
+.eladrousi-candidate-default-text ul li a {
+    color: #999
+}
+
+.eladrousi-candidate-default-btn i {
+    margin-right: 2px
+}
+
+.eladrousi-candidate-default-wrap {
+    border: 1px solid #ececec5c;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    border-left: 2px solid #ffa000;
+    border-radius: 5px;
+    position: relative;
+}
+
+.promotepof-badge {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.promotepof-badge i {
+    z-index: 5;
+    position: relative;
+    color: #fff;
+    float: left;
+    margin: 6px 6px 0 0;
+    font-size: 12px;
+}
+
+.promotepof-badge:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-top: 40px solid #ffb607;
+    border-left: 40px solid transparent;
+}
+
+
+.eladrousi-candidate-default figure {
+    float: left;
+    width: 80px;
+    margin: 0
+}
+
+.eladrousi-candidate-default-text h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    line-height: 1
+}
+
+.eladrousi-candidate-default-text h2 i {
+    color: #ffa000;
+    font-size: 14px
+}
+
+.eladrousi-candidate-default-text ul li {
+    float: left;
+    color: #999;
+    font-size: 12px;
+    padding: 0 15px;
+    border-left: 1px solid #e0e0e0;
+    line-height: 1.4
+}
+
+.eladrousi-candidate-default-text ul li i {
+    float: left;
+    font-size: 15px;
+    color: #aaa;
+    margin: 0 10px 0 0
+}
+
+.eladrousi-candidate-default-text ul li:first-child {
+    padding-left: 0;
+    border: none
+}
+
+.eladrousi-candidate-default-btn {
+    float: right;
+    font-size: 12px;
+    color: #26272b !important;
+    border: 1px solid #26272b !important;
+    line-height: 1;
+    padding: 10px;
+    margin-top: 7px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-candidate-default-btn:hover {
+    background-color: #26272b !important;
+    color: #fff !important
+}
+
+.eladrousi-candidate-grid figure,
+.eladrousi-candidate-grid-thumb img,
+.eladrousi-candidate-grid figure figcaption {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-candidate-grid {
+    margin-bottom: 15px
+}
+
+.eladrousi-candidate-grid>ul>li {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0;
+    margin-bottom: 30px
+}
+
+.eladrousi-candidate-grid figure {
+    text-align: center;
+    margin: 0;
+    border: 1px solid #ececec;
+    position: relative;
+    padding: 24px 22px
+}
+
+.eladrousi-candidate-grid-thumb {
+    display: inline-block;
+    width: 124px;
+    position: relative;
+    margin-bottom: 8px
+}
+
+.eladrousi-candidate-grid figure figcaption {
+    line-height: 1
+}
+
+.eladrousi-candidate-grid-thumb img {
+    border-radius: 100%
+}
+
+.eladrousi-candidate-grid-status {
+    position: absolute;
+    left: 8px;
+    top: 9px;
+    width: 22px;
+    height: 22px;
+    background-color: #53b427;
+    border: 4px solid #fff;
+    border-radius: 100%
+}
+
+.eladrousi-candidate-grid-status.eladrousi-yellow {
+    background-color: #fcd116
+}
+
+.eladrousi-candidate-grid-status.eladrousi-red {
+    background-color: #e81123
+}
+
+.eladrousi-candidate-grid-status.eladrousi-none {
+    background-color: #fff;
+    border-color: #53b427;
+    border-width: 2px
+}
+
+.eladrousi-candidate-grid figure figcaption h2 {
+    margin-bottom: 10px;
+    line-height: 1;
+    font-size: 16px
+}
+
+.eladrousi-candidate-grid figure figcaption p {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 8px;
+    line-height: 1.3
+}
+
+.eladrousi-candidate-grid figure figcaption p a a {
+    color: #ffa000
+}
+
+.eladrousi-candidate-grid-option li a {
+    color: #999
+}
+
+.eladrousi-candidate-grid figure figcaption span {
+    font-size: 12px;
+    color: #999;
+    line-height: 1.3
+}
+
+.eladrousi-candidate-grid-option {
+    background-color: #fcfcfc;
+    float: left;
+    width: 100%;
+    border: 1px solid #ececec;
+    border-top: none;
+    padding-right: 5px
+}
+
+.eladrousi-candidate-grid-option li {
+    float: left;
+    width: 50%;
+    line-height: 1;
+    color: #999;
+    font-size: 11px;
+    padding: 14px 18px
+}
+
+.eladrousi-candidate-grid-option li span {
+    color: #555;
+    font-size: 11px;
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 500
+}
+
+.jobsearch_candidate_info {
+    float: left;
+    width: 100%;
+    border: 1px solid #ececec;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 21px
+}
+
+.jobsearch_candidate_info figure {
+    display: inline-block;
+    width: 184px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .15);
+    border-radius: 100%;
+    margin-bottom: 13px
+}
+
+.jobsearch_candidate_info figure img {
+    float: left;
+    width: 100%;
+    border-radius: 100%;
+    border: 3px solid #fff
+}
+
+.jobsearch_candidate_info h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1
+}
+
+.jobsearch_candidate_info p,
+.jobsearch_candidate_info span {
+    color: #999;
+    font-size: 14px;
+    display: block;
+    line-height: 1.4
+}
+
+.jobsearch_candidate_info p {
+    margin-bottom: 6px
+}
+
+.jobsearch_candidate_info span {
+    margin-bottom: 19px
+}
+
+.jobsearch_candidate_info p a,
+.jobsearch_candidate_info small {
+    color: #ffa000
+}
+
+.jobsearch_candidate_info small {
+    font-size: 14px;
+    display: block;
+    line-height: 1;
+    margin-bottom: 26px
+}
+
+.jobsearch_candidate_info ul {
+    float: left;
+    width: 100%;
+    margin: 0 0 8px
+}
+
+.jobsearch_candidate_info ul li {
+    display: inline-block;
+    list-style: none;
+    margin-right: -4px;
+    line-height: 1
+}
+
+.jobsearch_candidate_info ul li a {
+    float: left;
+    color: #375d93;
+    font-size: 40px;
+    margin: 0 6px 10px
+}
+
+.jobsearch_candidate_info ul li a[data-original-title=twitter] {
+    color: #43afe9
+}
+
+.jobsearch_candidate_info ul li a[data-original-title=linkedin] {
+    color: #007eb3
+}
+
+.jobsearch_candidate_info ul li a[data-original-title=google-plus] {
+    color: #e24046
+}
+
+.jobsearch_candidate_info ul li a[data-original-title=dribbble] {
+    color: #f95c94
+}
+
+.eladrousi-candidate-download-btn {
+    display: inline-block;
+    font-size: 14px;
+    color: #ffa000;
+    border: 1px solid #ffa000;
+    border-radius: 40px;
+    padding: 10px 23px;
+    line-height: 1;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-candidate-download-btn i {
+    float: left;
+    font-size: 16px;
+    margin: -2px 10px 0 0
+}
+
+.eladrousi-candidate-download-btn:hover {
+    background-color: #ffa000;
+    color: #fff
+}
+
+.eladrousi-candidate-editor {
+    float: left;
+    width: 100%;
+    margin-bottom: 9px
+}
+
+.eladrousi-candidate-editor .eladrousi-jobdetail-services {
+    margin-bottom: 13px
+}
+
+.eladrousi-candidate-title {
+    float: left;
+    width: 100%;
+    line-height: 1;
+    margin-bottom: 27px;
+    position: relative
+}
+
+.eladrousi-candidate-title i {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 1px solid #dedede;
+    box-shadow: 0 0 0 3px #fff inset;
+    border-radius: 100%;
+    color: #ffa000;
+    padding-top: 9px;
+    margin-right: 11px
+}
+
+.eladrousi-candidate-title h2 {
+    font-size: 20px;
+    margin-bottom: 0;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+.eladrousi-candidate-timeline {
+    float: left;
+    width: 100%;
+    margin-bottom: 25px
+}
+
+.eladrousi-candidate-timeline ul li {
+    list-style: none
+}
+
+.eladrousi-candidate-timeline>ul>li {
+    margin-bottom: 20px
+}
+
+.eladrousi-candidate-timeline small {
+    float: left;
+    font-size: 12px;
+    color: #ffa000;
+    padding: 19px 0 0;
+    margin-left: 16px;
+    position: relative;
+    width: 87px;
+    text-align: right
+}
+
+.eladrousi-candidate-timeline small:before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 7px;
+    background-color: #ddd;
+    width: 78px;
+    height: 1px
+}
+
+.eladrousi-candidate-timeline small:after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 3px;
+    background-color: #ffa000;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%
+}
+
+.eladrousi-candidate-timeline small~.eladrousi-candidate-timeline-text {
+    margin-left: 124px
+}
+
+.eladrousi-candidate-timeline-text span {
+    line-height: 1;
+    font-size: 12px;
+    color: #ffa000;
+    margin-bottom: 11px;
+    display: block
+}
+
+.eladrousi-candidate-timeline-text h2 {
+    font-size: 18px;
+    margin-bottom: 9px;
+    line-height: 1
+}
+
+.eladrousi-candidate-timeline-text p {
+    font-size: 15px;
+    color: #999;
+    margin-bottom: 0
+}
+
+.jobsearch_progressbar {
+    margin-bottom: 17px;
+    float: left;
+    width: 100%;
+    position: relative
+}
+
+.jobsearch_progressbar .bar-container {
+    position: relative;
+    height: 6px;
+    border-radius: 0 10px 10px 0;
+    float: right;
+    width: 60%;
+    margin-top: 3px
+}
+
+.jobsearch_progressbar .bar-container:before,
+.jobsearch_progressbar .bar-container:after,
+.jobsearch_progressbar .backgroundBar:before,
+.jobsearch_progressbar .backgroundBar:after {
+    content: '';
+    position: absolute;
+    left: 20%;
+    top: 0;
+    width: 5px;
+    height: 6px;
+    background-color: #fff;
+    z-index: 2
+}
+
+.jobsearch_progressbar .bar-container:after {
+    left: 40%
+}
+
+.jobsearch_progressbar .backgroundBar:before {
+    left: 60%
+}
+
+.jobsearch_progressbar .backgroundBar:after {
+    left: 80%
+}
+
+.jobsearch_progressbar_wrap {
+    float: left;
+    width: 100%;
+    margin-bottom: 22px
+}
+
+.jobsearch_progressbar .backgroundBar {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0
+}
+
+.jobsearch_progressbar .bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 10px 0 0 10px
+}
+
+.jobsearch_progressbar .title {
+    float: left;
+    font-size: 12px;
+    color: #333;
+    line-height: 1
+}
+
+.jobsearch_progressbar_subtitle {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    margin: 14px 0 38px;
+    line-height: 1
+}
+
+.candidate_portfolio {
+    margin-bottom: 20px
+}
+
+.eladrousi-three-column-row {
+    margin: 0 -5px
+}
+
+.eladrousi-three-column {
+    float: left;
+    width: 33.333%;
+    padding: 0 5px
+}
+
+.eladrousi-candidate-dasboard {
+    float: left;
+    width: 100%;
+    margin-bottom: 50px
+}
+
+.eladrousi-candidate-section {
+    float: left;
+    width: 100%;
+    padding-left: 12px
+}
+
+.eladrousi-candidate-dashboard-editor {
+    padding-left: 57px;
+    margin-bottom: 50px
+}
+
+.eladrousi-candidate-resume-wrap {
+    float: left;
+    width: 100%;
+    position: relative
+}
+
+.eladrousi-candidate-resume-wrap:before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #f1f0f7
+}
+
+.eladrousi-candidate-resume-wrap:last-child:before {
+    display: none
+}
+
+.eladrousi-candidate-resume-wrap .eladrousi-candidate-title:before,
+.eladrousi-candidate-resume-wrap .eladrousi-candidate-title:after {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: -15px;
+    height: 15px;
+    width: 2px;
+    background-color: #fff
+}
+
+.eladrousi-candidate-resume-wrap .eladrousi-candidate-title:after {
+    top: auto;
+    bottom: -15px
+}
+
+.eladrousi-resume-addbtn {
+    float: right;
+    background-color: #ffa000;
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 12px;
+    border-radius: 40px;
+    line-height: 1;
+    margin-top: 1px
+}
+
+.eladrousi-resume-education {
+    float: left;
+    width: 100%;
+    padding-left: 78px
+}
+
+.eladrousi-resume-education-wrap {
+    float: left;
+    padding-left: 11px
+}
+
+.eladrousi-resume-education ul li {
+    list-style: none;
+    line-height: 1;
+    position: relative
+}
+
+.eladrousi-typo-wrap .eladrousi-resume-education ul li {
+    padding-bottom: 58px
+}
+
+.eladrousi-resume-education ul li:last-child:before {
+    display: none
+}
+
+.eladrousi-resume-education ul li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #ddd
+}
+
+.eladrousi-resume-education ul li:after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background-color: #fff
+}
+
+.eladrousi-resume-education small {
+    margin-bottom: 8px;
+    display: block
+}
+
+.eladrousi-resume-education h2 {
+    line-height: 1;
+    margin-bottom: 9px;
+    font-size: 18px
+}
+
+.eladrousi-resume-education h2 a {
+    color: #666
+}
+
+.eladrousi-resume-education span {
+    color: #ffa000;
+    font-size: 12px
+}
+
+.eladrousi-resume-education-btn {
+    float: right;
+    margin-top: 16px
+}
+
+.eladrousi-resume-education-btn a {
+    float: left;
+    font-size: 14px;
+    color: #ff6d4a;
+    margin: 6px 15px 0 0
+}
+
+.eladrousi-candidate-resume-wrap .eladrousi-company-gallery {
+    padding-left: 55px;
+    padding-bottom: 27px
+}
+
+.eladrousi-add-skills {
+    float: left;
+    width: 100%;
+    padding-left: 57px;
+    margin-bottom: 30px
+}
+
+.eladrousi-add-skills ul li {
+    list-style: none;
+    line-height: 1;
+    margin-bottom: 20px
+}
+
+.eladrousi-add-skills-wrap {
+    float: left;
+    width: 80%
+}
+
+.eladrousi-add-skills-wrap span {
+    float: left;
+    width: 43px;
+    height: 43px;
+    border: 1px solid #dedede;
+    border-radius: 100%;
+    color: #999;
+    font-size: 18px;
+    text-align: center;
+    padding: 13px 5px 0;
+    margin-right: 20px
+}
+
+.eladrousi-add-skills-wrap h2 {
+    font-size: 16px;
+    margin-bottom: 0;
+    line-height: 1;
+    padding: 12px 0 0;
+    font-weight: 400
+}
+
+.eladrousi-add-skills-wrap h2 a {
+    color: #666
+}
+
+.eladrousi-add-skills-wrap .eladrousi-resume-education-btn {
+    margin-top: 10px
+}
+
+.eladrousi-typo-wrap .eladrousi-resume-education.eladrousi-resume-awards ul li {
+    padding-bottom: 27px
+}
+
+.eladrousi-candidate-savedjobs {
+    float: left;
+    width: 100%;
+    margin-bottom: 40px
+}
+
+.eladrousi-candidate-savedjobs table>thead>tr>th,
+.eladrousi-candidate-savedjobs table>tbody>tr>th,
+.eladrousi-candidate-savedjobs table>tfoot>tr>th,
+.eladrousi-candidate-savedjobs table>thead>tr>td,
+.eladrousi-candidate-savedjobs table>tbody>tr>td,
+.eladrousi-candidate-savedjobs table>tfoot>tr>td {
+    border: none
+}
+
+.eladrousi-candidate-savedjobs thead {
+    background-color: #f2f2f2
+}
+
+.eladrousi-candidate-savedjobs thead tr th:first-child,
+.eladrousi-candidate-savedjobs tbody td:first-child {
+    padding-left: 15px
+}
+
+.eladrousi-candidate-savedjobs thead tr th:first-child,
+.eladrousi-candidate-savedjobs tbody td:first-child {
+    width: 54%
+}
+
+.eladrousi-candidate-savedjobs thead tr th {
+    text-align: left;
+    padding: 3px 0;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500
+}
+
+.eladrousi-savedjobs-thumb {
+    display: inline-block;
+    width: 44px;
+    margin-right: 15px;
+    border: 1px solid #ddd
+}
+
+.eladrousi-candidate-savedjobs tbody td {
+    padding: 16px 0;
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: left
+}
+
+.eladrousi-candidate-savedjobs tbody tr {
+    border-bottom: 1px solid #ececec
+}
+
+.eladrousi-candidate-savedjobs tbody tr:nth-child(even) {
+    background-color: #fafcfc
+}
+
+.eladrousi-candidate-savedjobs tbody td h2 {
+    font-size: 16px;
+    margin-bottom: 0;
+    line-height: 1;
+    display: inline-block
+}
+
+.eladrousi-candidate-savedjobs tbody td span {
+    color: #ffa000
+}
+
+.eladrousi-savedjobs-links {
+    float: right;
+    color: #ff6d4a;
+    font-size: 14px;
+    line-height: 1;
+    margin-right: 15px
+}
+
+.eladrousi-savedjobs-links .eladrousi-view {
+    font-size: 21px;
+    float: left;
+    margin-top: -3px
+}
+
+.eladrousi-applied-jobs,
+.eladrousi-applied-jobs-wrap {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-applied-jobs-wrap {
+    border: 1px solid #ececec;
+    padding: 14px
+}
+
+.eladrousi-applied-jobs ul li {
+    list-style: none;
+    line-height: 1
+}
+
+.eladrousi-applied-jobs>ul>li,
+.eladrousi-applied-jobs {
+    margin-bottom: 20px
+}
+
+.eladrousi-applied-jobs-thumb {
+    float: left;
+    width: 69px
+}
+
+.eladrousi-applied-jobs-thumb~.eladrousi-applied-jobs-text {
+    margin-left: 89px
+}
+
+.eladrousi-applied-jobs-left {
+    float: left
+}
+
+.eladrousi-applied-jobs-text span {
+    color: #ffa000;
+    font-size: 12px;
+    line-height: 1;
+    margin-bottom: 8px;
+    display: inline-block
+}
+
+.eladrousi-applied-jobs-text h2 {
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 12px
+}
+
+.eladrousi-applied-jobs-text ul {
+    margin: 0
+}
+
+.eladrousi-applied-jobs-text ul li {
+    float: left;
+    font-size: 12px;
+    padding: 3px 15px;
+    border-left: 1px solid #e0e0e0
+}
+
+.eladrousi-applied-jobs-text ul li a {
+    color: #999
+}
+
+.eladrousi-applied-jobs-text ul li:first-child {
+    padding-left: 0;
+    border-left: none
+}
+
+.eladrousi-applied-jobs-text ul li i {
+    color: #aaa;
+    margin-right: 7px
+}
+
+.eladrousi-applied-jobs-text .eladrousi-savedjobs-links {
+    margin-top: 27px
+}
+
+.eladrousi-job-alerts {
+    float: left;
+    width: 100%;
+    margin-bottom: 40px
+}
+
+.eladrousi-job-alerts table>thead>tr>th,
+.eladrousi-job-alerts table>tbody>tr>th,
+.eladrousi-job-alerts table>tfoot>tr>th,
+.eladrousi-job-alerts table>thead>tr>td,
+.eladrousi-job-alerts table>tbody>tr>td,
+.eladrousi-job-alerts table>tfoot>tr>td {
+    border: none
+}
+
+.eladrousi-job-alerts thead {
+    background-color: #f2f2f2
+}
+
+.eladrousi-job-alerts thead tr th:first-child,
+.eladrousi-job-alerts tbody td:first-child {
+    padding-left: 15px
+}
+
+.eladrousi-job-alerts thead tr th {
+    text-align: left;
+    padding: 3px 0;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500
+}
+
+.eladrousi-job-alerts tbody td {
+    padding: 16px 0;
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: left
+}
+
+.eladrousi-job-alerts tbody tr {
+    border-bottom: 1px solid #ececec
+}
+
+.eladrousi-job-alerts tbody tr:nth-child(even) {
+    background-color: #fafcfc
+}
+
+.eladrousi-job-alerts tbody td span {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500
+}
+
+.eladrousi-job-alerts .eladrousi-savedjobs-links {
+    margin-top: 2px
+}
+
+.eladrousi-upload-cv,
+.eladrousi-upload-cv p {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-upload-cv {
+    margin-bottom: 34px
+}
+
+.eladrousi-upload-cv small {
+    color: #333;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 500;
+    line-height: 1
+}
+
+.eladrousi-upload-cv p {
+    color: #b1b1b1;
+    font-size: 12px;
+    line-height: 1;
+    margin-bottom: 0
+}
+
+.eladrousi-upload-cv .eladrousi-disabled-input {
+    float: left;
+    width: 79%;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #eceeef;
+    font-size: 12px;
+    color: #333;
+    padding: 6px 14px;
+    margin-bottom: 13px
+}
+
+.eladrousi-cvupload-file {
+    position: relative;
+    overflow: hidden;
+    float: right
+}
+
+.eladrousi-cvupload-file span {
+    float: left;
+    padding: 11px 22px;
+    line-height: 1;
+    color: #ffa000;
+    font-size: 14px;
+    border: 1px solid #ffa000;
+    border-radius: 3px;
+    font-weight: 400;
+    margin-bottom: 13px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-cvupload-file span i {
+    font-size: 15px;
+    margin-right: 6px
+}
+
+.eladrousi-cvupload-file:hover span {
+    color: #fff;
+    background-color: #ffa000
+}
+
+.eladrousi-cvupload-file input.eladrousi-upload-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0)
+}
+
+.eladrousi-cv-manager-list,
+.eladrousi-cv-manager-wrap {
+    float: left;
+    width: 100%
+}
+
+.eladrousi-cv-manager-wrap {
+    border: 1px solid #ececec;
+    padding: 14px
+}
+
+.eladrousi-cv-manager-list ul li {
+    list-style: none;
+    line-height: 1
+}
+
+.eladrousi-cv-manager-list>ul>li,
+.eladrousi-cv-manager-list {
+    margin-bottom: 20px
+}
+
+.eladrousi-cv-manager-thumb {
+    float: left;
+    width: 69px
+}
+
+.eladrousi-cv-manager-thumb img {
+    border-radius: 100%
+}
+
+.eladrousi-cv-manager-thumb~.eladrousi-cv-manager-text {
+    margin-left: 89px;
+    padding-top: 10px
+}
+
+.eladrousi-cv-manager-left {
+    float: left
+}
+
+.eladrousi-cv-manager-text h2 {
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 11px
+}
+
+.eladrousi-cv-manager-text ul {
+    margin: 0
+}
+
+.eladrousi-cv-manager-text ul li {
+    float: left;
+    font-size: 12px;
+    padding: 3px 15px;
+    border-left: 1px solid #e0e0e0
+}
+
+.eladrousi-cv-manager-text ul li a {
+    color: #999
+}
+
+.eladrousi-cv-manager-text ul li:first-child {
+    padding-left: 0;
+    border-left: none
+}
+
+.eladrousi-cv-manager-text ul li i {
+    color: #aaa;
+    margin-right: 7px
+}
+
+.eladrousi-cv-manager-link {
+    float: right;
+    color: #ff6d4a;
+    font-size: 14px;
+    line-height: 1;
+    margin-right: 15px;
+    margin-top: 15px
+}
+
+.eladrousi-cv-manager-link .eladrousi-view {
+    font-size: 21px;
+    float: left;
+    margin-top: -3px
+}
+
+.eladrousi-add-popup {
+    position: absolute;
+    left: 0;
+    top: 15%;
+    background-color: #fff;
+    padding: 30px 30px 18px;
+    z-index: 10;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25);
+    display: none
+}
+
+.eladrousi-add-popup input[type=submit] {
+    float: left;
+    background-color: #ffa000;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 40px;
+    padding: 13px 24px;
+    line-height: 1;
+    border: none;
+    margin-top: 5px
+}
+
+.eladrousi-add-popup .eladrousi-checkbox {
+    margin: 0 0 13px
+}
+
+.eladrousi-add-popup .eladrousi-checkbox input[type=checkbox]+label span,
+.eladrousi-add-popup .eladrousi-checkbox input[type=radio]+label span {
+    width: 16px;
+    height: 16px;
+    border-color: #eceeef
+}
+
+body.eladrousi-modal-active {
+    overflow: hidden;
+    -ms-overflow: hidden
+}
+
+.eladrousi-modal {
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-modal.fade {
+    visibility: hidden;
+    opacity: 0
+}
+
+.eladrousi-modal.fade-in {
+    visibility: visible;
+    opacity: 1
+}
+
+.eladrousi-modal .modal-inner-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .7;
+    z-index: 9999
+}
+
+.eladrousi-modal .modal-content-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    -ms-overflow-y: scroll;
+    z-index: 99999;
+    text-align: center
+}
+
+.eladrousi-modal .modal-box-area {
+    display: inline-block;
+    width: 600px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 30px;
+    margin: 60px 0 0
+}
+
+.eladrousi-modal .modal-close {
+    cursor: pointer;
+    float: right;
+    color: #d1d1d1;
+    font-size: 19px;
+    line-height: 1;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.eladrousi-modal-title-box {
+    float: left;
+    width: 100%;
+    margin-bottom: 15px
+}
+
+.eladrousi-modal-title-box h2 {
+    float: left;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 0;
+    line-height: 1
+}
+
+.eladrousi-box-title {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 33px;
+    line-height: 25px
+}
+
+.eladrousi-box-title:before,
+.eladrousi-box-title:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 1px;
+    height: 10px;
+    background-color: #e5e5e5
+}
+
+.eladrousi-box-title:after {
+    left: auto;
+    right: 0
+}
+
+.eladrousi-box-title span:before,
+.eladrousi-box-title span:after {
+    background-color: #e5e5e5;
+    content: "";
+    height: 1px;
+    left: 100%;
+    margin-left: 8px;
+    position: absolute;
+    top: 12px;
+    width: 999em
+}
+
+.eladrousi-box-title span:after {
+    left: auto;
+    right: 100%;
+    margin-left: 0;
+    margin-right: 8px
+}
+
+.eladrousi-box-title span {
+    display: inline-block;
+    font-size: 12px;
+    color: #1cb5ea;
+    position: relative
+}
+
+

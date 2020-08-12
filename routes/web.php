@@ -4,12 +4,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('company/register', 'Company\Auth\RegisterController@showRegistrationForm')->name('company.register');
+
+Route::get('company/login', 'Company\Auth\LoginController@showLoginForm')->name('company.login');
 /*
 
   |--------------------------------------------------------------------------
 
   | Web Routes
-
+filter.states.dropdown
   |--------------------------------------------------------------------------
 
   |
@@ -84,7 +86,7 @@ Route::get('cronjob/send-alerts', 'AlertCronController@index')->name('send-alert
 
 
 
-Route::post('subscribe-newsletter', 'SubscriptionController@getSubscription')->name('subscribe.newsletter');
+Route::post('subscribe-newsletter', 'Subsc/job-seekersriptionController@getSubscription')->name('subscribe.newsletter');
 
 
 

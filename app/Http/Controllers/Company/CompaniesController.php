@@ -75,7 +75,7 @@ class CompaniesController extends Controller
        
 
         $data['companies'] = $query->paginate(20);
-        return view('company.listing')->with($data);
+        return view('website.partners')->with($data);
     }
 
     public function companyProfile()

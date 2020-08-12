@@ -1,0 +1,428 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('icomoon16d5.eot?czpsth');
+  src:  url('icomoon16d5.eot?czpsth#iefix') format('embedded-opentype'),
+    url('icomoon16d5.ttf?czpsth') format('truetype'),
+    url('icomoon16d5.woff?czpsth') format('woff'),
+    url('icomoon16d5.svg?czpsth#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.eladrousi-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.eladrousi-people:before {
+  content: "\e900";
+}
+.eladrousi-target:before {
+  content: "\e901";
+}
+.eladrousi-human-resources:before {
+  content: "\e902";
+}
+.eladrousi-arrow-left-long:before {
+  content: "\e903";
+}
+.eladrousi-twitter:before {
+  content: "\e904";
+}
+.eladrousi-hospital:before {
+  content: "\e905";
+}
+.eladrousi-money:before {
+  content: "\e906";
+}
+.eladrousi-apple:before {
+  content: "\e907";
+}
+.eladrousi-user-plus:before {
+  content: "\e908";
+}
+.eladrousi-diamond:before {
+  content: "\e909";
+}
+.eladrousi-map-pin-fill:before {
+  content: "\e90a";
+}
+.eladrousi-play-circular:before {
+  content: "\e90b";
+}
+.eladrousi-arrow-pointing-to-right:before {
+  content: "\e90c";
+}
+.eladrousi-arrow-pointing-to-left:before {
+  content: "\e90d";
+}
+.eladrousi-user:before {
+  content: "\e90e";
+}
+.eladrousi-login:before {
+  content: "\e90f";
+}
+.eladrousi-android-logo:before {
+  content: "\e910";
+}
+.eladrousi-resume-document:before {
+  content: "\e911";
+}
+.eladrousi-paper:before {
+  content: "\e912";
+}
+.eladrousi-coding:before {
+  content: "\e913";
+}
+.eladrousi-office:before {
+  content: "\e914";
+}
+.eladrousi-clock-hours:before {
+  content: "\e915";
+}
+.eladrousi-company-workers:before {
+  content: "\e916";
+}
+.eladrousi-graphic:before {
+  content: "\e917";
+}
+.eladrousi-support:before {
+  content: "\e918";
+}
+.eladrousi-pen:before {
+  content: "\e919";
+}
+.eladrousi-search-papper:before {
+  content: "\e91a";
+}
+.eladrousi-handshake:before {
+  content: "\e91b";
+}
+.eladrousi-office-building:before {
+  content: "\e91c";
+}
+.eladrousi-check-square:before {
+  content: "\e91d";
+}
+.eladrousi-arrow-right-circular-fill:before {
+  content: "\e91e";
+}
+.eladrousi-arrow-down-circular-fill:before {
+  content: "\e91f";
+}
+.eladrousi-building:before {
+  content: "\e920";
+}
+.eladrousi-curriculum:before {
+  content: "\e921";
+}
+.eladrousi-user-line-double:before {
+  content: "\e922";
+}
+.eladrousi-discuss-issue:before {
+  content: "\e923";
+}
+.eladrousi-newspaper:before {
+  content: "\e924";
+}
+.eladrousi-fax:before {
+  content: "\e925";
+}
+.eladrousi-placeholder:before {
+  content: "\e926";
+}
+.eladrousi-linkedin-fill:before {
+  content: "\e927";
+}
+.eladrousi-facebook:before {
+  content: "\e928";
+}
+.eladrousi-summary:before {
+  content: "\e929";
+}
+.eladrousi-calendar-line:before {
+  content: "\e92a";
+}
+.eladrousi-heart-fill:before {
+  content: "\e92b";
+}
+.eladrousi-check-box-fill:before {
+  content: "\e92c";
+}
+.eladrousi-check-box-empty:before {
+  content: "\e92d";
+}
+.eladrousi-checked:before {
+  content: "\e92e";
+}
+.eladrousi-linkedin:before {
+  content: "\e92f";
+}
+.eladrousi-user-circular:before {
+  content: "\e930";
+}
+.eladrousi-star-empty:before {
+  content: "\e931";
+}
+.eladrousi-upload:before {
+  content: "\e932";
+}
+.eladrousi-plus-circular:before {
+  content: "\e933";
+}
+.eladrousi-credit-card-line:before {
+  content: "\e934";
+}
+.eladrousi-star-fill:before {
+  content: "\e935";
+}
+.eladrousi-right-arrow-long:before {
+  content: "\e936";
+}
+.eladrousi-credit-card:before {
+  content: "\e937";
+}
+.eladrousi-time:before {
+  content: "\e938";
+}
+.eladrousi-folder:before {
+  content: "\e939";
+}
+.eladrousi-group:before {
+  content: "\e93a";
+}
+.eladrousi-linkedin-circular:before {
+  content: "\e93b";
+}
+.eladrousi-twitter-circular:before {
+  content: "\e93c";
+}
+.eladrousi-facebook-circular:before {
+  content: "\e93d";
+}
+.eladrousi-internet:before {
+  content: "\e93e";
+}
+.eladrousi-calendar:before {
+  content: "\e93f";
+}
+.eladrousi-view:before {
+  content: "\e940";
+}
+.eladrousi-rubbish:before {
+  content: "\e941";
+}
+.eladrousi-edit:before {
+  content: "\e942";
+}
+.eladrousi-resume-user:before {
+  content: "\e943";
+}
+.eladrousi-logout:before {
+  content: "\e944";
+}
+.eladrousi-multimedia:before {
+  content: "\e945";
+}
+.eladrousi-id-card:before {
+  content: "\e946";
+}
+.eladrousi-alarm:before {
+  content: "\e947";
+}
+.eladrousi-briefcase-time:before {
+  content: "\e948";
+}
+.eladrousi-resume:before {
+  content: "\e949";
+}
+.eladrousi-google-plus-circular-fill:before {
+  content: "\e94a";
+}
+.eladrousi-add:before {
+  content: "\e94b";
+}
+.eladrousi-download-arrow:before {
+  content: "\e94c";
+}
+.eladrousi-technology:before {
+  content: "\e94d";
+}
+.eladrousi-envelope-line:before {
+  content: "\e94e";
+}
+.eladrousi-trophy:before {
+  content: "\e94f";
+}
+.eladrousi-design-skills:before {
+  content: "\e950";
+}
+.eladrousi-degree-cap:before {
+  content: "\e951";
+}
+.eladrousi-network:before {
+  content: "\e952";
+}
+.eladrousi-user-line:before {
+  content: "\e953";
+}
+.eladrousi-briefcase:before {
+  content: "\e954";
+}
+.eladrousi-social-media:before {
+  content: "\e955";
+}
+.eladrousi-salary:before {
+  content: "\e956";
+}
+.eladrousi-check-circular-fill:before {
+  content: "\e957";
+}
+.eladrousi-sort:before {
+  content: "\e958";
+}
+.eladrousi-envelope:before {
+  content: "\e959";
+}
+.eladrousi-add-list:before {
+  content: "\e95a";
+}
+.eladrousi-squares:before {
+  content: "\e95b";
+}
+.eladrousi-list:before {
+  content: "\e95c";
+}
+.eladrousi-up-arrow:before {
+  content: "\e95d";
+}
+.eladrousi-right-arrow:before {
+  content: "\e95e";
+}
+.eladrousi-instagram-circular-fill:before {
+  content: "\e95f";
+}
+.eladrousi-linkedin-circular-fill:before {
+  content: "\e960";
+}
+.eladrousi-dribbble-circular-fill:before {
+  content: "\e961";
+}
+.eladrousi-twitter-circular-fill:before {
+  content: "\e962";
+}
+.eladrousi-facebook-circular-fill:before {
+  content: "\e963";
+}
+.eladrousi-play-button:before {
+  content: "\e964";
+}
+.eladrousi-arrow-right-circular:before {
+  content: "\e965";
+}
+.eladrousi-arrow-left-circular-fill:before {
+  content: "\e966";
+}
+.eladrousi-two-quotes:before {
+  content: "\e967";
+}
+.eladrousi-left-quote:before {
+  content: "\e968";
+}
+.eladrousi-filter-tool-black-shape:before {
+  content: "\e969";
+}
+.eladrousi-map-pin:before {
+  content: "\e96a";
+}
+.eladrousi-heart:before {
+  content: "\e96b";
+}
+.eladrousi-business:before {
+  content: "\e96c";
+}
+.eladrousi-fast-food:before {
+  content: "\e96d";
+}
+.eladrousi-books:before {
+  content: "\e96e";
+}
+.eladrousi-antenna:before {
+  content: "\e96f";
+}
+.eladrousi-hospital2:before {
+  content: "\e970";
+}
+.eladrousi-accounting:before {
+  content: "\e971";
+}
+.eladrousi-car:before {
+  content: "\e972";
+}
+.eladrousi-engineer:before {
+  content: "\e973";
+}
+.eladrousi-search:before {
+  content: "\e974";
+}
+.eladrousi-down-arrow:before {
+  content: "\e975";
+}
+.eladrousi-location:before {
+  content: "\e976";
+}
+.eladrousi-briefcase-line:before {
+  content: "\e977";
+}
+.eladrousi-arrow-up-circular:before {
+  content: "\e978";
+}
+.eladrousi-upload-arrow:before {
+  content: "\e979";
+}
+.eladrousi-arrow-right-fill:before {
+  content: "\ea3c";
+}
+.eladrousi-arrow-left:before {
+  content: "\ea40";
+}
+.eladrousi-arrow-right-bold:before {
+  content: "\eaef";
+}
+.eladrousi-arrow-right:before {
+  content: "\eb2d";
+}
+.eladrousi-list-sign:before {
+  content: "\eb44";
+}
+.eladrousi-grid-square:before {
+  content: "\eb45";
+}
+.eladrousi-arrow-right-light:before {
+  content: "\eb60";
+}
+.eladrousi-map-location-pin:before {
+  content: "\eb6e";
+}
+.eladrousi-check-mark:before {
+  content: "\eb73";
+}
+.eladrousi-map-pin-square:before {
+  content: "\eb76";
+}
+.eladrousi-edit-tool:before {
+  content: "\eb7d";
+}
+.eladrousi-building-office:before {
+  content: "\eb92";
+}
