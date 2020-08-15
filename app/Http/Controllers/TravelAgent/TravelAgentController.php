@@ -52,8 +52,8 @@ class TravelAgentController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('travel_agent', ['except' => ['travel_agentDetail', 'sendContactForm']]);
-        $this->runCheckPackageValidity();
+        /*$this->middleware('travel_agent', ['except' => ['travel_agentDetail', 'sendContactForm']]);
+        $this->runCheckPackageValidity();*/
     }
 
     public function index()

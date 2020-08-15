@@ -31,6 +31,7 @@
         </li>
         @include('admin/shared/side_bars/job')
         @include('admin/shared/side_bars/company')
+        @include('admin/shared/side_bars/travel_agent')
         @include('admin/shared/side_bars/site_user')
         @include('admin/shared/side_bars/cms')
         @include('admin/shared/side_bars/blogs')

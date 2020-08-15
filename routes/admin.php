@@ -32,6 +32,7 @@ include_once($real_path . 'city.php');
 include_once($real_path . 'result_type.php');
 include_once($real_path . 'language_level.php');
 include_once($real_path . 'marital_status.php');
+include_once($real_path . 'travel_agent.php');
 include_once($real_path . 'company.php');
 include_once($real_path . 'ownership_type.php');
 include_once($real_path . 'job.php');

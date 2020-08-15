@@ -65,6 +65,8 @@ class Kernel extends HttpKernel
         'checkAdminRoles' => \App\Http\Middleware\CheckAdminRole::class,
         'company' => \App\Http\Middleware\RedirectIfCompanyNotAuthenticated::class,
         'company.guest' => \App\Http\Middleware\RedirectIfCompanyAuthenticated::class,
+        'travel_agent' => \App\Http\Middleware\RedirectIfTravelAgentNotAuthenticated::class,
+        'travel_agent.guest' => \App\Http\Middleware\RedirectIfTravelAgentAuthenticated::class,
     ];
 
 }
