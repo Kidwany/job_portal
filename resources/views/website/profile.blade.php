@@ -19,7 +19,7 @@
                         {{$user->getName()}}
                     </div>
                     <h1 class="job-title">
-                        Front-End web developer
+                        {{$user->job_title ? $user->job_title : 'No Job Title'}}
                     </h1>
                     <div class="static-rating">
                         <ul class="rating-ul">
@@ -89,7 +89,7 @@
                                         Academic Level
                                     </p>
                                     <p>
-                                        Computer Engineer
+                                        {{$user->getIndustry('industry')}}
                                     </p>
                                 </div>
                             </li>
@@ -161,45 +161,23 @@
                             /><span> {{__('Education')}}</span>
                         </p>
                         <ul class="education-ul">
-                            <li>
-                                <div class="years-div">
-                                    2017 - 2018
-                                </div>
-                                <div class="li-text">
-                                    <p>
-                                        Ain-shams university
-                                    </p>
-                                    <p>
-                                        Masters degree in computer engineer
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="years-div">
-                                    2011 - 2016
-                                </div>
-                                <div class="li-text">
-                                    <p>
-                                        Ain-shams university
-                                    </p>
-                                    <p>
-                                        Bachelor degree in computer engineer
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="years-div">
-                                    2008 - 2011
-                                </div>
-                                <div class="li-text">
-                                    <p>
-                                        El-nozha heigh school
-                                    </p>
-                                    <p>
-                                        <!-- Bachelor degree in computer engineer -->
-                                    </p>
-                                </div>
-                            </li>
+                            @if($user->profileEducation->count())
+                                @foreach($user->profileEducation as $education)
+                                    <li>
+                                        <div class="years-div">
+                                            {{$education->date_completion}}
+                                        </div>
+                                        <div class="li-text">
+                                            <p>
+                                                {{$education->institution}}
+                                            </p>
+                                            <p>
+                                                {{$education->degree_title}}
+                                            </p>
+                                        </div>
+                                    </li>
+                                @endforeach
+                            @endif
                         </ul>
                     </div>
 
@@ -208,61 +186,32 @@
                             <i class="ion-code-working"></i><span> Experience</span>
                         </p>
                         <ul class="education-ul">
-                            <li>
-                                <div class="years-div">
-                                    2017 - present
-                                </div>
-                                <div class="li-text">
-                                    <p>
-                                        Eventus corp
-                                    </p>
-                                    <p>
-                                        Front-End web developer
-                                    </p>
-                                    <div class="exp-desc">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                        Veritatis, quidem sint soluta accusantium error cupiditate
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="years-div">
-                                    2014 - 2016
-                                </div>
-                                <div class="li-text">
-                                    <p>
-                                        Amazon.inc
-                                    </p>
-                                    <p>
-                                        PHP backend developer
-                                    </p>
-                                    <div class="exp-desc">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                        Veritatis, quidem sint soluta accusantium error cupiditate
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="years-div">
-                                    2011 - 2014
-                                </div>
-                                <div class="li-text">
-                                    <p>
-                                        Google Egypt
-                                    </p>
-                                    <p>
-                                        Junior UI / UX designer
-                                    </p>
-                                    <div class="exp-desc">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                        Veritatis, quidem sint soluta accusantium error cupiditate
-                                    </div>
-                                </div>
-                            </li>
+                            @if($user->profileExperience->count())
+                                @foreach($user->profileExperience as $experience)
+                                    <li>
+                                        <div class="years-div">
+                                            {{$experience->date_start->format('Y')}} -
+                                            {{$experience->date_end ? $experience->date_end->format('Y') : 'Present'}}
+                                        </div>
+                                        <div class="li-text">
+                                            <p>
+                                                {{$experience->company}}
+                                            </p>
+                                            <p>
+                                                {{$experience->title}}
+                                            </p>
+                                            <div class="exp-desc">
+                                                {{$experience->description}}
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                @endforeach
+                            @endif
                         </ul>
                     </div>
 
-                    <div class="profile-sub-section portfolio-section">
+                    {{--<div class="profile-sub-section portfolio-section">
                         <p class="section-heading">
                             <i class="linearicons-file-charts"></i><span> Portfolio</span>
                         </p>
@@ -324,52 +273,20 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div>--}}
 
                     <div class="profile-sub-section skills-section">
                         <p class="section-heading">
                             <i class="linearicons-chart-growth"></i><span> Skills</span>
                         </p>
                         <ul class="skills-wrapper">
-                            <li class="skill-li">
-                                Javascript
-                            </li>
-                            <li class="skill-li">
-                                Nodejs
-                            </li>
-                            <li class="skill-li">
-                                Reactjs
-                            </li>
-                            <li class="skill-li">
-                                Graphql
-                            </li>
-                            <li class="skill-li">
-                                Apollo-client
-                            </li>
-                            <li class="skill-li">
-                                HTML5
-                            </li>
-                            <li class="skill-li">
-                                SASS
-                            </li>
-                            <li class="skill-li">
-                                RWD
-                            </li>
-                            <li class="skill-li">
-                                Git
-                            </li>
-                            <li class="skill-li">
-                                NPM
-                            </li>
-                            <li class="skill-li">
-                                Webpack4
-                            </li>
-                            <li class="skill-li">
-                                PHP
-                            </li>
-                            <li class="skill-li">
-                                SQL, Monogdb
-                            </li>
+                            @if($user->profileSkills->count())
+                                @foreach($user->profileSkills as $skill)
+                                    <li class="skill-li">
+                                        {{$skill->jobSkill->job_skill}}
+                                    </li>
+                                @endforeach
+                            @endif
                         </ul>
                     </div>
 
@@ -378,8 +295,11 @@
                             <i class="linearicons-chart-growth"></i
                             ><span> Contact Form</span>
                         </p>
-                        <form class="mfa-form">
-                            <div class="form-div">
+                        @include('flash::message')
+                        <form class="mfa-form" action="{{route('company.send-message-to-seeker')}}" method="post">
+                            @csrf
+                            <input type="hidden" name="seeker_id" value="{{$user->id}}">
+                            {{--<div class="form-div">
                                 <label for="username">
 										<span>
 											Username
@@ -396,14 +316,14 @@
                                     <input type="text" id="email" />
                                     <i class="feather icon-mail"></i>
                                 </label>
-                            </div>
+                            </div>--}}
                             <div class="form-div">
                                 <label for="message">
 										<span>
 											Message
 										</span>
                                     <!-- <textarea id="message" /> -->
-                                    <textarea id="message" name="message" rows="10"></textarea>
+                                    <textarea id="message" name="message" rows="10">{{old('message')}}</textarea>
                                     <i class="feather icon-message-square"></i>
                                 </label>
                             </div>
@@ -419,90 +339,38 @@
                     <!-- Reviews section -->
                     <div class="reviews-section">
                         <ul class="all-reviews-ul">
-                            <li>
-                                <div class="review-header">
-                                    <img src="{{asset('images/profile/no-image.jpg')}}" alt="img" />
-                                    <div class="reviewer">
-                                        <div class="name">
-                                            Amazon.inc
+                            @if($user->profileReviews->count())
+                                @foreach($user->profileReviews as $review)
+                                    <li>
+                                        <div class="review-header">
+                                            <img src="{{asset('company_logos/' . $review->company->logo)}}" alt="img" />
+                                            <div class="reviewer">
+                                                <div class="name">
+                                                    {{$review->company->name}}
+                                                </div>
+                                                <div class="rate">
+                                                    <ul>
+                                                        <li>
+                                                            @for($i=1; $i<=$review->rate; $i++)
+                                                                <i class="ion-ios-star"></i>
+                                                            @endfor
+                                                            @for($i=0; $i<5 - $review->rate; $i++)
+                                                                <i class="ion-ios-star-outline"></i>
+                                                            @endfor
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="review-date">
+                                                {{$review->created_at->format('M d, Y')}}
+                                            </div>
                                         </div>
-                                        <div class="rate">
-                                            <ul>
-                                                <li>
-                                                    <i class="ion-ios-star"></i>
-                                                    <i class="ion-ios-star"></i>
-                                                    <i class="ion-ios-star"></i>
-                                                    <i class="ion-ios-star"></i>
-                                                    <i class="ion-ios-star-outline"></i>
-                                                </li>
-                                            </ul>
+                                        <div class="review-desc">
+                                            {{$review->review}} {{$review->rate}}
                                         </div>
-                                    </div>
-                                    <div class="review-date">
-                                        Aug 10, 2020
-                                    </div>
-                                </div>
-                                <div class="review-desc">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Adipisci ratione earum quaerat minus, magnam neque
-                                </div>
-                            </li>
-                            <li>
-                                <div class="review-header">
-                                    <img src="{{asset('website/images/profile/no-image.jpg')}}" alt="img" />
-                                    <div class="reviewer">
-                                        <div class="name">
-                                            Amazon.inc
-                                        </div>
-                                        <div class="rate">
-                                            <ul>
-                                                <li>
-                                                    <i class="ion-ios-star"></i>
-                                                    <i class="ion-ios-star"></i>
-                                                    <i class="ion-ios-star"></i>
-                                                    <i class="ion-ios-star"></i>
-                                                    <i class="ion-ios-star-outline"></i>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="review-date">
-                                        Aug 10, 2020
-                                    </div>
-                                </div>
-                                <div class="review-desc">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Adipisci ratione earum quaerat minus, magnam neque
-                                </div>
-                            </li>
-                            <li>
-                                <div class="review-header">
-                                    <img src="{{asset('website/images/profile/no-image.jpg')}}" alt="img" />
-                                    <div class="reviewer">
-                                        <div class="name">
-                                            Amazon.inc
-                                        </div>
-                                        <div class="rate">
-                                            <ul>
-                                                <li>
-                                                    <i class="ion-ios-star"></i>
-                                                    <i class="ion-ios-star"></i>
-                                                    <i class="ion-ios-star"></i>
-                                                    <i class="ion-ios-star"></i>
-                                                    <i class="ion-ios-star-outline"></i>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="review-date">
-                                        Aug 10, 2020
-                                    </div>
-                                </div>
-                                <div class="review-desc">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Adipisci ratione earum quaerat minus, magnam neque
-                                </div>
-                            </li>
+                                    </li>
+                                @endforeach
+                            @endif
                         </ul>
                     </div>
                     <!-- ./Reviews section -->
@@ -512,8 +380,10 @@
                         <p class="section-heading">
                             <i class="linearicons-star"></i><span> Leave Your Review </span>
                         </p>
-                        <form class="rating-form">
-                            <select class="star-rating">
+                        <form class="rating-form" action="{{url('profile-review')}}" method="post">
+                            @csrf
+                            <input type="hidden" name="user_id" value="{{$user->id}}">
+                            <select class="star-rating" name="rate">
                                 <option value="">Select a rating</option>
                                 <option value="5">Excellent</option>
                                 <option value="4">Very Good</option>
@@ -522,7 +392,7 @@
                                 <option value="1">Terrible</option>
                             </select>
 
-                            <div class="name-email">
+                            {{--<div class="name-email">
                                 <label for="name">
 										<span>
 											Your name
@@ -535,12 +405,12 @@
 										</span>
                                     <input type="text" id="your-email" />
                                 </label>
-                            </div>
+                            </div>--}}
                             <label for="your-review">
 									<span>
 										Your review
 									</span>
-                                <textarea id="your-review" name="review" rows="6"></textarea>
+                                <textarea id="your-review" name="review" rows="6">{{old('review')}}</textarea>
                             </label>
 
                             <button type="submit">

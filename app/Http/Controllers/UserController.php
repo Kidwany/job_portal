@@ -150,6 +150,7 @@ class UserController extends Controller
         $user->current_salary = $request->input('current_salary');
         $user->expected_salary = $request->input('expected_salary');
         $user->salary_currency = $request->input('salary_currency');
+        $user->job_title = $request->input('job_title');
         $user->street_address = $request->input('street_address');
 		$user->is_subscribed = $request->input('is_subscribed', 0);
 		

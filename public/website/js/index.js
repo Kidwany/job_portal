@@ -766,6 +766,7 @@ if (document.querySelector('#slider-video')) {
 if (document.querySelector('form.stepper-form')) {
 	const prevBtn = document.querySelector('.prevBtn');
 	const nextBtn = document.querySelector('.nextBtn');
+	const submitBtn = document.querySelector('.submitBtn');
 	const formSteps = document.querySelectorAll('.form-step');
 	const stepsForm = document.querySelector('.steps-form');
 	const allStepsIndicators = document.querySelectorAll('.step-indicator');
@@ -775,12 +776,15 @@ if (document.querySelector('form.stepper-form')) {
 		formSteps[currentStep].classList.add('active-step');
 		if (currentStep === 0) {
 			prevBtn.style.display = 'none';
+			submitBtn.style.display = 'none';
 		} else {
 			prevBtn.style.display = 'block';
 		}
 
 		if (currentStep == formSteps.length - 1) {
-			nextBtn.innerHTML = 'Submit';
+			// nextBtn.innerHTML = 'Submit';
+			nextBtn.style.display = 'none';
+			submitBtn.style.display = 'block';
 		} else {
 			nextBtn.innerHTML = 'Next';
 		}

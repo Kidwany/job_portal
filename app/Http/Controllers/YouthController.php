@@ -31,13 +31,19 @@ class YouthController extends Controller
         $maritalStatuses = DataArrayHelper::langMaritalStatusesArray();
         $nationalities = DataArrayHelper::langNationalitiesArray();
         $countries = DataArrayHelper::defaultCountriesArray();
+        $functionalAreas = DataArrayHelper::langFunctionalAreasArray();
+        $degrees = DataArrayHelper::langDegreelevelsArray();
+        $industries = DataArrayHelper::defaultIndustriesArray();
         // $countries = DataArrayHelper::langCountriesArray();
         $upload_max_filesize = UploadedFile::getMaxFilesize() / (1048576);
         
-        return view('youth.create')
+        return view('website.youth')
                 ->with('genders', $genders)
                 ->with('maritalStatuses', $maritalStatuses)
                 ->with('nationalities', $nationalities)
+                ->with('degrees', $degrees)
+                ->with('functionalAreas', $functionalAreas)
+                ->with('industries', $industries)
                 ->with('countries', $countries)
                 ->with('upload_max_filesize', $upload_max_filesize);
     }

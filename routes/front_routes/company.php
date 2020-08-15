@@ -27,4 +27,5 @@ Route::get('company-messages', 'CompanyMessagesController@all_messages')->name('
 Route::get('append-messages', 'CompanyMessagesController@append_messages')->name('append-message');
 Route::get('append-only-messages', 'CompanyMessagesController@appendonly_messages')->name('append-only-message');
 Route::post('company-submit-messages', 'CompanyMessagesController@submit_message')->name('company.submit-message');
+Route::post('send-message-to-seeker', 'CompanyMessagesController@sendMessageToSeeker')->name('company.send-message-to-seeker');
 Route::get('company-message-detail/{id}', 'Company\CompanyController@companyMessageDetail')->name('company.message.detail');

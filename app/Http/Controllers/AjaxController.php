@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\State;
 use DB;
 use Input;
 use Form;
@@ -97,11 +98,20 @@ class AjaxController extends Controller
     {
         $degree_level_id = $request->input('degree_level_id');
         $degree_type_id = $request->input('degree_type_id');
-
         $degreeTypes = DataArrayHelper::langDegreeTypesArray($degree_level_id);
-
         $dd = Form::select('degree_type_id', ['' => 'Select degree type'] + $degreeTypes, $degree_type_id, array('id' => 'degree_type_id', 'class' => 'form-control'));
         echo $dd;
     }
 
+    public function getStatesOfCountry($id)
+    {
+        $states = DataArrayHelper::langStatesArray($id);
+        return response()->json($states);
+    }
+
+    public function getCitiesOfState($id)
+    {
+        $cities = DataArrayHelper::langCitiesArray($id);
+        return response()->json($cities);
+    }
 }

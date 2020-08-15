@@ -4,7 +4,7 @@
             <div class="section-zero">
                 <div class="section-body">
                     <div class="img-div">
-                        <img src="{{ asset('/') }}sitesetting_images/thumb/{{ $siteSetting->site_logo }}" alt="img" />
+                        <img src="{{ asset('website/images/logo/logo-black.png') }}" alt="img" />
                     </div>
 
                     <div class="contact-info">

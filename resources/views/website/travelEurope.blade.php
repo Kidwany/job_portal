@@ -1,4 +1,75 @@
 @extends('website.layouts.layouts')
+@section('style')
+    <style>
+        #new_state_id, #new_city_id
+        {
+            width: 100%;
+            background: #eee;
+            border-radius: 2px;
+            padding: 12px 22px;
+            display: block;
+            transition: border-radius .2s ease-out;
+            cursor: text;
+            position: relative;
+            font-size: 14px;
+            border: none;
+        }
+    </style>
+@endsection
+
+@section('scripts')
+
+    <script>
+        $(document).ready(function () {
+            $('#new_country_id').on('change', function () {
+                var country_id = $(this).val();
+                //alert(country_id);
+                if (country_id)
+                {
+                    $.ajax({
+                        header: '@csrf',
+                        url: '{{url('get-states-of-country/')}}' + '/' + country_id,
+                        type: "GET",
+                        dataType: 'json',
+                        success: function (data) {
+                            $('#new_state_id').empty();
+                            $('#new_city_id').empty();
+                            //$('#childOfChildLocation').empty();
+                            $.each(data, function (key, value) {
+                                //alert(value);
+                                //$('#new_state_id').append('<option value="">kidoo</option>')
+                                $('#new_state_id').append('<option value="' + key +'">'+ value +'</option>')
+                            })
+                        }
+                    })
+                }
+            });
+
+            $('#new_state_id').on('change', function () {
+                var state_id = $(this).val();
+                //alert(country_id);
+                if (state_id)
+                {
+                    $.ajax({
+                        header: '@csrf',
+                        url: '{{url('get-cities-of-state/')}}' + '/' + state_id,
+                        type: "GET",
+                        dataType: 'json',
+                        success: function (data) {
+                            $('#new_city_id').empty();
+                            //$('#childOfChildLocation').empty();
+                            $.each(data, function (key, value) {
+                                //alert(value);
+                                //$('#new_state_id').append('<option value="">kidoo</option>')
+                                $('#new_city_id').append('<option value="' + key +'">'+ value +'</option>')
+                            })
+                        }
+                    })
+                }
+            });
+        });
+    </script>
+@endsection
 @section('content')
     <!-- Header start -->
     @include('website.layouts.header')
@@ -170,7 +241,9 @@
                         <i class="linearicons-chart-growth"></i
                         ><span> Get a free consultation </span>
                     </p>
-                    <form class="mfa-form stepper-form" onsubmit="submit()">
+                    <form class="mfa-form stepper-form" onsubmit="submit()" method="post" action="{{route('traveler.store')}}">
+                        @csrf
+                        <input type="hidden" name="type_id" value="1">
                         <div class="form-step">
                             <div class="form-div">
                                 <label for="username">
@@ -181,6 +254,8 @@
                                             class="formInput"
                                             type="text"
                                             id="username"
+                                            name="first_name"
+                                            value="{{old('first_name')}}"
                                             required
                                     />
                                     <i class="feather icon-user"></i>
@@ -189,139 +264,182 @@
                             <div class="form-div">
                                 <label for="email">
 										<span>
-											Email
+											{{__('Email')}}
 										</span>
-                                    <input class="formInput" type="email" id="email" required />
+                                    <input class="formInput" type="email" id="email" required name="email" value="{{old('first_name')}}" />
                                     <i class="feather icon-mail"></i>
                                 </label>
                             </div>
                             <div class="form-div">
                                 <label for="phone">
 										<span>
-											Phone number
+											{{__('Phone')}}
 										</span>
                                     <input
                                             class="formInput"
                                             type="number"
                                             id="phone"
+                                            name="phone"
+                                            value="{{old('phone')}}"
                                             required
                                     />
                                     <i class="feather icon-phone"></i>
                                 </label>
                             </div>
+
                             <div class="form-div">
                                 <label>
 										<span>
 											<!-- Date of birth -->
 										</span>
-                                    <input class="formInput" type="date" required />
+                                    <input class="formInput" type="date" name="date_of_birth" value="{{old('date_of_birth')/*->format('Y-m-d')*/}}" required />
                                 </label>
+                            </div>
+                            <div class="form-div">
+									<span>
+										{{__('Select Gender')}}
+									</span>
+                                <select
+                                        class="formInput my-select"
+                                        name="gender_id"
+                                        id="gender"
+                                        required
+                                >
+                                    <option>
+                                        {{__('Select Gender')}}
+                                    </option>
+                                    <option value="0">Male</option>
+                                    <option value="1">Female</option>
+                                </select>
+                            </div>
+                            <div class="form-div">
+									<span>
+										{{__('Marital Status')}}
+									</span>
+                                <select class="formInput my-select" name="marital_status_id" required>
+                                    <option>
+                                        {{__('Select Marital Status')}}
+                                    </option>
+                                    @if($maritalStatuses)
+                                        @foreach($maritalStatuses as $key=>$value)
+                                            <option value="{{$key}}">{{$value}}</option>
+                                        @endforeach
+                                    @endif
+                                </select>
                             </div>
                         </div>
 
                         <div class="form-step">
+
+
                             <div class="form-div">
 									<span>
-										Select gender
+										{{__('Country')}}
 									</span>
-                                <select class="formInput" name="gender" id="gender" required>
+                                <select class="formInput my-select" name="country_id" required id="new_country_id">
                                     <option>
-                                        Select gender
+                                        {{__('Select Country')}}
                                     </option>
-                                    <option value="0">Male</option>
-                                    <option value="1">Female</option>
+                                    @if($countries)
+                                        @foreach($countries as $key=>$value)
+                                            <option value="{{$key}}">{{$value}}</option>
+                                        @endforeach
+                                    @endif
                                 </select>
                             </div>
                             <div class="form-div">
 									<span>
-										Marital Status
+										{{__('State')}}
 									</span>
-                                <select class="formInput" name="marital" required>
-                                    <option>
-                                        Select Marital Status
-                                    </option>
-                                    <option value="0">Divorced</option>
-                                    <option value="1">Married</option>
-                                    <option value="2">Separated</option>
-                                    <option value="3">Single</option>
-                                    <option value="4">Widow/er</option>
+                                <select class="form-control" id="new_state_id" name="state_id">
+                                    <option>{{__('Select State')}}</option>
                                 </select>
                             </div>
+
                             <div class="form-div">
 									<span>
-										Country
+										{{__('City')}}
 									</span>
-                                <select class="formInput" name="coutnry" required>
-                                    <option>
-                                        Select Coutnry
-                                    </option>
-                                    <option value="0">Saudi Arabi</option>
-                                    <option value="1">Egypt</option>
-                                    <option value="2">Separated</option>
-                                    <option value="3">Single</option>
-                                    <option value="4">Widow/er</option>
+                                <select class="form-control" id="new_city_id" name="city_id">
+                                    <option>{{__('Select City')}}</option>
                                 </select>
                             </div>
+
                             <div class="form-div">
 									<span>
-										State
+										{{__('Nationality')}}
 									</span>
-                                <select class="formInput" name="state" required>
+                                <select
+                                        class="formInput my-select"
+                                        name="nationality_id"
+                                        required
+                                >
                                     <option>
-                                        Select State
+                                        {{__('Select Nationality')}}
                                     </option>
-                                    <option value="0">State one</option>
-                                    <option value="1">state two</option>
-                                    <option value="2">Separated</option>
-                                    <option value="3">Single</option>
-                                    <option value="4">Widow/er</option>
+                                    @if($nationalities)
+                                        @foreach($nationalities as $key=>$value)
+                                            <option value="{{$key}}">{{$value}}</option>
+                                        @endforeach
+                                    @endif
                                 </select>
                             </div>
                         </div>
                         <div class="form-step">
                             <div class="form-div">
 									<span>
-										Select City
+										Functional Area
 									</span>
-                                <select class="formInput" name="city" required>
+                                <select class="formInput my-select" name="functional_area_id" required>
                                     <option>
-                                        Select City
+                                        Select Functional Area
                                     </option>
-                                    <option value="0">Male</option>
-                                    <option value="1">Female</option>
-                                </select>
-                            </div>
-                            <div class="form-div">
-									<span>
-										Nationality
-									</span>
-                                <select class="formInput" name="nationality" required>
-                                    <option>
-                                        Select Nationality
-                                    </option>
-                                    <option value="0">Saudi Arabi</option>
-                                    <option value="1">Egypt</option>
-                                    <option value="2">Separated</option>
-                                    <option value="3">Single</option>
-                                    <option value="4">Widow/er</option>
+                                    @if($functionalAreas)
+                                        @foreach($functionalAreas as $key=>$value)
+                                            <option value="{{$key}}">{{$value}}</option>
+                                        @endforeach
+                                    @endif
                                 </select>
                             </div>
                             <div class="form-div">
 									<span>
 										Industry
 									</span>
-                                <select class="formInput" name="nationality" required>
+                                <select
+                                        class="formInput my-select"
+                                        name="industry_id"
+                                        required
+                                >
                                     <option>
                                         Select Industry
                                     </option>
-                                    <option value="0">Saudi Arabi</option>
-                                    <option value="1">Egypt</option>
-                                    <option value="2">Separated</option>
-                                    <option value="3">Single</option>
-                                    <option value="4">Widow/er</option>
+                                    @if($industries)
+                                        @foreach($industries as $key=>$value)
+                                            <option value="{{$key}}">{{$value}}</option>
+                                        @endforeach
+                                    @endif
                                 </select>
                             </div>
                             <div class="form-div">
+									<span>
+										Degree
+									</span>
+                                <select
+                                        class="formInput my-select"
+                                        name="degree_id"
+                                        required
+                                >
+                                    <option>
+                                        Select Degree Level
+                                    </option>
+                                    @if($degrees)
+                                        @foreach($degrees as $key=>$value)
+                                            <option value="{{$key}}">{{$value}}</option>
+                                        @endforeach
+                                    @endif
+                                </select>
+                            </div>
+                            {{--<div class="form-div">
                                 <label for="address">
 										<span>
 											Adress
@@ -338,11 +456,12 @@
                                     <input class="formInput" type="text" id="idcard" required />
                                     <i class="feather icon-codepen"></i>
                                 </label>
-                            </div>
+                            </div>--}}
                         </div>
                         <div class="formBtns">
                             <button class="prevBtn">Previous</button>
                             <button class="nextBtn">Next</button>
+                            <button class="submitBtn" type="submit">Submit</button>
                         </div>
 
                         <div class="step-indicators">

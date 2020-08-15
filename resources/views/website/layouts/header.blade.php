@@ -11,7 +11,7 @@
                 </div>
                 <div class="logo-img">
                     <a href="{{url('/')}}">
-                        <img src="{{ asset('/') }}sitesetting_images/thumb/{{ $siteSetting->site_logo }}" alt="img" />
+                        <img src="{{ asset('website/images/logo/logo-black.png') }}" alt="img" style="max-width: initial !important;"/>
                     </a>
                 </div>
             </div>
@@ -22,7 +22,7 @@
     <div class="main-header-md-ul-div">
         <div class="img-ul-div">
             <a class="logo-img">
-                <img src="{{ asset('/') }}sitesetting_images/thumb/{{ $siteSetting->site_logo }}" alt="img" />
+                <img src="{{ asset('website/images/logo/logo-black.png') }}" alt="img" style="max-width: initial !important;"/>
             </a>
             <ul class="main-header-md-ul">
                 <li class="active-li">
@@ -225,28 +225,28 @@
                     </a>
                     <ul class="dropped-ul">
                         <li>
-                            <a href="#">
+                            <a href="{{url('traveling-to-europe')}}">
                                 <span>
                                     Traveling to Europe
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="{{url('talented')}}">
                                 <span>
                                     Are you talented?
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="{{url('youth')}}">
                                 <span>
                                     Youth support
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="http://freelance.limitlessgroup-eg.com" target="_blank">
                                 <span>
                                     Remote working
                                 </span>
@@ -357,7 +357,7 @@
             <div class="block-wrapper">
                 <div class="logo-img">
                     <a href="{{url('/')}}">
-                        <img src="{{ asset('/') }}sitesetting_images/thumb/{{ $siteSetting->site_logo }}" alt="img" />
+                        <img src="{{ asset('website/images/logo/logo-black.png') }}" alt="img" style="max-width: initial !important;"/>
                     </a>
                 </div>
                 <div class="header-lg-ul-div"></div>

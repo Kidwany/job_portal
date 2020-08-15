@@ -329,6 +329,7 @@ class CompanyController extends Controller
 
         $user = User::findOrFail($id);
         $profileCv = $user->getDefaultCv();
+        //$education = DataArrayHelper::lan
 
         /*         * ********************************************** */
         $num_profile_views = $user->num_profile_views + 1;

@@ -31,8 +31,10 @@ class TravelerController extends Controller
         $genders = DataArrayHelper::langGendersArray();
         $maritalStatuses = DataArrayHelper::langMaritalStatusesArray();
         $nationalities = DataArrayHelper::langNationalitiesArray();
+        $functionalAreas = DataArrayHelper::langFunctionalAreasArray();
         $countries = DataArrayHelper::arabicLangCountriesArray();
         $industries = DataArrayHelper::defaultIndustriesArray();
+        $degrees = DataArrayHelper::langDegreelevelsArray();
         $upload_max_filesize = UploadedFile::getMaxFilesize() / (1048576);
         
         return view('website.travelEurope')
@@ -41,6 +43,8 @@ class TravelerController extends Controller
                 ->with('nationalities', $nationalities)
                 ->with('countries', $countries)
                 ->with('industries', $industries)
+                ->with('degrees', $degrees)
+                ->with('functionalAreas', $functionalAreas)
                 ->with('upload_max_filesize', $upload_max_filesize);
     }
 
@@ -70,6 +74,9 @@ class TravelerController extends Controller
 
         $traveler->nationality_id = $request->input('nationality_id');
         $traveler->industry_id = $request->input('industry_id');
+        $traveler->functional_area_id = $request->input('functional_area_id');
+        $traveler->degree_id = $request->input('degree_id');
+        $traveler->type_id = $request->input('type_id');
         $traveler->national_id_card_number = $request->input('national_id_card_number');
         
         $traveler->phone = $request->input('phone');

@@ -10,20 +10,23 @@ if (!isset($seo)) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{__($seo->seo_title) }}</title>
     <meta name="Description" content="{!! $seo->seo_description !!}">
     <meta name="Keywords" content="{!! $seo->seo_keywords !!}">
 
-{!! $seo->seo_other !!}
+    {!! $seo->seo_other !!}
 
-<!-- Fav Icon -->
-    <link rel="shortcut icon" href="{{asset('website/favicon.ico')}}">
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="{{asset('website/images/favicon.png')}}">
     <link href="{{asset('website/css/index.min.css')}}" rel="stylesheet">
     @if((session('localeDir', 'ltr') == 'rtl'))
     <!-- Rtl Style -->
         <link href="{{asset('/')}}css/rtl-style.css" rel="stylesheet">
     @endif
+
+    @yield('style')
 
     @stack('styles')
 </head>
@@ -46,6 +49,10 @@ if (!isset($seo)) {
 <script src="{{asset('website/js/jquery.mb.YTPlayer.min.js')}}"></script>
 <script src="{{asset('website/js/custom-select.min.js')}}"></script>
 <script src="{{asset('website/js/star-rating.min.js')}}"></script>
+<script src="{{asset('website/js/lightgallery.js')}}"></script>
+<script src="{{asset('website/js/lg-thumbnail.js')}}"></script>
+<script src="http://support.limitlessgroup-eg.com/chat_widget.js"></script>
+@yield('scripts')
 <script src="{{asset('website/js/index.js')}}"></script>
 {{--<script src="{{asset('/')}}js/jquery.min.js"></script>
 <script src="{{asset('/')}}js/bootstrap.min.js"></script>
@@ -66,6 +73,7 @@ if (!isset($seo)) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.min.js"></script>--}}
 {!! NoCaptcha::renderJs() !!}
+
 @stack('scripts')
 <!-- Custom js -->
 {{--<script src="{{asset('/')}}js/script.js"></script>--}}
@@ -78,6 +86,8 @@ if (!isset($seo)) {
         $("#"+btn_id).attr('disabled','disabled');
     }
 </script>
+
+
 </body>
 
 </html>

@@ -1,4 +1,77 @@
 @extends('website.layouts.layouts')
+
+@section('style')
+    <style>
+        #new_state_id, #new_city_id
+        {
+            width: 100%;
+            background-color: hsla(0,0%,100%,.8);
+            border-radius: 2px;
+            padding: 12px 22px;
+            display: block;
+            transition: border-radius .2s ease-out;
+            cursor: text;
+            position: relative;
+            font-size: 14px;
+            border: none;
+        }
+    </style>
+@endsection
+
+@section('scripts')
+
+    <script>
+        $(document).ready(function () {
+            $('#new_country_id').on('change', function () {
+                var country_id = $(this).val();
+                //alert(country_id);
+                if (country_id)
+                {
+                    $.ajax({
+                        header: '@csrf',
+                        url: '{{url('get-states-of-country/')}}' + '/' + country_id,
+                        type: "GET",
+                        dataType: 'json',
+                        success: function (data) {
+                            $('#new_state_id').empty();
+                            $('#new_city_id').empty();
+                            //$('#childOfChildLocation').empty();
+                            $.each(data, function (key, value) {
+                                //alert(value);
+                                //$('#new_state_id').append('<option value="">kidoo</option>')
+                                $('#new_state_id').append('<option value="' + key +'">'+ value +'</option>')
+                            })
+                        }
+                    })
+                }
+            });
+
+            $('#new_state_id').on('change', function () {
+                var state_id = $(this).val();
+                //alert(country_id);
+                if (state_id)
+                {
+                    $.ajax({
+                        header: '@csrf',
+                        url: '{{url('get-cities-of-state/')}}' + '/' + state_id,
+                        type: "GET",
+                        dataType: 'json',
+                        success: function (data) {
+                            $('#new_city_id').empty();
+                            //$('#childOfChildLocation').empty();
+                            $.each(data, function (key, value) {
+                                //alert(value);
+                                //$('#new_state_id').append('<option value="">kidoo</option>')
+                                $('#new_city_id').append('<option value="' + key +'">'+ value +'</option>')
+                            })
+                        }
+                    })
+                }
+            });
+        });
+    </script>
+
+@endsection
 @section('content')
 <!-- Header start -->
 @include('website.layouts.header')
@@ -84,13 +157,13 @@
             </div>
 
             <div class="content-section">
-                <form>
+                <form action="{{route('job.list')}}" method="get">
                     <div class="input-group-btn">
                         <div class="label">
                             Keywords / Job title
                         </div>
                         <div class="input-btn-group">
-                            <input type="text" placeholder="Enter skils or job title" />
+                            <input type="text" placeholder="Enter skils or job title" name="search" value="{{Request::get('search', '')}}"/>
                             <button type="submit">
 										<span>
 											Search
@@ -144,7 +217,7 @@
                             <div class="label">
                                 Select country
                             </div>
-                            <select class="my-select" id="country_id">
+                            <select class="my-select" id="new_country_id">
                                 <option>
                                     Select country
                                 </option>
@@ -161,17 +234,15 @@
                             <div class="label">
                                 Select State
                             </div>
-                            <select class="my-select" id="state_id">
-                                <option>
-                                    Select State
-                                </option>
+                            <select class="form-control" id="new_state_id">
+                                <option>Select State</option>
                             </select>
                         </div>
                         <div class="input-label-group">
                             <div class="label">
                                 Select City
                             </div>
-                            <select class="my-select" id="city_id">
+                            <select class="form-control" id="new_city_id">
                                 <option>
                                     Select City
                                 </option>
@@ -316,10 +387,10 @@
                         @foreach($featuredJobs as $featuredJob)
                             <?php $company = $featuredJob->getCompany(); ?>
                             @if(null !== $company)
-                                    <li>
+                                <li>
                                         <a href="#">
                                             <div class="img-div">
-                                                <img src="{{$company->printCompanyImage()}}" alt="job image" />
+                                                <img src="{!! asset('company_logos/' . $company->logo) !!}" alt="job image" />
                                             </div>
                                             <div class="job-desc">
                                                 <div class="job-title-date">
@@ -328,7 +399,7 @@
                                                     </div>
                                                     <div class="date">
                                                         <i class="feather icon-clock"></i>
-                                                        {{$featuredJob->created->diffForHumans()}}
+                                                        {{$featuredJob->created_at->diffForHumans()}}
                                                     </div>
                                                 </div>
                                                 <div class="location-option">
@@ -368,7 +439,7 @@
     <div class="section-body">
         <ul class="main-section-ul">
             <li>
-                <a class="service-card" href="./about.html">
+                <a class="service-card" href="#">
                     <div class="service-img">
                         <img src="{{asset('website/images/services/1.png')}}" alt="img" />
                     </div>
@@ -388,7 +459,7 @@
                 </a>
             </li>
             <li>
-                <a class="service-card" href="./about.html">
+                <a class="service-card" href="#">
                     <div class="service-img">
                         <img src="{{asset('website/images/services/2.png')}}" alt="img" />
                     </div>
@@ -408,7 +479,7 @@
                 </a>
             </li>
             <li>
-                <a class="service-card" href="./about.html">
+                <a class="service-card" href="#">
                     <div class="service-img">
                         <img src="{{asset('website/images/services/3.png')}}" alt="img" />
                     </div>
@@ -428,7 +499,7 @@
                 </a>
             </li>
             <li>
-                <a class="service-card" href="./about.html">
+                <a class="service-card" href="#">
                     <div class="service-img">
                         <img src="{{asset('website/images/services/4.png')}}" alt="img" />
                     </div>
@@ -448,7 +519,7 @@
                 </a>
             </li>
             <li>
-                <a class="service-card" href="./about.html">
+                <a class="service-card" href="#">
                     <div class="service-img">
                         <img src="{{asset('website/images/services/5.png')}}" alt="img" />
                     </div>
@@ -468,7 +539,7 @@
                 </a>
             </li>
             <li>
-                <a class="service-card" href="./about.html">
+                <a class="service-card" href="#">
                     <div class="service-img">
                         <img src="{{asset('website/images/services/6.png')}}" alt="img" />
                     </div>
@@ -578,8 +649,11 @@
 <div class="egypt-2030-section">
     <div class="mfa-container">
         <div class="section-wrapper">
-            <img src="{{asset('website/images/egypt-2030/egypt-2030.png')}}" />
-            <div class="section-text">
+            <div class="egypt-section">
+                <div class="section-heading">
+                    Egypt 2030
+                </div>
+                <img src="{{asset('website/images/egypt-2030/egypt-2030.png')}}" alt="egypt 2030" />
                 <p>
                     By 2030, Egypt will witness a comprehensive renaissance,
                     leveraging its genius location and unique Egyptian personality,
@@ -591,6 +665,26 @@
                     justice as well as a balanced ecosystem that preserves the human
                     and natural resources gifted to Egypt by Allah.
                 </p>
+            </div>
+            <div class="million-section">
+                <div class="section-heading">
+                    One million success stories
+                </div>
+                <img src="{{asset('website/images/egypt-2030/million.png')}}" alt="egypt 2030" />
+                <div class="section-text">
+                    <p>
+                        By 2030, Egypt will witness a comprehensive renaissance,
+                        leveraging its genius location and unique Egyptian personality,
+                        and taking into consideration the historical phase to achieve
+                        sustainable development for a better standard of living to all
+                        Egyptians. Mainly depending on science, knowledge and
+                        innovation, Egypt will have a competitive and diversified
+                        economic system and a social system characterized by
+                        participation, solidarity, and justice as well as a balanced
+                        ecosystem that preserves the human and natural resources gifted
+                        to Egypt by Allah.
+                    </p>
+                </div>
             </div>
         </div>
     </div>

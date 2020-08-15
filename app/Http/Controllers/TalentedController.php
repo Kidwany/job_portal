@@ -30,17 +30,20 @@ class TalentedController extends Controller
         $genders = DataArrayHelper::langGendersArray();
         $maritalStatuses = DataArrayHelper::langMaritalStatusesArray();
         $nationalities = DataArrayHelper::langNationalitiesArray();
-         $countries = DataArrayHelper::defaultCountriesArray();
+        $functionalAreas = DataArrayHelper::langFunctionalAreasArray();
+        $degrees = DataArrayHelper::langDegreelevelsArray();
+        $countries = DataArrayHelper::defaultCountriesArray();
         $industries = DataArrayHelper::defaultIndustriesArray();
-        // $countries = DataArrayHelper::langCountriesArray();
         $upload_max_filesize = UploadedFile::getMaxFilesize() / (1048576);
         
-        return view('talented.create')
+        return view('website.talented')
                 ->with('genders', $genders)
                 ->with('maritalStatuses', $maritalStatuses)
                 ->with('nationalities', $nationalities)
                 ->with('countries', $countries)
                 ->with('industries', $industries)
+                ->with('degrees', $degrees)
+                ->with('functionalAreas', $functionalAreas)
                 ->with('upload_max_filesize', $upload_max_filesize);
     }
 

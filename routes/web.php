@@ -139,10 +139,6 @@ include_once($real_path . 'company_auth.php');
 
 include_once($real_path . 'admin_auth.php');
 
-
-
-
-
 Route::get('blog', 'BlogController@index')->name('blogs');
 
 Route::get('blog/search', 'BlogController@search')->name('blog-search');
@@ -152,6 +148,7 @@ Route::get('blog/{slug}', 'BlogController@details')->name('blog-detail');
 Route::get('/blog/category/{blog}', 'BlogController@categories')->name('blog-category');
 
 Route::get('/company-change-message-status', 'CompanyMessagesController@change_message_status')->name('company-change-message-status');
+
 Route::get('/seeker-change-message-status', 'Job\SeekerSendController@change_message_status')->name('seeker-change-message-status');
 
 Route::get('/sitemap', 'SitemapController@index');
@@ -165,6 +162,8 @@ Route::resource('talented', 'TalentedController');
 Route::resource('youth', 'YouthController');
 
 Route::resource('traveler', 'TravelerController');
+
+Route::post('profile-review', 'ProfileReviewController@review');
 
 
 

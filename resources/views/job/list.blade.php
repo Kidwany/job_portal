@@ -4,7 +4,7 @@
 
 <!-- Header start --> 
 
-@include('includes.header') 
+@include('website.layouts.header')
 
 <!-- Header end --> 
 
@@ -276,7 +276,7 @@
 
 </div>
 
-@include('includes.footer')
+@include('website.layouts.footer')
 
 @endsection
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content') 
 <!-- Header start --> 
-@include('includes.header') 
+@include('website.layouts.header')
 <!-- Header end --> 
 <!-- Inner Page Title start --> 
 @include('includes.inner_page_title', ['page_title'=>__('Job Detail')]) 
@@ -225,7 +225,7 @@ $company = $job->getCompany();
         </div>
     </div>
 </div>
-@include('includes.footer')
+@include('website.layouts.footer')
 @endsection
 @push('styles')
 <style type="text/css">

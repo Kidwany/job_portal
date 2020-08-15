@@ -49,6 +49,7 @@ class UserFrontFormRequest extends Request
             //'career_level_id' => 'required',
             'industry_id' => 'required',
             'functional_area_id' => 'required',
+            'job_title' => 'required',
            // 'current_salary' => 'required|max:11',
             //'expected_salary' => 'required|max:11',
             //'salary_currency' => 'required|max:5',

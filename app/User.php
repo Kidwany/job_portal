@@ -105,6 +105,11 @@ class User extends Authenticatable
         return $this->hasMany('App\ProfileSkill', 'user_id', 'id');
     }
 
+    public function profileReviews()
+    {
+        return $this->hasMany(ProfileReviews::class, 'user_id', 'id');
+    }
+
     public function getProfileSkills()
     {
         return $this->profileSkills->get();

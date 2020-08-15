@@ -140,4 +140,22 @@ class CompanyMessagesController extends Controller
         }
         echo 'done';
     }
+
+    public function sendMessageToSeeker(Request $request)
+    {
+        $this->validate($request, [
+            'message' => 'required',
+        ], [
+            'message.required' => 'Message is required.',
+        ]);
+        $message = new CompanyMessage();
+        $message->company_id = Auth::guard('company')->user()->id;
+        $message->message = $request->message;
+        $message->seeker_id = $request->seeker_id;
+        $message->type = 'reply';
+        $message->save();
+
+        flash('Message Has Been Sent Successfully')->success();
+        return \redirect('user-profile/' . $request->seeker_id);
+    }
 }

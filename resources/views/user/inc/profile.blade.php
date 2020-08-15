@@ -136,6 +136,11 @@
 <h5>{{__('Career Information')}}</h5>
 
 <div class="row">
+    <div class="col-md-12 mb-2">
+            <label for="">Job Title</label>
+            {!! Form::text('job_title', null, array('class'=>'form-control', 'id'=>'job_title', 'placeholder'=> 'Job Title')) !!}
+            {!! APFrmErrHelp::showErrors($errors, 'job_title') !!}
+    </div>
  <div class="col-md-6">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'job_experience_id') !!}">
 			<label for="">{{__('Job Experience')}}</label>

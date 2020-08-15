@@ -11147,6 +11147,7 @@ button.swiper-pagination-bullet {
   position: relative;
   display: inline-block;
   height: 26px;
+  height: 36px;
   vertical-align: middle;
   cursor: pointer; }
 
@@ -11156,8 +11157,11 @@ select[disabled] + .gl-star-rating-stars {
 .gl-star-rating-stars > span {
   display: inline-block;
   width: 24px;
+  width: 34px;
   height: 24px;
+  height: 34px;
   background-size: 24px;
+  background-size: 34px;
   background-repeat: no-repeat;
   background-image: url(../images/star-rating/star-empty.svg);
   margin: 0 4px 0 0; }
@@ -11189,7 +11193,9 @@ select[disabled] + .gl-star-rating-stars {
   display: inline-block;
   position: relative;
   height: 26px;
+  height: 36px;
   line-height: 26px;
+  line-height: 36px;
   font-size: 0.8em;
   font-weight: 600;
   color: #fff;
@@ -11197,17 +11203,20 @@ select[disabled] + .gl-star-rating-stars {
   white-space: nowrap;
   vertical-align: middle;
   padding: 0 12px 0 6px;
-  margin: 0 0 0 12px; }
+  margin: 0 0 0 12px;
+  margin: 0 0 0 18px; }
 
 .gl-star-rating-text::before {
   position: absolute;
   top: 0;
   left: -12px;
+  left: -14px;
   width: 0;
   height: 0;
   content: '';
   border-style: solid;
   border-width: 13px 12px 13px 0;
+  border-width: 18px 14px 18px 0;
   border-color: transparent #1a1a1a transparent transparent; }
 
 .gl-star-rating-rtl[data-star-rating] .gl-star-rating-text {
@@ -11237,12 +11246,18 @@ body {
     z-index: 99999;
     display: grid;
     align-items: center;
-    justify-items: center; }
+    align-content: center;
+    justify-items: center;
+    color: #fff;
+    font-family: 'OpenSans-Bold';
+    text-transform: uppercase; }
     body .loading-div img {
-      width: 160px; }
+      width: 160px;
+      margin-bottom: 12px; }
       @media only screen and (min-width: 992px) {
         body .loading-div img {
-          width: 200px; } }
+          width: 200px;
+          margin-bottom: 16px; } }
   body .header-md {
     height: 80px;
     position: fixed;
@@ -11656,16 +11671,19 @@ body {
             background-color: transparent;
             transform: translateY(34px); }
   body .fixed-sub-nav {
+    display: none;
     position: fixed;
-    top: 220px;
+    top: 140px;
     left: 0;
     background-color: #eee;
     z-index: 9999;
     border-radius: 4px;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
-    display: grid;
     width: 62px;
     transition: all 0.5s cubic-bezier(0.16, 0.27, 0, 0.86); }
+    @media only screen and (min-width: 1200px) {
+      body .fixed-sub-nav {
+        display: grid; } }
     body .fixed-sub-nav .dropped-ul {
       display: grid;
       grid-gap: 4px;
@@ -12062,6 +12080,7 @@ body {
     background-color: #c6faf9;
     background-color: #f7fbbf;
     background-color: #d5fffa;
+    overflow: hidden;
     position: relative; }
     body .looking-job-section .section-wrapper {
       padding: 32px 0;
@@ -12120,7 +12139,8 @@ body {
             width: 100%; } }
   body .startups-section {
     background-color: #f7e5b3;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     body .startups-section .startups-wrapper {
       display: grid;
       padding: 32px 0; }
@@ -12129,59 +12149,62 @@ body {
           padding: 92px 0;
           grid-template-columns: 1fr 1fr;
           grid-gap: 52px; } }
-      body .startups-section .startups-wrapper .section-text {
-        align-self: center;
-        position: relative;
-        z-index: 1; }
-        body .startups-section .startups-wrapper .section-text h2 {
-          font-family: 'OpenSans-Bold';
-          text-transform: capitalize;
-          color: #e6af17;
-          line-height: 1.2;
-          font-size: 24px;
-          margin-bottom: 16px; }
-          body .startups-section .startups-wrapper .section-text h2 img {
-            height: 28px;
-            margin-bottom: -4px; }
-          @media only screen and (min-width: 992px) {
-            body .startups-section .startups-wrapper .section-text h2 {
-              margin-bottom: 22px;
-              font-size: 48px; }
-              body .startups-section .startups-wrapper .section-text h2 img {
-                height: 42px;
-                margin-bottom: -8px; } }
-        body .startups-section .startups-wrapper .section-text .span-wrapper i {
+      @media only screen and (min-width: 992px) {
+        body .startups-section .startups-wrapper .section-text {
+          align-self: center;
           position: relative;
-          line-height: 0;
-          opacity: 0.2;
-          display: inline-block;
-          font-size: 42px;
-          margin-right: 6px;
-          transform: translateY(6px); }
-          body .startups-section .startups-wrapper .section-text .span-wrapper i:last-of-type {
-            transform: translateY(18px); }
-          @media only screen and (min-width: 992px) {
-            body .startups-section .startups-wrapper .section-text .span-wrapper i {
-              margin-right: 12px;
-              font-size: 72px;
-              transform: translateY(13px); }
-              body .startups-section .startups-wrapper .section-text .span-wrapper i:last-of-type {
-                transform: translateY(26px); } }
-        body .startups-section .startups-wrapper .section-text .span-wrapper span {
-          color: #6d6d6d;
-          font-size: 18px;
-          line-height: 1.4;
-          letter-spacing: 0.2px;
-          font-family: 'OpenSans-Light'; }
-          @media only screen and (min-width: 992px) {
-            body .startups-section .startups-wrapper .section-text .span-wrapper span {
-              font-size: 20px; } }
-      body .startups-section .startups-wrapper > img {
-        display: none;
-        width: 152%; }
+          z-index: 1; } }
+      body .startups-section .startups-wrapper .section-text h2 {
+        font-family: 'OpenSans-Bold';
+        text-transform: capitalize;
+        color: #e6af17;
+        line-height: 1.2;
+        font-size: 24px;
+        margin-bottom: 16px; }
+        body .startups-section .startups-wrapper .section-text h2 img {
+          height: 28px;
+          margin-bottom: -4px; }
         @media only screen and (min-width: 992px) {
-          body .startups-section .startups-wrapper > img {
+          body .startups-section .startups-wrapper .section-text h2 {
+            margin-bottom: 22px;
+            font-size: 48px; }
+            body .startups-section .startups-wrapper .section-text h2 img {
+              height: 42px;
+              margin-bottom: -8px; } }
+      body .startups-section .startups-wrapper .section-text .span-wrapper i {
+        position: relative;
+        line-height: 0;
+        opacity: 0.2;
+        display: inline-block;
+        font-size: 42px;
+        margin-right: 6px;
+        transform: translateY(6px); }
+        body .startups-section .startups-wrapper .section-text .span-wrapper i:last-of-type {
+          transform: translateY(18px); }
+        @media only screen and (min-width: 992px) {
+          body .startups-section .startups-wrapper .section-text .span-wrapper i {
+            margin-right: 12px;
+            font-size: 72px;
+            transform: translateY(13px); }
+            body .startups-section .startups-wrapper .section-text .span-wrapper i:last-of-type {
+              transform: translateY(26px); } }
+      body .startups-section .startups-wrapper .section-text .span-wrapper span {
+        color: #6d6d6d;
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: 0.2px;
+        font-family: 'OpenSans-Light'; }
+        @media only screen and (min-width: 992px) {
+          body .startups-section .startups-wrapper .section-text .span-wrapper span {
+            font-size: 20px; } }
+      body .startups-section .startups-wrapper .svg-div {
+        display: none; }
+        @media only screen and (min-width: 992px) {
+          body .startups-section .startups-wrapper .svg-div {
             display: block; } }
+        @media only screen and (min-width: 992px) {
+          body .startups-section .startups-wrapper .svg-div img {
+            width: 152%; } }
   body .how-it-works-section {
     padding-top: 28px; }
     @media only screen and (min-width: 992px) {
@@ -12289,65 +12312,76 @@ body {
       @media only screen and (min-width: 992px) {
         body .featured-jobs-section .main-section-ul {
           grid-template-columns: 1fr 1fr; } }
-      body .featured-jobs-section .main-section-ul > li a {
-        background-color: #f9f9f9;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 2px;
-        display: grid;
-        grid-template-columns: auto 1fr;
-        transition: all 0.25s ease-out; }
-        body .featured-jobs-section .main-section-ul > li a .img-div {
-          border-right: 1px solid rgba(0, 0, 0, 0.1);
+      body .featured-jobs-section .main-section-ul > li {
+        display: grid; }
+        body .featured-jobs-section .main-section-ul > li a {
+          background-color: #f9f9f9;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          border-radius: 2px;
           display: grid;
-          align-items: center;
-          padding: 12px 14px; }
-          body .featured-jobs-section .main-section-ul > li a .img-div img {
-            width: 82px; }
-        body .featured-jobs-section .main-section-ul > li a .job-desc {
-          padding: 26px 22px;
-          color: #272727; }
-          body .featured-jobs-section .main-section-ul > li a .job-desc .job-title-date {
+          transition: all 0.25s ease-out; }
+          @media only screen and (min-width: 768px) {
+            body .featured-jobs-section .main-section-ul > li a {
+              grid-template-columns: auto 1fr; } }
+          body .featured-jobs-section .main-section-ul > li a .img-div {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             display: grid;
-            grid-gap: 12px;
-            grid-template-columns: 1fr auto;
-            align-items: center; }
-            body .featured-jobs-section .main-section-ul > li a .job-desc .job-title-date .title {
-              font-family: 'OpenSans-Bold';
-              text-transform: capitalize;
-              font-size: 14px;
-              text-overflow: ellipsis;
-              overflow: hidden;
-              white-space: nowrap; }
-              @media only screen and (min-width: 992px) {
-                body .featured-jobs-section .main-section-ul > li a .job-desc .job-title-date .title {
-                  font-size: 18px; } }
-            body .featured-jobs-section .main-section-ul > li a .job-desc .job-title-date .date {
+            align-items: center;
+            padding: 12px 14px; }
+            @media only screen and (min-width: 768px) {
+              body .featured-jobs-section .main-section-ul > li a .img-div {
+                border-right: 1px solid rgba(0, 0, 0, 0.1);
+                border-bottom: 0; } }
+            body .featured-jobs-section .main-section-ul > li a .img-div img {
+              width: 82px; }
+          body .featured-jobs-section .main-section-ul > li a .job-desc {
+            padding: 20px 16px;
+            color: #272727; }
+            @media only screen and (min-width: 992px) {
+              body .featured-jobs-section .main-section-ul > li a .job-desc {
+                padding: 26px 22px; } }
+            body .featured-jobs-section .main-section-ul > li a .job-desc .job-title-date {
+              display: grid;
+              grid-gap: 12px;
+              grid-template-columns: 1fr auto;
+              align-items: center; }
+              body .featured-jobs-section .main-section-ul > li a .job-desc .job-title-date .title {
+                font-family: 'OpenSans-Bold';
+                text-transform: capitalize;
+                font-size: 14px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap; }
+                @media only screen and (min-width: 992px) {
+                  body .featured-jobs-section .main-section-ul > li a .job-desc .job-title-date .title {
+                    font-size: 18px; } }
+              body .featured-jobs-section .main-section-ul > li a .job-desc .job-title-date .date {
+                color: #6d6d6d;
+                font-size: 14px; }
+            body .featured-jobs-section .main-section-ul > li a .job-desc .location-option {
+              margin-top: 12px;
               color: #6d6d6d;
-              font-size: 14px; }
-          body .featured-jobs-section .main-section-ul > li a .job-desc .location-option {
-            margin-top: 12px;
-            color: #6d6d6d;
-            display: grid;
-            grid-gap: 12px;
-            grid-template-columns: 1fr auto;
-            align-items: center; }
-          body .featured-jobs-section .main-section-ul > li a .job-desc .job-badge {
-            padding: 4px 12px;
-            border-radius: 2px;
-            background-color: #eee;
-            color: #373737; }
-            body .featured-jobs-section .main-section-ul > li a .job-desc .job-badge.full-time-badge {
-              background-color: #f4dc98; }
-            body .featured-jobs-section .main-section-ul > li a .job-desc .job-badge.part-time-badge {
-              background-color: #7fe7e4; }
-            body .featured-jobs-section .main-section-ul > li a .job-desc .job-badge.freelance-badge {
-              background-color: #66d8b2; }
-            body .featured-jobs-section .main-section-ul > li a .job-desc .job-badge.temporary-badge {
-              background-color: #f1927a; }
-        body .featured-jobs-section .main-section-ul > li a:hover {
-          border-color: #f0cc69;
-          background-color: #fdf8eb;
-          box-shadow: 0 10px 14px rgba(0, 0, 0, 0.06); }
+              display: grid;
+              grid-gap: 12px;
+              grid-template-columns: 1fr auto;
+              align-items: center; }
+            body .featured-jobs-section .main-section-ul > li a .job-desc .job-badge {
+              padding: 4px 12px;
+              border-radius: 2px;
+              background-color: #eee;
+              color: #373737; }
+              body .featured-jobs-section .main-section-ul > li a .job-desc .job-badge.full-time-badge {
+                background-color: #f4dc98; }
+              body .featured-jobs-section .main-section-ul > li a .job-desc .job-badge.part-time-badge {
+                background-color: #7fe7e4; }
+              body .featured-jobs-section .main-section-ul > li a .job-desc .job-badge.freelance-badge {
+                background-color: #66d8b2; }
+              body .featured-jobs-section .main-section-ul > li a .job-desc .job-badge.temporary-badge {
+                background-color: #f1927a; }
+          body .featured-jobs-section .main-section-ul > li a:hover {
+            border-color: #f0cc69;
+            background-color: #fdf8eb;
+            box-shadow: 0 10px 14px rgba(0, 0, 0, 0.06); }
     body .featured-jobs-section .all-jobs {
       display: block;
       width: max-content;
@@ -12470,37 +12504,82 @@ body {
             outline: 0; }
   body .egypt-2030-section {
     background-color: #d4f0f9;
+    background-color: #d7ffd9;
     padding: 32px 0; }
     @media only screen and (min-width: 992px) {
       body .egypt-2030-section {
         padding: 62px 0; } }
     body .egypt-2030-section .section-wrapper {
       display: grid;
-      place-items: center; }
-      body .egypt-2030-section .section-wrapper img {
-        height: 140px;
-        margin-bottom: 14px; }
-        @media only screen and (min-width: 992px) {
-          body .egypt-2030-section .section-wrapper img {
-            height: 230px;
-            margin-bottom: 22px; } }
-        @media only screen and (min-width: 1200px) {
-          body .egypt-2030-section .section-wrapper img {
-            height: 260px; } }
-      body .egypt-2030-section .section-wrapper p {
-        text-align: center;
-        font-family: 'OpenSans-Light';
-        color: #848484;
-        line-height: 1.6; }
-        @media only screen and (min-width: 992px) {
-          body .egypt-2030-section .section-wrapper p {
-            font-size: 20px;
-            max-width: 80%;
-            margin: auto; } }
+      place-items: center;
+      grid-gap: 22px; }
+      @media only screen and (min-width: 1200px) {
+        body .egypt-2030-section .section-wrapper {
+          grid-gap: 8px;
+          grid-template-columns: 1fr 1fr;
+          place-items: unset; } }
+      body .egypt-2030-section .section-wrapper .egypt-section,
+      body .egypt-2030-section .section-wrapper .million-section {
+        text-align: center; }
+        body .egypt-2030-section .section-wrapper .egypt-section .section-heading,
+        body .egypt-2030-section .section-wrapper .million-section .section-heading {
+          text-transform: capitalize;
+          font-family: 'OpenSans-Bold';
+          text-align: center;
+          margin-bottom: 8px;
+          color: #84a886;
+          font-size: 22px; }
+          @media only screen and (min-width: 992px) {
+            body .egypt-2030-section .section-wrapper .egypt-section .section-heading,
+            body .egypt-2030-section .section-wrapper .million-section .section-heading {
+              margin-bottom: 12px;
+              font-size: 32px; } }
+        body .egypt-2030-section .section-wrapper .egypt-section img,
+        body .egypt-2030-section .section-wrapper .million-section img {
+          height: 140px;
+          margin-bottom: 14px; }
+          @media only screen and (min-width: 992px) {
+            body .egypt-2030-section .section-wrapper .egypt-section img,
+            body .egypt-2030-section .section-wrapper .million-section img {
+              height: 230px;
+              margin-bottom: 22px; } }
+          @media only screen and (min-width: 1200px) {
+            body .egypt-2030-section .section-wrapper .egypt-section img,
+            body .egypt-2030-section .section-wrapper .million-section img {
+              height: 260px;
+              float: left;
+              margin-right: 22px;
+              shape-outside: ellipse(50% 45% at 49% 40%); } }
+        body .egypt-2030-section .section-wrapper .egypt-section p,
+        body .egypt-2030-section .section-wrapper .million-section p {
+          text-align: center;
+          font-family: 'OpenSans-Light';
+          color: #848484;
+          line-height: 1.6; }
+          @media only screen and (min-width: 992px) {
+            body .egypt-2030-section .section-wrapper .egypt-section p,
+            body .egypt-2030-section .section-wrapper .million-section p {
+              font-size: 20px;
+              max-width: 80%;
+              margin: auto; } }
+          @media only screen and (min-width: 1200px) {
+            body .egypt-2030-section .section-wrapper .egypt-section p,
+            body .egypt-2030-section .section-wrapper .million-section p {
+              text-align: justify;
+              line-height: 1.8;
+              max-width: 92%; } }
+      @media only screen and (min-width: 1200px) {
+        body .egypt-2030-section .section-wrapper .million-section img {
+          float: left;
+          shape-outside: ellipse(54% 44% at 42% 55%);
+          margin-bottom: 0; } }
   body .subscribe-section {
-    background-color: #fff;
-    padding: 62px 0;
+    background-color: #f7f8fa;
+    padding-bottom: 32px;
     display: grid; }
+    @media only screen and (min-width: 992px) {
+      body .subscribe-section {
+        padding-bottom: 62px; } }
     body .subscribe-section .section-title {
       max-width: 500px;
       font-size: 18px;
@@ -12755,6 +12834,12 @@ body {
         line-height: 1;
         font-family: 'OpenSans-Bold';
         font-size: 22px; }
+      body .profile-page .profile-img-card .static-rating .rating-ul li i {
+        color: #eebc3e;
+        font-size: 22px; }
+        @media only screen and (min-width: 992px) {
+          body .profile-page .profile-img-card .static-rating .rating-ul li i {
+            font-size: 32px; } }
       body .profile-page .profile-img-card .job-title {
         color: #ebbc3b;
         font-family: 'OpenSans-Bold';
@@ -12935,6 +13020,139 @@ body {
             padding: 8px 18px;
             display: grid;
             place-items: center; }
+        body .profile-page .main-profile-section .profile-sub-section .gallery-layout {
+          margin: 14px; }
+          @media only screen and (min-width: 992px) {
+            body .profile-page .main-profile-section .profile-sub-section .gallery-layout {
+              margin: 22px; } }
+      body .profile-page .main-profile-section .reviews-section {
+        transform: translateY(-140px);
+        margin-top: 28px; }
+        body .profile-page .main-profile-section .reviews-section .all-reviews-ul > li {
+          background-color: #fff;
+          border: 1px solid rgba(0, 0, 0, 0.06);
+          border-radius: 4px;
+          display: grid;
+          margin-bottom: 18px; }
+          body .profile-page .main-profile-section .reviews-section .all-reviews-ul > li:last-of-type {
+            margin-bottom: 0 !important; }
+          @media only screen and (min-width: 992px) {
+            body .profile-page .main-profile-section .reviews-section .all-reviews-ul > li {
+              margin-bottom: 24px; } }
+          body .profile-page .main-profile-section .reviews-section .all-reviews-ul > li .review-header {
+            background-color: #f1f2f3;
+            padding: 18px 14px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-gap: 14px; }
+            @media only screen and (min-width: 768px) {
+              body .profile-page .main-profile-section .reviews-section .all-reviews-ul > li .review-header {
+                grid-template-columns: auto 1fr auto; } }
+            @media only screen and (min-width: 992px) {
+              body .profile-page .main-profile-section .reviews-section .all-reviews-ul > li .review-header {
+                padding: 22px 24px; } }
+            body .profile-page .main-profile-section .reviews-section .all-reviews-ul > li .review-header img {
+              align-self: center;
+              width: 72px;
+              height: 72px;
+              border-radius: 50%;
+              object-fit: cover;
+              object-position: center; }
+              @media only screen and (min-width: 992px) {
+                body .profile-page .main-profile-section .reviews-section .all-reviews-ul > li .review-header img {
+                  width: 82px;
+                  height: 82px; } }
+            body .profile-page .main-profile-section .reviews-section .all-reviews-ul > li .review-header .reviewer {
+              align-self: center; }
+              body .profile-page .main-profile-section .reviews-section .all-reviews-ul > li .review-header .reviewer .name {
+                font-family: 'OpenSans-Bold';
+                text-transform: capitalize;
+                color: rgba(0, 0, 0, 0.6);
+                font-size: 18px; }
+                @media only screen and (min-width: 992px) {
+                  body .profile-page .main-profile-section .reviews-section .all-reviews-ul > li .review-header .reviewer .name {
+                    font-size: 22px; } }
+              body .profile-page .main-profile-section .reviews-section .all-reviews-ul > li .review-header .reviewer .rate > ul {
+                color: #eebc3e;
+                font-size: 20px; }
+                @media only screen and (min-width: 992px) {
+                  body .profile-page .main-profile-section .reviews-section .all-reviews-ul > li .review-header .reviewer .rate > ul {
+                    font-size: 22px; } }
+            body .profile-page .main-profile-section .reviews-section .all-reviews-ul > li .review-header .review-date {
+              color: rgba(0, 0, 0, 0.7); }
+          body .profile-page .main-profile-section .reviews-section .all-reviews-ul > li .review-desc {
+            color: rgba(0, 0, 0, 0.7);
+            max-width: 90%;
+            padding: 18px 14px; }
+            @media only screen and (min-width: 992px) {
+              body .profile-page .main-profile-section .reviews-section .all-reviews-ul > li .review-desc {
+                padding: 22px 24px; } }
+      body .profile-page .main-profile-section .rating-section {
+        transform: translateY(-140px);
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 4px;
+        margin-top: 28px; }
+        body .profile-page .main-profile-section .rating-section .section-heading {
+          background-color: #f1f2f3;
+          padding: 18px 22px;
+          font-family: 'OpenSans-Bold';
+          color: #203242;
+          font-size: 22px;
+          color: #edc452;
+          text-transform: capitalize; }
+          body .profile-page .main-profile-section .rating-section .section-heading img {
+            height: 26px; }
+        body .profile-page .main-profile-section .rating-section .rating-form {
+          display: grid;
+          padding: 62px 52px;
+          grid-gap: 22px; }
+          body .profile-page .main-profile-section .rating-section .rating-form label {
+            display: grid;
+            grid-gap: 2px;
+            color: rgba(0, 0, 0, 0.7); }
+            body .profile-page .main-profile-section .rating-section .rating-form label input {
+              height: 48px;
+              padding: 8px 18px; }
+            body .profile-page .main-profile-section .rating-section .rating-form label textarea {
+              padding: 12px 22px;
+              resize: none; }
+            body .profile-page .main-profile-section .rating-section .rating-form label input,
+            body .profile-page .main-profile-section .rating-section .rating-form label textarea {
+              border: 1px solid rgba(0, 0, 0, 0.2);
+              border-radius: 4px;
+              outline: 0;
+              transition: all 0.2s ease-out; }
+              body .profile-page .main-profile-section .rating-section .rating-form label input:focus,
+              body .profile-page .main-profile-section .rating-section .rating-form label textarea:focus {
+                border-color: #ebbc3b;
+                background-color: #fdf8eb; }
+          body .profile-page .main-profile-section .rating-section .rating-form .name-email {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 18px; }
+          body .profile-page .main-profile-section .rating-section .rating-form button {
+            display: block;
+            width: max-content;
+            padding: 10px 22px;
+            font-size: 14px;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: #f6e2aa;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #ae8412;
+            border-radius: 8px;
+            font-family: 'OpenSans-Bold';
+            border: 2px solid transparent;
+            transition: all 0.25s ease-out; }
+            @media only screen and (min-width: 992px) {
+              body .profile-page .main-profile-section .rating-section .rating-form button {
+                font-size: 16px;
+                padding: 12px 28px; } }
+            body .profile-page .main-profile-section .rating-section .rating-form button:hover {
+              background-color: #f2d27c;
+              border-color: #ebbc3b; }
   body .myPage {
     min-height: calc(100vh - 300px);
     margin-top: 80px; }
@@ -12983,26 +13201,32 @@ body {
             body .myPage .header-breadcrumb .breadcrumb-ul .breadcrumb-li a:hover {
               text-decoration: underline; }
     body .myPage .page-content .europe-services,
-    body .myPage .page-content .why-eladrousi {
+    body .myPage .page-content .why-eladrousi,
+    body .myPage .page-content .find-talented-section {
       padding-top: 42px; }
       @media only screen and (min-width: 992px) {
         body .myPage .page-content .europe-services,
-        body .myPage .page-content .why-eladrousi {
+        body .myPage .page-content .why-eladrousi,
+        body .myPage .page-content .find-talented-section {
           padding-top: 62px; } }
       @media only screen and (min-width: 1200px) {
         body .myPage .page-content .europe-services,
-        body .myPage .page-content .why-eladrousi {
+        body .myPage .page-content .why-eladrousi,
+        body .myPage .page-content .find-talented-section {
           padding-top: 82px; } }
       body .myPage .page-content .europe-services .section-heading,
-      body .myPage .page-content .why-eladrousi .section-heading {
+      body .myPage .page-content .why-eladrousi .section-heading,
+      body .myPage .page-content .find-talented-section .section-heading {
         text-align: center;
         margin-bottom: 22px; }
         @media only screen and (min-width: 992px) {
           body .myPage .page-content .europe-services .section-heading,
-          body .myPage .page-content .why-eladrousi .section-heading {
+          body .myPage .page-content .why-eladrousi .section-heading,
+          body .myPage .page-content .find-talented-section .section-heading {
             margin-bottom: 42px; } }
         body .myPage .page-content .europe-services .section-heading h1,
-        body .myPage .page-content .why-eladrousi .section-heading h1 {
+        body .myPage .page-content .why-eladrousi .section-heading h1,
+        body .myPage .page-content .find-talented-section .section-heading h1 {
           font-family: 'OpenSans-Bold';
           text-transform: capitalize;
           color: #272727;
@@ -13010,38 +13234,46 @@ body {
           font-size: 24px;
           margin-bottom: 8px; }
           body .myPage .page-content .europe-services .section-heading h1 img,
-          body .myPage .page-content .why-eladrousi .section-heading h1 img {
+          body .myPage .page-content .why-eladrousi .section-heading h1 img,
+          body .myPage .page-content .find-talented-section .section-heading h1 img {
             height: 28px;
             margin-bottom: -2px; }
           @media only screen and (min-width: 992px) {
             body .myPage .page-content .europe-services .section-heading h1,
-            body .myPage .page-content .why-eladrousi .section-heading h1 {
+            body .myPage .page-content .why-eladrousi .section-heading h1,
+            body .myPage .page-content .find-talented-section .section-heading h1 {
               margin-bottom: 10px;
               font-size: 32px; }
               body .myPage .page-content .europe-services .section-heading h1 img,
-              body .myPage .page-content .why-eladrousi .section-heading h1 img {
+              body .myPage .page-content .why-eladrousi .section-heading h1 img,
+              body .myPage .page-content .find-talented-section .section-heading h1 img {
                 height: 42px;
                 margin-bottom: -4px; } }
         body .myPage .page-content .europe-services .section-heading p,
-        body .myPage .page-content .why-eladrousi .section-heading p {
+        body .myPage .page-content .why-eladrousi .section-heading p,
+        body .myPage .page-content .find-talented-section .section-heading p {
           color: #6d6d6d;
           margin: auto;
           font-family: 'OpenSans-Light';
           font-size: 18px; }
       body .myPage .page-content .europe-services .section-body .main-ul,
-      body .myPage .page-content .why-eladrousi .section-body .main-ul {
+      body .myPage .page-content .why-eladrousi .section-body .main-ul,
+      body .myPage .page-content .find-talented-section .section-body .main-ul {
         display: grid;
         grid-gap: 32px; }
         @media only screen and (min-width: 768px) {
           body .myPage .page-content .europe-services .section-body .main-ul,
-          body .myPage .page-content .why-eladrousi .section-body .main-ul {
+          body .myPage .page-content .why-eladrousi .section-body .main-ul,
+          body .myPage .page-content .find-talented-section .section-body .main-ul {
             grid-template-columns: repeat(2, 1fr); } }
         @media only screen and (min-width: 992px) {
           body .myPage .page-content .europe-services .section-body .main-ul,
-          body .myPage .page-content .why-eladrousi .section-body .main-ul {
+          body .myPage .page-content .why-eladrousi .section-body .main-ul,
+          body .myPage .page-content .find-talented-section .section-body .main-ul {
             grid-template-columns: repeat(4, 1fr); } }
         body .myPage .page-content .europe-services .section-body .main-ul li,
-        body .myPage .page-content .why-eladrousi .section-body .main-ul li {
+        body .myPage .page-content .why-eladrousi .section-body .main-ul li,
+        body .myPage .page-content .find-talented-section .section-body .main-ul li {
           background-color: rgba(255, 255, 255, 0.86);
           border-radius: 4px;
           padding: 22px 24px;
@@ -13050,18 +13282,22 @@ body {
           text-align: center; }
           @media only screen and (min-width: 992px) {
             body .myPage .page-content .europe-services .section-body .main-ul li,
-            body .myPage .page-content .why-eladrousi .section-body .main-ul li {
+            body .myPage .page-content .why-eladrousi .section-body .main-ul li,
+            body .myPage .page-content .find-talented-section .section-body .main-ul li {
               box-shadow: 0 14px 16px rgba(0, 0, 0, 0.08); } }
           @media only screen and (min-width: 1200px) {
             body .myPage .page-content .europe-services .section-body .main-ul li,
-            body .myPage .page-content .why-eladrousi .section-body .main-ul li {
+            body .myPage .page-content .why-eladrousi .section-body .main-ul li,
+            body .myPage .page-content .find-talented-section .section-body .main-ul li {
               padding: 30px 26px; } }
           body .myPage .page-content .europe-services .section-body .main-ul li img,
-          body .myPage .page-content .why-eladrousi .section-body .main-ul li img {
+          body .myPage .page-content .why-eladrousi .section-body .main-ul li img,
+          body .myPage .page-content .find-talented-section .section-body .main-ul li img {
             margin-bottom: 14px;
             height: 92px; }
           body .myPage .page-content .europe-services .section-body .main-ul li .li-title,
-          body .myPage .page-content .why-eladrousi .section-body .main-ul li .li-title {
+          body .myPage .page-content .why-eladrousi .section-body .main-ul li .li-title,
+          body .myPage .page-content .find-talented-section .section-body .main-ul li .li-title {
             font-family: 'OpenSans-Bold';
             margin-bottom: 4px;
             font-size: 18px;
@@ -13069,25 +13305,255 @@ body {
             color: #434343;
             color: #edc24e; }
           body .myPage .page-content .europe-services .section-body .main-ul li .li-body,
-          body .myPage .page-content .why-eladrousi .section-body .main-ul li .li-body {
+          body .myPage .page-content .why-eladrousi .section-body .main-ul li .li-body,
+          body .myPage .page-content .find-talented-section .section-body .main-ul li .li-body {
             line-height: 1.7;
             color: #6d6d6d; }
       @media only screen and (min-width: 992px) {
         body .myPage .page-content .europe-services.why-eladrousi .section-heading h1 img,
-        body .myPage .page-content .why-eladrousi.why-eladrousi .section-heading h1 img {
+        body .myPage .page-content .why-eladrousi.why-eladrousi .section-heading h1 img,
+        body .myPage .page-content .find-talented-section.why-eladrousi .section-heading h1 img {
           height: 32px; } }
       @media only screen and (min-width: 992px) {
         body .myPage .page-content .europe-services.why-eladrousi .section-body .main-ul,
-        body .myPage .page-content .why-eladrousi.why-eladrousi .section-body .main-ul {
+        body .myPage .page-content .why-eladrousi.why-eladrousi .section-body .main-ul,
+        body .myPage .page-content .find-talented-section.why-eladrousi .section-body .main-ul {
           grid-template-columns: repeat(3, 1fr); } }
       body .myPage .page-content .europe-services.why-eladrousi .section-body .main-ul li,
-      body .myPage .page-content .why-eladrousi.why-eladrousi .section-body .main-ul li {
+      body .myPage .page-content .why-eladrousi.why-eladrousi .section-body .main-ul li,
+      body .myPage .page-content .find-talented-section.why-eladrousi .section-body .main-ul li {
         box-shadow: none;
         border: 2px solid #e4d09b7d;
         background-color: #f8f1de; }
         body .myPage .page-content .europe-services.why-eladrousi .section-body .main-ul li .li-title,
-        body .myPage .page-content .why-eladrousi.why-eladrousi .section-body .main-ul li .li-title {
+        body .myPage .page-content .why-eladrousi.why-eladrousi .section-body .main-ul li .li-title,
+        body .myPage .page-content .find-talented-section.why-eladrousi .section-body .main-ul li .li-title {
           color: #cca742; }
+      @media only screen and (min-width: 992px) {
+        body .myPage .page-content .europe-services.youth-support-section .section-body .main-ul,
+        body .myPage .page-content .why-eladrousi.youth-support-section .section-body .main-ul,
+        body .myPage .page-content .find-talented-section.youth-support-section .section-body .main-ul {
+          grid-template-columns: repeat(3, auto);
+          justify-content: center; } }
+      body .myPage .page-content .europe-services.youth-support-section .section-body .main-ul li,
+      body .myPage .page-content .why-eladrousi.youth-support-section .section-body .main-ul li,
+      body .myPage .page-content .find-talented-section.youth-support-section .section-body .main-ul li {
+        box-shadow: none;
+        border: 2px solid #e4d09b7d;
+        background-color: #f8f1de; }
+        @media only screen and (min-width: 992px) {
+          body .myPage .page-content .europe-services.youth-support-section .section-body .main-ul li,
+          body .myPage .page-content .why-eladrousi.youth-support-section .section-body .main-ul li,
+          body .myPage .page-content .find-talented-section.youth-support-section .section-body .main-ul li {
+            max-width: 320px; } }
+        body .myPage .page-content .europe-services.youth-support-section .section-body .main-ul li .li-title,
+        body .myPage .page-content .why-eladrousi.youth-support-section .section-body .main-ul li .li-title,
+        body .myPage .page-content .find-talented-section.youth-support-section .section-body .main-ul li .li-title {
+          color: #cca742; }
+      body .myPage .page-content .europe-services.find-talented-section,
+      body .myPage .page-content .why-eladrousi.find-talented-section,
+      body .myPage .page-content .find-talented-section.find-talented-section {
+        background-color: #fff;
+        padding: 32px 0; }
+        @media only screen and (min-width: 992px) {
+          body .myPage .page-content .europe-services.find-talented-section,
+          body .myPage .page-content .why-eladrousi.find-talented-section,
+          body .myPage .page-content .find-talented-section.find-talented-section {
+            padding: 52px 0; } }
+        @media only screen and (min-width: 1200px) {
+          body .myPage .page-content .europe-services.find-talented-section,
+          body .myPage .page-content .why-eladrousi.find-talented-section,
+          body .myPage .page-content .find-talented-section.find-talented-section {
+            padding: 62px 0; } }
+        body .myPage .page-content .europe-services.find-talented-section .section-body,
+        body .myPage .page-content .why-eladrousi.find-talented-section .section-body,
+        body .myPage .page-content .find-talented-section.find-talented-section .section-body {
+          display: grid; }
+          body .myPage .page-content .europe-services.find-talented-section .section-body img,
+          body .myPage .page-content .why-eladrousi.find-talented-section .section-body img,
+          body .myPage .page-content .find-talented-section.find-talented-section .section-body img {
+            width: 100%; }
+          body .myPage .page-content .europe-services.find-talented-section .section-body .section-text h1,
+          body .myPage .page-content .why-eladrousi.find-talented-section .section-body .section-text h1,
+          body .myPage .page-content .find-talented-section.find-talented-section .section-body .section-text h1 {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            justify-content: start;
+            grid-gap: 5px;
+            font-family: 'OpenSans-Bold';
+            text-transform: capitalize;
+            color: #272727;
+            line-height: 1.2;
+            font-size: 24px;
+            margin-bottom: 8px; }
+            body .myPage .page-content .europe-services.find-talented-section .section-body .section-text h1 img,
+            body .myPage .page-content .why-eladrousi.find-talented-section .section-body .section-text h1 img,
+            body .myPage .page-content .find-talented-section.find-talented-section .section-body .section-text h1 img {
+              height: 28px;
+              width: 28px;
+              margin-bottom: -2px; }
+            @media only screen and (min-width: 992px) {
+              body .myPage .page-content .europe-services.find-talented-section .section-body .section-text h1,
+              body .myPage .page-content .why-eladrousi.find-talented-section .section-body .section-text h1,
+              body .myPage .page-content .find-talented-section.find-talented-section .section-body .section-text h1 {
+                margin-bottom: 10px;
+                font-size: 32px; }
+                body .myPage .page-content .europe-services.find-talented-section .section-body .section-text h1 img,
+                body .myPage .page-content .why-eladrousi.find-talented-section .section-body .section-text h1 img,
+                body .myPage .page-content .find-talented-section.find-talented-section .section-body .section-text h1 img {
+                  height: 42px;
+                  width: 42px;
+                  margin-bottom: -4px; } }
+          body .myPage .page-content .europe-services.find-talented-section .section-body .section-text > p,
+          body .myPage .page-content .why-eladrousi.find-talented-section .section-body .section-text > p,
+          body .myPage .page-content .find-talented-section.find-talented-section .section-body .section-text > p {
+            font-family: 'OpenSans-Light';
+            color: rgba(0, 0, 0, 0.8);
+            line-height: 1.5; }
+            @media only screen and (min-width: 992px) {
+              body .myPage .page-content .europe-services.find-talented-section .section-body .section-text > p,
+              body .myPage .page-content .why-eladrousi.find-talented-section .section-body .section-text > p,
+              body .myPage .page-content .find-talented-section.find-talented-section .section-body .section-text > p {
+                font-size: 20px; } }
+          @media only screen and (min-width: 992px) {
+            body .myPage .page-content .europe-services.find-talented-section .section-body,
+            body .myPage .page-content .why-eladrousi.find-talented-section .section-body,
+            body .myPage .page-content .find-talented-section.find-talented-section .section-body {
+              grid-template-columns: 1fr 1fr;
+              grid-gap: 18px;
+              align-items: center; }
+              body .myPage .page-content .europe-services.find-talented-section .section-body .section-text,
+              body .myPage .page-content .why-eladrousi.find-talented-section .section-body .section-text,
+              body .myPage .page-content .find-talented-section.find-talented-section .section-body .section-text {
+                align-self: center; } }
+  body .myPage.employer-page .page-content .page-section {
+    padding-top: 42px; }
+    @media only screen and (min-width: 992px) {
+      body .myPage.employer-page .page-content .page-section {
+        padding-top: 62px; } }
+    @media only screen and (min-width: 1200px) {
+      body .myPage.employer-page .page-content .page-section {
+        padding-top: 82px; } }
+    body .myPage.employer-page .page-content .page-section .section-heading {
+      text-align: center;
+      margin-bottom: 22px;
+      display: grid;
+      justify-content: center; }
+      @media only screen and (min-width: 992px) {
+        body .myPage.employer-page .page-content .page-section .section-heading {
+          margin: auto;
+          margin-bottom: 42px;
+          max-width: 80%; } }
+      body .myPage.employer-page .page-content .page-section .section-heading h1 {
+        font-family: 'OpenSans-Bold';
+        text-transform: capitalize;
+        color: #272727;
+        line-height: 1.2;
+        font-size: 24px;
+        margin-bottom: 8px; }
+        body .myPage.employer-page .page-content .page-section .section-heading h1 img {
+          height: 28px;
+          margin-bottom: -2px; }
+        @media only screen and (min-width: 992px) {
+          body .myPage.employer-page .page-content .page-section .section-heading h1 {
+            margin-bottom: 10px;
+            font-size: 32px; }
+            body .myPage.employer-page .page-content .page-section .section-heading h1 img {
+              height: 42px;
+              margin-bottom: -4px; } }
+      body .myPage.employer-page .page-content .page-section .section-heading p {
+        color: #6d6d6d;
+        margin: auto;
+        font-family: 'OpenSans-Light';
+        font-size: 18px; }
+    body .myPage.employer-page .page-content .page-section .section-body .recruitments-ul {
+      display: grid;
+      grid-gap: 32px; }
+      @media only screen and (min-width: 768px) {
+        body .myPage.employer-page .page-content .page-section .section-body .recruitments-ul {
+          grid-template-columns: repeat(2, 1fr); } }
+      @media only screen and (min-width: 992px) {
+        body .myPage.employer-page .page-content .page-section .section-body .recruitments-ul {
+          grid-template-columns: repeat(3, 1fr); } }
+      @media only screen and (min-width: 1200px) {
+        body .myPage.employer-page .page-content .page-section .section-body .recruitments-ul {
+          grid-template-columns: repeat(8, 1fr); } }
+      body .myPage.employer-page .page-content .page-section .section-body .recruitments-ul li {
+        background-color: rgba(255, 255, 255, 0.86);
+        border-radius: 4px;
+        padding: 22px 24px;
+        display: grid;
+        justify-items: center;
+        text-align: center; }
+        @media only screen and (min-width: 992px) {
+          body .myPage.employer-page .page-content .page-section .section-body .recruitments-ul li {
+            box-shadow: 0 14px 16px rgba(0, 0, 0, 0.08); } }
+        @media only screen and (min-width: 1200px) {
+          body .myPage.employer-page .page-content .page-section .section-body .recruitments-ul li {
+            padding: 30px 26px;
+            grid-column-end: span 2; }
+            body .myPage.employer-page .page-content .page-section .section-body .recruitments-ul li:nth-of-type(1) {
+              grid-column-start: 2; } }
+        body .myPage.employer-page .page-content .page-section .section-body .recruitments-ul li img {
+          margin-bottom: 14px;
+          height: 42px; }
+          @media only screen and (min-width: 992px) {
+            body .myPage.employer-page .page-content .page-section .section-body .recruitments-ul li img {
+              margin-bottom: 20px; } }
+        body .myPage.employer-page .page-content .page-section .section-body .recruitments-ul li .li-title {
+          font-family: 'OpenSans-Bold';
+          margin-bottom: 4px;
+          font-size: 18px;
+          text-transform: capitalize;
+          color: #434343; }
+        body .myPage.employer-page .page-content .page-section .section-body .recruitments-ul li .li-body {
+          line-height: 1.7;
+          color: #6d6d6d; }
+        body .myPage.employer-page .page-content .page-section .section-body .recruitments-ul li a {
+          height: max-content;
+          background-color: #f8e8bd;
+          display: grid;
+          align-content: center;
+          color: #d3a116;
+          padding: 6px 14px;
+          border-radius: 4px;
+          border: 1px solid #f0cc69;
+          transition: all 0.25s ease-out;
+          margin-top: 8px; }
+          body .myPage.employer-page .page-content .page-section .section-body .recruitments-ul li a:hover {
+            background-color: #ebbc3b;
+            color: #fff; }
+          @media only screen and (min-width: 992px) {
+            body .myPage.employer-page .page-content .page-section .section-body .recruitments-ul li a {
+              margin-top: 16px; } }
+    body .myPage.employer-page .page-content .page-section .section-body .partners-ul {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 2px; }
+      body .myPage.employer-page .page-content .page-section .section-body .partners-ul li {
+        display: grid;
+        padding: 12px; }
+        @media only screen and (min-width: 992px) {
+          body .myPage.employer-page .page-content .page-section .section-body .partners-ul li {
+            padding: 22px; } }
+        body .myPage.employer-page .page-content .page-section .section-body .partners-ul li a {
+          display: grid;
+          background-color: #fff;
+          padding: 8px; }
+      body .myPage.employer-page .page-content .page-section .section-body .partners-ul img {
+        width: 100%;
+        height: auto; }
+    body .myPage.employer-page .page-content .page-section.companies-section {
+      margin-bottom: 22px; }
+      @media only screen and (min-width: 992px) {
+        body .myPage.employer-page .page-content .page-section.companies-section {
+          margin-bottom: 32px; } }
+      @media only screen and (min-width: 1200px) {
+        body .myPage.employer-page .page-content .page-section.companies-section {
+          margin-bottom: 52px; } }
+      body .myPage.employer-page .page-content .page-section.companies-section .section-heading {
+        margin-bottom: 18px !important; }
   body .stepper-form-wrapper {
     max-width: 700px;
     margin: 32px auto;
@@ -13141,6 +13607,89 @@ body {
           border-radius: 50%; }
           body .stepper-form-wrapper .mfa-form.stepper-form .step-indicators .step-indicator.active {
             background-color: grey; }
+  body .gallery-layout {
+    display: grid;
+    transition: all 0.3s ease-out; }
+    body .gallery-layout .mfa-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-flow: dense;
+      grid-gap: 4px; }
+      @media only screen and (min-width: 992px) {
+        body .gallery-layout .mfa-gallery {
+          grid-template-columns: repeat(3, 1fr); } }
+      body .gallery-layout .mfa-gallery a {
+        display: grid;
+        align-items: stretch;
+        position: relative;
+        transition: all 0.3s ease-out;
+        overflow: hidden;
+        background-color: #323f57; }
+        body .gallery-layout .mfa-gallery a::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(235, 188, 59, 0.1);
+          opacity: 0;
+          visibility: hidden;
+          transform: scale(0.5);
+          border-radius: 22px;
+          border-radius: 400px;
+          z-index: 1;
+          transition: all 0.3s ease-out; }
+        body .gallery-layout .mfa-gallery a::after {
+          content: '\ec22';
+          font-family: 'linearicons';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.4);
+          background-color: rgba(235, 188, 59, 0.4);
+          visibility: hidden;
+          opacity: 0;
+          font-size: 22px;
+          transform: translate(-50%, 150px) scale(0);
+          transition: all 0.3s ease-out 0.3s;
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          display: grid;
+          align-items: center;
+          justify-items: center;
+          z-index: 2; }
+          @media only screen and (min-width: 992px) {
+            body .gallery-layout .mfa-gallery a::after {
+              font-size: 40px;
+              width: 72px;
+              height: 72px; } }
+        body .gallery-layout .mfa-gallery a:hover::before {
+          opacity: 1;
+          visibility: visible;
+          border-radius: 0;
+          transform: scale(1); }
+        body .gallery-layout .mfa-gallery a:hover::after {
+          transform: translate(-50%, -50%) scale(1);
+          visibility: visible;
+          opacity: 1; }
+        body .gallery-layout .mfa-gallery a:hover .img-div img {
+          filter: grayscale(0) !important;
+          transform: scale(1.2) rotate(4deg) !important; }
+        body .gallery-layout .mfa-gallery a .img-div {
+          display: grid;
+          height: 250px;
+          overflow: hidden; }
+          @media only screen and (min-width: 992px) {
+            body .gallery-layout .mfa-gallery a .img-div {
+              height: 380px; } }
+        body .gallery-layout .mfa-gallery a img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all 0.4s ease-out; }
   body .testimonials-section {
     padding: 42px 0; }
     @media only screen and (min-width: 768px) {
@@ -13225,16 +13774,16 @@ body {
         border: 1px solid #eee;
         border-radius: 4px;
         padding: 18px;
-        display: grid; }
+        display: grid;
+        padding-bottom: 0; }
         @media only screen and (min-width: 768px) {
           body .testimonials-section .slider-itself .testimonials-slider .swiper-slide .content {
-            padding: 24px; } }
+            padding: 24px;
+            padding-bottom: 0; } }
         @media only screen and (min-width: 992px) {
           body .testimonials-section .slider-itself .testimonials-slider .swiper-slide .content {
-            padding: 32px; } }
-        @media only screen and (min-width: 1200px) {
-          body .testimonials-section .slider-itself .testimonials-slider .swiper-slide .content {
-            padding: 42px; } }
+            padding: 32px;
+            padding-bottom: 0; } }
         body .testimonials-section .slider-itself .testimonials-slider .swiper-slide .content > i {
           color: lightgray;
           line-height: 1;
@@ -13274,6 +13823,26 @@ body {
           @media only screen and (min-width: 992px) {
             body .testimonials-section .slider-itself .testimonials-slider .swiper-slide .content .name {
               margin-top: 14px; } }
+        body .testimonials-section .slider-itself .testimonials-slider .swiper-slide .content .logo-name {
+          justify-self: end;
+          display: grid;
+          grid-auto-flow: column;
+          justify-content: start;
+          align-items: center;
+          grid-gap: 6px;
+          margin-bottom: 12px; }
+          @media only screen and (min-width: 992px) {
+            body .testimonials-section .slider-itself .testimonials-slider .swiper-slide .content .logo-name {
+              margin-bottom: 18px; } }
+          body .testimonials-section .slider-itself .testimonials-slider .swiper-slide .content .logo-name img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center center; }
+          body .testimonials-section .slider-itself .testimonials-slider .swiper-slide .content .logo-name .name-me {
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 15px; }
       body .testimonials-section .slider-itself .testimonials-slider .swiper-slide.swiper-slide-active {
         opacity: 1;
         visibility: visible;
@@ -13561,15 +14130,26 @@ body {
     body .profile-form-wrapper .mfa-form {
       margin: 42px auto; }
   body footer {
-    background-color: #002a32da;
-    background-color: #33435f;
     background-color: #323f57;
     padding: 32px 0;
     padding-bottom: 0;
-    background-image: url("../images/bkgs/foot-fzx_after.png");
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: 80%; }
+    position: relative; }
+    @media only screen and (min-width: 992px) {
+      body footer {
+        background-image: url("../images/bkgs/footer-bkg.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat; } }
+    body footer::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(90, 111, 138, 0.151);
+      background-color: #5a698a87;
+      background-color: #00315487;
+      background-color: #33435fa6; }
     @media only screen and (min-width: 768px) {
       body footer {
         padding: 42px 0;
@@ -13587,7 +14167,9 @@ body {
         padding: 92px 0;
         padding-bottom: 0; } }
     body footer .top-footer {
-      padding-bottom: 18px; }
+      padding-bottom: 18px;
+      position: relative;
+      z-index: 1; }
       @media only screen and (min-width: 768px) {
         body footer .top-footer {
           padding-bottom: 22px; } }
@@ -13661,7 +14243,7 @@ body {
               body footer .top-footer .mfa-container .section-one .section-body .main-section-ul li a span,
               body footer .top-footer .mfa-container .section-two .section-body .main-section-ul li a span,
               body footer .top-footer .mfa-container .section-three .section-body .main-section-ul li a span {
-                color: rgba(255, 255, 255, 0.5);
+                color: rgba(255, 255, 255, 0.8);
                 text-transform: uppercase; }
                 @media only screen and (min-width: 992px) {
                   body footer .top-footer .mfa-container .section-zero .section-body .main-section-ul li a span,
@@ -13669,6 +14251,13 @@ body {
                   body footer .top-footer .mfa-container .section-two .section-body .main-section-ul li a span,
                   body footer .top-footer .mfa-container .section-three .section-body .main-section-ul li a span {
                     font-size: 14px; } }
+              body footer .top-footer .mfa-container .section-zero .section-body .main-section-ul li a::before,
+              body footer .top-footer .mfa-container .section-one .section-body .main-section-ul li a::before,
+              body footer .top-footer .mfa-container .section-two .section-body .main-section-ul li a::before,
+              body footer .top-footer .mfa-container .section-three .section-body .main-section-ul li a::before {
+                content: '\e844';
+                font-family: 'feather';
+                color: rgba(255, 255, 255, 0.6); }
               body footer .top-footer .mfa-container .section-zero .section-body .main-section-ul li a:hover span,
               body footer .top-footer .mfa-container .section-one .section-body .main-section-ul li a:hover span,
               body footer .top-footer .mfa-container .section-two .section-body .main-section-ul li a:hover span,
@@ -13679,7 +14268,7 @@ body {
             body footer .top-footer .mfa-container .section-two .section-body .contact-info,
             body footer .top-footer .mfa-container .section-three .section-body .contact-info {
               margin-top: 18px;
-              color: rgba(255, 255, 255, 0.5); }
+              color: rgba(255, 255, 255, 0.8); }
               @media only screen and (min-width: 992px) {
                 body footer .top-footer .mfa-container .section-zero .section-body .contact-info,
                 body footer .top-footer .mfa-container .section-one .section-body .contact-info,
@@ -13706,7 +14295,7 @@ body {
               body footer .top-footer .mfa-container .section-one .section-body .contact-info a,
               body footer .top-footer .mfa-container .section-two .section-body .contact-info a,
               body footer .top-footer .mfa-container .section-three .section-body .contact-info a {
-                color: rgba(255, 255, 255, 0.5); }
+                color: rgba(255, 255, 255, 0.8); }
             body footer .top-footer .mfa-container .section-zero .section-body .news-letter,
             body footer .top-footer .mfa-container .section-one .section-body .news-letter,
             body footer .top-footer .mfa-container .section-two .section-body .news-letter,
@@ -13838,7 +14427,7 @@ body {
                 body footer .top-footer .mfa-container .section-two .section-body .social-ul li::before,
                 body footer .top-footer .mfa-container .section-three .section-body .social-ul li::before {
                   content: '|';
-                  color: rgba(255, 255, 255, 0.1);
+                  color: rgba(255, 255, 255, 0.3);
                   margin: 0 6px; }
                 body footer .top-footer .mfa-container .section-zero .section-body .social-ul li:first-of-type::before,
                 body footer .top-footer .mfa-container .section-one .section-body .social-ul li:first-of-type::before,
@@ -13852,7 +14441,7 @@ body {
                   display: grid;
                   align-items: center;
                   justify-items: center;
-                  color: rgba(255, 255, 255, 0.5);
+                  color: rgba(255, 255, 255, 0.8);
                   font-size: 22px;
                   width: 32px;
                   transition: all 0.3s ease-out; }
@@ -13880,6 +14469,8 @@ body {
               padding-bottom: 0;
               border-bottom: 0; } }
     body footer .bottom-footer {
+      position: relative;
+      z-index: 1;
       border-top: 1px solid rgba(255, 255, 255, 0.171);
       padding: 12px 0; }
       @media only screen and (min-width: 768px) {
