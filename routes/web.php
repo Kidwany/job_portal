@@ -86,8 +86,7 @@ Route::get('cronjob/send-alerts', 'AlertCronController@index')->name('send-alert
 
 
 
-Route::post('subscribe-newsletter', 'Subsc/job-seekersriptionController@getSubscription')->name('subscribe.newsletter');
-
+Route::post('subscribe-newsletter', 'SubscriptionController@getSubscription')->name('subscribe.newsletter');
 
 
 /* * ******** OrderController ************ */
@@ -163,7 +162,25 @@ Route::resource('youth', 'YouthController');
 
 Route::resource('traveler', 'TravelerController');
 
+Route::resource('traveler', 'TravelerController');
+
 Route::post('profile-review', 'ProfileReviewController@review');
+
+Route::get('certificate ', 'Certificate@index');
+
+/*Route::get('test', function (){
+    //return \Illuminate\Support\Facades\Auth::id();
+   $user = \App\Company::find(21);
+   if ($user->isOnline())
+   {
+       return 1;
+   }
+   else
+   {
+       return 0;
+   }
+   //return $user;
+});*/
 
 
 

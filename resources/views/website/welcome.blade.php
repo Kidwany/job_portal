@@ -388,7 +388,7 @@
                             <?php $company = $featuredJob->getCompany(); ?>
                             @if(null !== $company)
                                 <li>
-                                        <a href="#">
+                                        <a href="{{route('job.detail', [$featuredJob->slug])}}">
                                             <div class="img-div">
                                                 <img src="{!! asset('company_logos/' . $company->logo) !!}" alt="job image" />
                                             </div>
@@ -716,7 +716,15 @@
                         }
                         ?>
                             <li>
-                                <a href="#" class="blog-card">
+                                <?php
+                                $cate_ids = explode(",", $blog->cate_id);
+                                $data = DB::table('blog_categories')->whereIn('id', $cate_ids)->get();
+                                $cate_array = array();
+                                foreach ($data as $cat) {
+                                    $cate_array[] = "<a href='" . url('/blog/category/') . "/" . $cat->slug . "'>$cat->heading</a>";
+                                }
+                                ?>
+                                <a href="{{url('blog/' . $blog->slug)}}" class="blog-card">
                                     <div class="img-div lazy-div">
                                         @if(null!==($blog->image) && $blog->image!="")
                                             <img class="lazy" data-src="{{asset('uploads/blogs/'.$blog->image)}}" alt="{{$blog->heading}}" />
@@ -727,7 +735,7 @@
                                         <div class="next-lazy-img"></div>
                                     </div>
                                     <p class="blog-title">
-                                        {!! str_limit($blog->content, $limit = 150, $end = '...') !!}
+                                        {{$blog->heading}}
                                     </p>
                                 </a>
                             </li>
@@ -753,9 +761,9 @@
                         @if(isset($testimonials) && count($testimonials))
                             @foreach($testimonials as $testimonial)
                                 <div class="swiper-slide">
-                                    {{--<div class="img-div">
-                                        <img src="./images/testimonials/1.jpg" alt="img" />
-                                    </div>--}}
+                                    <div class="img-div">
+                                        <img src="{{asset('website/images/testimonials/1.jpg')}}" alt="img" />
+                                    </div>
 
                                     <div class="content">
                                         <i class="linearicons-quote-close"></i>
@@ -813,13 +821,15 @@
             money
         </p>
         <div class="section-body">
+            @include('website.layouts.messages')
             <form action="{{ route('subscribe.newsletter')}}" class="subscribe-form" method="post">
                 {{ csrf_field() }}
                 <input
                         type="email"
-                        name=""
+                        name="email"
                         id=""
                         placeholder="{{__('Email')}}"
+                        value="{{old('email')}}"
                 />
                 <button class="subscribe-btn" type="submit">
                     <i class="linearicons-paper-plane"></i>

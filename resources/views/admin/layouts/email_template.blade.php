@@ -8,7 +8,7 @@
         <!-- enable media queries for windows phone 8 -->
         <meta name="format-detection" content="telephone=no">
         <!-- disable auto telephone linking in iOS -->
-        <title>{{ $siteSetting->site_name }}</title>
+        <title>El Adrousi</title>
         <style type="text/css">
             body {
                 margin: 0;
@@ -118,7 +118,7 @@
                             <td class="content" align="left" style="padding-top:0px;padding-bottom:12px;background-color:#f8f8f8;"><table border="0" cellpadding="0" cellspacing="0" class="force-row" style="width:100%;">
                                     <tr>
                                         <td align="center" valign="middle" class="content-wrapper" style="padding-left:24px;padding-right:24px"><br>
-                                            <a href="{{ url('/login') }}"><img src="{{ asset('/') }}sitesetting_images/thumb/{{ $siteSetting->site_logo }}" /></a></td>
+                                            <a href="{{ url('/login') }}"><img src="https://www.new.eladrousi.net/website/images/logo/logo-black.png" /></a></td>
                                     </tr>
                                 </table></td>
                         </tr>

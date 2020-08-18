@@ -39,7 +39,7 @@ class CompanyFrontFormRequest extends Request
                         "ownership_type_id" => "required",
                         "description" => "required",
                         "location" => "required|max:150",
-                        //"map" => "required",
+                        "map" => "required",
                         "no_of_offices" => "required|max:11",
                         "website" => "required|url|max:150",
                         "no_of_employees" => "required|max:15",

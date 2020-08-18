@@ -32,6 +32,7 @@ class JobFrontFormRequest extends Request
                     return [
                         "title" => "required|max:180",
                         "description" => "required",
+                        "benefits" => "required",
                         "skills" => "required",
                         "country_id" => "required",
                         "state_id" => "required",

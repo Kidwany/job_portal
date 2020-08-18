@@ -14,11 +14,6 @@
 $company = $job->getCompany();
 @endphp
 
-
-
-
-
-
 <div class="listpgWraper">
     <div class="container"> 
         @include('flash::message')

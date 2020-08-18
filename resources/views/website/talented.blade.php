@@ -129,6 +129,7 @@
                         <i class="linearicons-chart-growth"></i
                         ><span> Are you talented? Register now </span>
                     </p>
+                    @include('website.layouts.messages')
                     <form class="mfa-form stepper-form" onsubmit="submit()" method="post" action="{{route('traveler.store')}}">
                         @csrf
                         <input type="hidden" name="type_id" value="2">
@@ -165,7 +166,7 @@
 										</span>
                                     <input
                                             class="formInput"
-                                            type="number"
+                                            type="tel"
                                             id="phone"
                                             name="phone"
                                             value="{{old('phone')}}"

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <!-- Header start -->
-@include('includes.header')
+@include('website.layouts.header')
 <!-- Header end --> 
 <!-- Inner Page Title start -->
 @include('includes.inner_page_title', ['page_title'=>__('Email to Friend')])
@@ -10,7 +10,7 @@
     <div class="container">
         @include('flash::message')
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-12 col-md-offset-3">
                 <div class="userccount">
                     <h5>{{__('Thanks')}}!</h5>
                     <p>{{__('Email has been sent to your friend')}},<br /><br />{{ $siteSetting->site_name }}</p>
@@ -19,5 +19,5 @@
         </div>
     </div>
 </div>
-@include('includes.footer')
+@include('website.layouts.footer')
 @endsection

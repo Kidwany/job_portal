@@ -225,7 +225,7 @@ class JobController extends Controller
                     'seo_keywords' => $seoArray['keywords'],
                     'seo_other' => ''
         );
-        return view('job.detail')
+        return view('website.job_details')
                         ->with('job', $job)
                         ->with('relatedJobs', $relatedJobs)
                         ->with('seo', $seo);

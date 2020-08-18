@@ -64,6 +64,7 @@ if (!isset($seo)) {
     @yield('content')
     <!-- Bootstrap's JavaScript -->
     <script src="{{asset('/')}}js/jquery.min.js"></script>
+    <script src="https://support.limitlessgroup-eg.com/chat_widget.js"></script>
     <script src="{{asset('/')}}js/bootstrap.min.js"></script>
     <script src="{{asset('/')}}js/popper.js"></script>
     <script src="{{asset('/')}}js/nprogress.js"></script>

@@ -33,47 +33,48 @@ class SubscriptionController extends Controller
     public function getSubscription(Request $request)
     {
         $msgresponse = array();
-        $rules = array(
-            'name' => 'required|max:100|between:4,70',
+        $validate = $request->validate( [
+            /*'name' => 'required|max:100|between:4,70',*/
             'email' => 'required|email|max:100',
-        );
-        $rules_messages = array(
-            'name.required' => __('Name is required'),
-            'email.required' => __('E-mail address is required'),
-        );
-        $validation = Validator::make($request->all(), $rules, $rules_messages);
-        if ($validation->fails()) {
-            $msgresponse = $validation->messages()->toJson();
-            echo $msgresponse;
-            exit;
-        } else {
-            $user = User::where('email', 'like', $request->input('email'))->first();
-            if (null !== $user) {
-                $user->is_subscribed = 1;
-                $user->update();
-            }
+        ], [], [
+            'first_name'                =>  'Name',
+            'email'                     =>  'Email',
+            'date_of_birth'             =>  'Date of Birth',
+            'gender_id'                 =>  'Gender',
+            'marital_status_id'         =>  'Marital Status',
+            'country_id'                =>  'Country',
+            'state_id'                  =>  'State',
+            'nationality_id'            =>  'Nationality',
+            'industry_id'               =>  'Industry',
+            'functional_area_id'        =>  'Functional Area',
+            'degree_id'                 =>  'Degree',
+            'phone'                     =>  'Phone',
+        ]);
 
-            $company = Company::where('email', 'like', $request->input('email'))->first();
-            if (null !== $company) {
-                $company->is_subscribed = 1;
-                $company->update();
-            }
-
-            /*************************/
-            Subscription::where('email', 'like', $request->input('email'))->delete();
-            $subscription = new Subscription();
-            $subscription->email = $request->input('email');
-            $subscription->name = $request->input('name');
-            $subscription->save();
-            /*************************/
-            Newsletter::subscribeOrUpdate($subscription->email, ['FNAME' => $subscription->name]);
-            /*************************/
-
-
-            $msgresponse = ['success' => 'success', 'message' => __('Subscribed successfully')];
-            echo json_encode($msgresponse);
-            exit;
+        $user = User::where('email', 'like', $request->input('email'))->first();
+        if (null !== $user) {
+            $user->is_subscribed = 1;
+            $user->update();
         }
+
+        $company = Company::where('email', 'like', $request->input('email'))->first();
+        if (null !== $company) {
+            $company->is_subscribed = 1;
+            $company->update();
+        }
+
+        /*************************/
+        Subscription::where('email', 'like', $request->input('email'))->delete();
+        $subscription = new Subscription();
+        $subscription->email = $request->input('email');
+        $subscription->name = 'Subscriber';
+        $subscription->save();
+        /*************************/
+        Newsletter::subscribeOrUpdate($subscription->email, ['FNAME' =>  'Subscriber']);
+        /*************************/
+        flash('Your Information has been saved successfully... We will contact you soon!')->success();
+
+        return redirect('/')->with('create', 'You Have Been Subscribed Successfully');
     }
     public function submitAlert(Request $request)
     {

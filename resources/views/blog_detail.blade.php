@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <!-- Header start -->
-@include('includes.header')
+@include('website.layouts.header')
 <!-- Header end -->
 <!-- Inner Page Title start -->
 @include('includes.inner_page_title', ['page_title'=>__('Blog Detail')])
@@ -84,7 +84,7 @@
 </div>
 
 @endif
-@include('includes.footer')
+@include('website.layouts.footer')
 @endsection
 @push('styles')
 <style>

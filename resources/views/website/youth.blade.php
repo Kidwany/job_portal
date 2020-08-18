@@ -155,6 +155,7 @@
                         <i class="linearicons-chart-growth"></i
                         ><span> Personal Information</span>
                     </p>
+                    @include('website.layouts.messages')
                     <form class="mfa-form stepper-form" onsubmit="submit()" method="post" action="{{route('traveler.store')}}">
                         @csrf
                         <input type="hidden" name="type_id" value="3">
@@ -191,7 +192,7 @@
 										</span>
                                     <input
                                             class="formInput"
-                                            type="number"
+                                            type="tel"
                                             id="phone"
                                             name="phone"
                                             value="{{old('phone')}}"

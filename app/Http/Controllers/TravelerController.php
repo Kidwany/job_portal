@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use App\Helpers\DataArrayHelper;
 use App\Http\Requests\Front\TravelerFrontFormRequest;
+use Illuminate\Support\Facades\Validator;
 
 class TravelerController extends Controller
 {
@@ -57,6 +58,35 @@ class TravelerController extends Controller
     public function store(TravelerFrontFormRequest $request)
     {
 
+        $validate = $request->validate( [
+            'first_name'                =>  'required',
+            'email'                     =>  'required|email',
+            'date_of_birth'             =>  'required',
+            'gender_id'                 =>  'required|int',
+            'marital_status_id'         =>  'required|int',
+            'country_id'                =>  'required|int',
+            'state_id'                  =>  'required|int',
+            'nationality_id'            =>  'required|int',
+            'industry_id'               =>  'required|int',
+            'functional_area_id'        =>  'required|int',
+            'degree_id'                 =>  'required|int',
+            'phone'                     =>  'required|min:9|max:18',
+        ], [], [
+            'first_name'                =>  'Name',
+            'email'                     =>  'Email',
+            'date_of_birth'             =>  'Date of Birth',
+            'gender_id'                 =>  'Gender',
+            'marital_status_id'         =>  'Marital Status',
+            'country_id'                =>  'Country',
+            'state_id'                  =>  'State',
+            'nationality_id'            =>  'Nationality',
+            'industry_id'               =>  'Industry',
+            'functional_area_id'        =>  'Functional Area',
+            'degree_id'                 =>  'Degree',
+            'phone'                     =>  'Phone',
+        ]);
+
+
         //return $request->all();
         $traveler = new Traveler();
 
@@ -88,7 +118,7 @@ class TravelerController extends Controller
 
         
         flash('Your Information has been saved successfully... We will contact you soon!')->success();
-        return redirect('traveling-to-europe');
+        return redirect('traveling-to-europe')->with('create', 'Your Information has been saved successfully... We will contact you soon!');
 
     }
 

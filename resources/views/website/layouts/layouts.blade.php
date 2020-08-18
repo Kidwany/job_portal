@@ -51,7 +51,7 @@ if (!isset($seo)) {
 <script src="{{asset('website/js/star-rating.min.js')}}"></script>
 <script src="{{asset('website/js/lightgallery.js')}}"></script>
 <script src="{{asset('website/js/lg-thumbnail.js')}}"></script>
-<script src="http://support.limitlessgroup-eg.com/chat_widget.js"></script>
+<script src="https://support.limitlessgroup-eg.com/chat_widget.js"></script>
 @yield('scripts')
 <script src="{{asset('website/js/index.js')}}"></script>
 {{--<script src="{{asset('/')}}js/jquery.min.js"></script>

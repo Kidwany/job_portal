@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use App\Notifications\CompanyResetPassword;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Cache;
 
 /**
  * @property int $id
@@ -384,6 +385,11 @@ class Company extends Authenticatable
 
         }
 
+    }
+
+    public function isOnline()
+    {
+        return Cache::has('company-is-online-' . $this->id);
     }
 
 }

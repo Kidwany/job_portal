@@ -29,8 +29,8 @@ class EmailToFriendFormRequest extends Request
             'friend_email' => 'required|email|max:100',
             'your_name' => 'required|max:100',
             'your_email' => 'required|email|max:100',
-            'job_url' => 'required|url',
-            'g-recaptcha-response' => 'required|captcha',
+            /*'job_url' => 'required|url',*/
+            /*'g-recaptcha-response' => 'required|captcha',*/
         ];
     }
 

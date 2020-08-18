@@ -241,6 +241,7 @@
                         <i class="linearicons-chart-growth"></i
                         ><span> Get a free consultation </span>
                     </p>
+                    @include('website.layouts.messages')
                     <form class="mfa-form stepper-form" onsubmit="submit()" method="post" action="{{route('traveler.store')}}">
                         @csrf
                         <input type="hidden" name="type_id" value="1">
@@ -275,9 +276,8 @@
 										<span>
 											{{__('Phone')}}
 										</span>
-                                    <input
-                                            class="formInput"
-                                            type="number"
+                                    <input class="formInput"
+                                            type="tel"
                                             id="phone"
                                             name="phone"
                                             value="{{old('phone')}}"

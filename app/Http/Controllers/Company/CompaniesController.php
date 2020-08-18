@@ -74,7 +74,7 @@ class CompaniesController extends Controller
         }
        
 
-        $data['companies'] = $query->paginate(20);
+        $data['companies'] = $query->paginate(18);
         return view('website.partners')->with($data);
     }
 

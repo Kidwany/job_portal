@@ -14,9 +14,6 @@
       <div id="alert_messages"></div>       
        <form method="post" action="{{ route('subscribe.newsletter')}}" name="subscribe_newsletter_form" id="subscribe_newsletter_form">
       {{ csrf_field() }}
-		  
-		   
-		   
 		  <div class="input-group">
 		  <input type="text" class="form-control" placeholder="{{__('Name')}}" name="name" id="name" required="required">
 			<input type="text" class="form-control" placeholder="{{__('Email')}}" name="email" id="email" required="required">
