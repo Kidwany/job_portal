@@ -150,13 +150,13 @@
                     </div>
 
                     <div class="sectionBody">
-                        <form class="mfa-form">
+                        <form class="mfa-form" action="{{ route('contact.us')}}" method="post" enctype="multipart/form-data">
                             <div class="form-div">
                                 <label for="name">
 										<span>
 											Full Name
 										</span>
-                                    <input type="text" id="name" />
+                                    <input type="text" id="name" required name="full_name"/>
                                     <i class="feather icon-user"></i>
                                 </label>
                             </div>
@@ -165,7 +165,7 @@
 										<span>
 											Email
 										</span>
-                                    <input type="text" id="email" />
+                                    <input type="text" id="email" required name="email"/>
                                     <i class="feather icon-mail"></i>
                                 </label>
                             </div>
@@ -174,7 +174,7 @@
 										<span>
 											Phone number
 										</span>
-                                    <input type="text" id="phone" />
+                                    <input type="text" id="phone" required name="phone"/>
                                     <i class="feather icon-phone"></i>
                                 </label>
                             </div>
@@ -183,7 +183,7 @@
 										<span>
 											Your address
 										</span>
-                                    <input type="text" id="address" />
+                                    <input type="text" id="address" required name="address"/>
                                     <i class="feather icon-map"></i>
                                 </label>
                             </div>

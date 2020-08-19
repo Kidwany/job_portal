@@ -14,17 +14,18 @@ if (!isset($seo)) {
     <title><?php echo e(__($seo->seo_title)); ?></title>
     <meta name="Description" content="<?php echo $seo->seo_description; ?>">
     <meta name="Keywords" content="<?php echo $seo->seo_keywords; ?>">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
+    <?php echo $seo->seo_other; ?>
 
-<?php echo $seo->seo_other; ?>
 
-
-<!-- Fav Icon -->
-    <link rel="shortcut icon" href="<?php echo e(asset('/')); ?>favicon.ico">
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="<?php echo e(asset('website/images/favicon.png')); ?>">
     <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Questrial'>
+    
 
-
-<!-- Slider -->
+    <!-- Slider -->
     <!-- Slider -->
     <link href="<?php echo e(asset('/')); ?>js/revolution-slider/css/settings.css" rel="stylesheet">
     <!-- Bootstrap -->
@@ -46,7 +47,7 @@ if (!isset($seo)) {
     <!-- Custom Style -->
     <link href="<?php echo e(asset('/')); ?>css/main.css" rel="stylesheet">
 
-<?php if((session('localeDir', 'ltr') == 'rtl')): ?>
+    <?php if((session('localeDir', 'ltr') == 'rtl')): ?>
     <!-- Rtl Style -->
         <link href="<?php echo e(asset('/')); ?>css/rtl-style.css" rel="stylesheet">
     <?php endif; ?>
@@ -55,7 +56,7 @@ if (!isset($seo)) {
     <link href="<?php echo e(asset('/')); ?>admin_assets/global/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo e(asset('/')); ?>admin_assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-    <link href="<?php echo e(asset('website/')); ?>css/index.min.css" rel="stylesheet">
+    <link href="<?php echo e(asset('website/css/index.min.css')); ?>" rel="stylesheet">
 
     <?php echo $__env->yieldPushContent('styles'); ?>
 </head>
@@ -64,6 +65,7 @@ if (!isset($seo)) {
     <?php echo $__env->yieldContent('content'); ?>
     <!-- Bootstrap's JavaScript -->
     <script src="<?php echo e(asset('/')); ?>js/jquery.min.js"></script>
+    <script src="https://support.limitlessgroup-eg.com/chat_widget.js"></script>
     <script src="<?php echo e(asset('/')); ?>js/bootstrap.min.js"></script>
     <script src="<?php echo e(asset('/')); ?>js/popper.js"></script>
     <script src="<?php echo e(asset('/')); ?>js/nprogress.js"></script>
@@ -81,6 +83,18 @@ if (!isset($seo)) {
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.min.js"></script>
+
+
+    <script src="<?php echo e(asset('website/js/jquery.waypoints.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('website/js/swiper.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('website/js/aos.js')); ?>"></script>
+    <script src="<?php echo e(asset('website/js/fotorama.js')); ?>"></script>
+    <script src="<?php echo e(asset('website/js/jquery.mb.YTPlayer.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('website/js/custom-select.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('website/js/star-rating.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('website/js/index.js')); ?>"></script>
+
+
     <?php echo NoCaptcha::renderJs(); ?>
 
     <?php echo $__env->yieldPushContent('scripts'); ?>
@@ -93,8 +107,8 @@ if (!isset($seo)) {
             function showProcessingForm(btn_id){		
             $("#"+btn_id).val( 'Processing .....' );
             $("#"+btn_id).attr('disabled','disabled');		
-            }
-        </script>
+        }
+    </script>
 </body>
 
 </html>

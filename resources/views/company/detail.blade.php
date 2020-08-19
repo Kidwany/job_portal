@@ -18,7 +18,14 @@
                         <div class="candidateinfo">
                             <div class="userPic"><a href="{{route('company.detail',$company->slug)}}">{{$company->printCompanyImage()}}</a>
                             </div>
-                            <div class="title">{{$company->name}}</div>
+                            <div class="title">
+                                {{$company->name}}
+                                @if($company->isOnline())
+                                    <small style="color: lightseagreen; font-weight: 200; font-size: 12px"> online</small>
+                                @else
+                                    <small style="color: orangered; font-weight: 200; font-size: 12px"> offline</small>
+                                @endif
+                            </div>
                             <div class="desi">{{$company->getIndustry('industry')}}</div>
                             <div class="loctext"><i class="fa fa-history" aria-hidden="true"></i>
                                 {{__('Member Since')}}, {{$company->created_at->format('M d, Y')}}</div>

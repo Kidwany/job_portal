@@ -298,6 +298,11 @@
                                     <div class="title__count">
                                         <div class="compTitle">
                                             {{$company->name}}
+                                            @if($company->isOnline())
+                                                <small style="color: lightseagreen; font-weight: 200; font-size: 12px"> online</small>
+                                            @else
+                                                <small style="color: orangered; font-weight: 200; font-size: 12px"> offline</small>
+                                            @endif
                                         </div>
                                         <div class="positionsCount">
                                             <span>{{App\Company::countNumJobs('company_id', $company->id)}} </span>

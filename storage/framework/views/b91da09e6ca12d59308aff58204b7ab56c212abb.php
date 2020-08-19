@@ -1,12 +1,29 @@
-<div class="pageTitle">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-6">
-                <h1 class="page-heading"><?php echo e($page_title); ?></h1>
-            </div>
-            <div class="col-md-6 col-sm-6">
-                <div class="breadCrumb"><a href="<?php echo e(route('index')); ?>"><?php echo e(__('Home')); ?></a> / <span><?php echo e($page_title); ?></span></div>
+<div class="myPage europe-page">
+    <div class="header-breadcrumb">
+        <div class="page-title mfa-container">
+            <?php echo e($page_title); ?>
+
+        </div>
+        <div class="breadcrumb-wrapper">
+            <div class="mfa-container">
+                <ul class="breadcrumb-ul">
+                    <li class="breadcrumb-li">
+                        <a href="<?php echo e(url('/')); ?>">
+                            <?php echo e(__('Home')); ?>
+
+                        </a>
+                    </li>
+                    <li class="breadcrumb-li active-breadcrumb">
+                        <?php echo e($page_title); ?>
+
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
+
+
+
+
+

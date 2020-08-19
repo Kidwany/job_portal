@@ -31,6 +31,7 @@
         </li>
         <?php echo $__env->make('admin/shared/side_bars/job', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         <?php echo $__env->make('admin/shared/side_bars/company', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php echo $__env->make('admin/shared/side_bars/travel_agent', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         <?php echo $__env->make('admin/shared/side_bars/site_user', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         <?php echo $__env->make('admin/shared/side_bars/cms', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         <?php echo $__env->make('admin/shared/side_bars/blogs', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
