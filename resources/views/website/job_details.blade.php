@@ -367,7 +367,7 @@
 
                         <div class="emailToFriend">
                             <div class="title">
-                                <i class="feather icon-map-pin"></i>
+                                <i class="feather icon-mail"></i>
                                 Email to Friend
                             </div>
                             @include('flash::message')

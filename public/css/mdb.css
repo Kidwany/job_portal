@@ -8663,13 +8663,15 @@ table.table a.btn.btn-yellow {
 }
 
 .btn-amber {
-    color: #fff !important;
-    background-color: #ffa000 !important;
+    /*color: #fff !important;*/
+    /*background-color: #ffa000 !important;*/
+    color: #f29f0f !important;
+  background-color: #f7e4c3 !important;
 }
 
 .btn-amber:hover {
-    color: #fff;
-    background-color: #ffaa1a
+    color: #fff !important;
+    background-color: #ffaa1a !important;
 }
 
 .btn-amber:focus,

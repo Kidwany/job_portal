@@ -280,6 +280,13 @@
                                 </span>
                             </a>
                         </li>
+                         <li>
+                            <a href="{{url('certificate')}}">
+                                <span>
+                                    Certificate Translate
+                                </span>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 

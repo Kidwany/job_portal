@@ -4313,10 +4313,14 @@ video::-webkit-media-text-track-display {
 
 .searchform .btn {
 	background: #ffa000;
-	font-size: 16px;
+	font-size: 15px;
 	color: #fff;
-	padding: 14px 20px;
+	padding: 12px 20px;
 	width: 100%;
+	box-shadow: none;
+    border-radius: 6px;
+    font-weight: bold;
+  border: 1px solid #efc377;
 }
 
 .searchform .btn:hover {
@@ -4338,6 +4342,10 @@ video::-webkit-media-text-track-display {
 	margin-bottom: 10px;
 	background: #ffa000;
 	color: #fff;
+	box-shadow: none;
+	border-radius: 4px;
+	background: #f9ab29;
+    font-weight: bold;
 }
 
 .jobreqbtn a:hover {
@@ -4373,9 +4381,9 @@ video::-webkit-media-text-track-display {
 
 .sidebar .widget-title {
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 800;
 	color: #e6af17;
-	margin-bottom: 20px;
+	margin-bottom: 8px;
 }
 
 .optionlist {
@@ -4386,7 +4394,7 @@ video::-webkit-media-text-track-display {
 	margin-bottom: 10px;
 	padding: 5px 0;
 	position: relative;
-	padding-left: 30px;
+	padding-left: 22px;
 }
 
 .optionlist li span {
@@ -4400,14 +4408,15 @@ video::-webkit-media-text-track-display {
 }
 
 .optionlist li input[type=checkbox]+label {
-	width: 20px;
-	height: 20px;
 	border: 1px solid #e0e0e0;
 	background: #f5f5f5;
 	cursor: pointer;
 	position: absolute;
 	left: 0;
-	top: 0;
+	top: 50%;
+    transform: translate(0, -50%);
+    width: 16px;
+    height: 16px;
 }
 
 .optionlist li input[type=checkbox]:checked+label:before {
@@ -4434,6 +4443,8 @@ video::-webkit-media-text-track-display {
 	text-transform: uppercase;
 	font-weight: 700;
 	padding: 10px 15px;
+	box-shadow: none;
+	border-radius: 4px;
 }
 
 .sidebar .gad {
@@ -4470,13 +4481,15 @@ video::-webkit-media-text-track-display {
 	padding: 20px;
 	margin-bottom: 10px;
 	border-radius: 5px;
-	box-shadow: 0 2px 22px 8px rgba(56, 125, 255, .1);
+	/*box-shadow: 0 2px 22px 8px rgba(56, 125, 255, .1);*/
+	border: 1px solid rgba(0, 0, 0, .08);
 	transition: all 0.5s ease-in-out;
 }
 
 .searchList li:hover {
-	transform: translate(0px, -5px);
-	transition: all 0.5s ease-in-out;
+	/*transform: translate(0px, -5px);*/
+	/*transition: all 0.5s ease-in-out;*/
+	background-color: #fff4e2cf;
 }
 
 .searchList li:hover .listbtn a {
@@ -4523,16 +4536,17 @@ video::-webkit-media-text-track-display {
 }
 
 .searchList li .listbtn a {
-	background: #fff;
-	display: block;
-	border-radius: 40px;
-	width: 100%;
-	color: #ffa000;
-	text-transform: uppercase;
-	font-weight: 700;
-	padding: 10px 15px;
-	text-align: center;
-	border: 1px solid #ffa000;
+  display: block;
+  border-radius: 6px;
+  width: 100%;
+  color: #ffa000;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 10px 15px;
+  text-align: center;
+  border: 1px solid #ffa0006b;
+  font-size: 14px;
+  background-color: #f9ab2933;
 }
 
 .searchList li .listbtn a:hover {
@@ -5431,6 +5445,7 @@ ul.skillslist li a:hover {
 	font-size: 16px;
 	font-weight: 700;
 	text-transform: uppercase;
+	box-shadow: none;
 }
 
 .formpanel .btn:hover {
@@ -6675,15 +6690,21 @@ blockquote:after {
 	height: auto;
 	padding: 10px 12px;
 	border-color: #ddd;
+	padding-right: 62px;
+	border-radius: 4px;
 }
 
 .search .btn {
 	position: absolute;
-	right: 0;
-	top: 0;
-	border-radius: 0;
-	background: none;
-	font-size: 20px;
+    right: 0;
+    top: 0;
+    border-radius: 0;
+    background: none;
+    font-size: 20px;
+    padding: 8px 18px;
+    box-shadow: none;
+    color: #626262;
+	
 }
 
 /*categories*/
@@ -10280,4 +10301,10 @@ li:hover .eladrousi-read-more {
 
 .eladrousi-header-seven .eladrousi-headsix-option>li>a {
     padding: 10px 20px 8px
+}
+.view_more {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    margin-bottom: 4px;
 }

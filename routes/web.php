@@ -182,5 +182,8 @@ Route::get('certificate ', 'Certificate@index');
    //return $user;
 });*/
 
-
+Route::get('/clear-cache', function() {
+    \Illuminate\Support\Facades\Artisan::call('cache:clear');
+    return "Cache is cleared";
+});
 

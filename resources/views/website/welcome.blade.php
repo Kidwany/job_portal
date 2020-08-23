@@ -327,8 +327,7 @@
                         Create an account
                     </div>
                     <div class="li-body">
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                        qui officia deserunt mollit anim id est laborum.
+                        Every great online service requires you to create an account and go through a signing up process. Some processes take a few minutes and some get more complicated when you need to add a lot of information.
                     </div>
                 </li>
                 <li>
@@ -337,8 +336,9 @@
                         Update Profile
                     </div>
                     <div class="li-body">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incidid ut labore et dolore magna aliqua.
+                        Having an updated profile with relevant information increases your chances of
+                        being headhunted by employers or invited to apply to certain job vacancies
+                        that they see you fit in.
                     </div>
                 </li>
                 <li>
@@ -347,8 +347,10 @@
                         Search Desired Job
                     </div>
                     <div class="li-body">
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur.
+                        We recommend jobs for you that are tailored to your expertise
+                        and preferences that are sent directly to your e-mail.
+                        But our ability to do so depends on you completing
+                        your profile and updating your Career Interests.
                     </div>
                 </li>
                 <li>
@@ -357,8 +359,7 @@
                         Send your Resume
                     </div>
                     <div class="li-body">
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                        qui officia deserunt mollit anim id est laborum.
+                        Connect with experts who can help you building your resume and find you best job match.
                     </div>
                 </li>
             </ul>
@@ -439,7 +440,7 @@
     <div class="section-body">
         <ul class="main-section-ul">
             <li>
-                <a class="service-card" href="#">
+                <a class="service-card" href="/">
                     <div class="service-img">
                         <img src="{{asset('website/images/services/1.png')}}" alt="img" />
                     </div>
@@ -449,10 +450,10 @@
                         </p>
                         <div class="service-desc">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Sint eligendi magnam quae aspernatur modi similique
-                                repellendus, earum neque adipisci quis ducimus ea quam vero
-                                dolore nesciunt
+                                we offers various recruitment solutions to suit the needs of your
+                                business and the nature of the role you are looking to fill.
+                                These include: Permanent Staffing Solutions, Short-term Staffing Solutions,
+                                and Short-term to Permanent Staffing Solutions.
                             </p>
                         </div>
                     </div>
@@ -469,10 +470,11 @@
                         </p>
                         <div class="service-desc">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Sint eligendi magnam quae aspernatur modi similique
-                                repellendus, earum neque adipisci quis ducimus ea quam vero
-                                dolore nesciunt
+                                Travelling to Europe is such an adventure!
+                                Why is it not a rite of passage for every single person
+                                around the world? Travelling is educational, inspiring
+                                and just plain fun!
+                                we offer so many travel packages around Europe.
                             </p>
                         </div>
                     </div>
@@ -489,10 +491,13 @@
                         </p>
                         <div class="service-desc">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Sint eligendi magnam quae aspernatur modi similique
-                                repellendus, earum neque adipisci quis ducimus ea quam vero
-                                dolore nesciunt
+                                Young people can face many issues which may lead to them becoming
+                                disengaged
+                                from education,employment, family and community.
+                                Our youth programs offer individual support,
+                                education and practical assistance to help young people
+                                re-establish
+                               .
                             </p>
                         </div>
                     </div>
@@ -509,10 +514,11 @@
                         </p>
                         <div class="service-desc">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Sint eligendi magnam quae aspernatur modi similique
-                                repellendus, earum neque adipisci quis ducimus ea quam vero
-                                dolore nesciunt
+                                Your company needs more than just money to take off.
+                                We’ll provide you with access to capital,
+                                resources and industry expertise from a network of global
+                                investors who believe in your vision and want to share in your
+                                success.
                             </p>
                         </div>
                     </div>
@@ -529,10 +535,12 @@
                         </p>
                         <div class="service-desc">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Sint eligendi magnam quae aspernatur modi similique
-                                repellendus, earum neque adipisci quis ducimus ea quam vero
-                                dolore nesciunt
+                                The 9-5, 40 hour week still exists in many companies,
+                                but more and more companies are moving towards a remote work policy.
+                                Usually, this gives employees the option to work remotely and from
+                                the office, when it suits them best. While the remote work trend does
+                                not <br>suit every business,
+                                it does suit<br> those in <br>tech-reliant <br>sectors.
                             </p>
                         </div>
                     </div>
@@ -549,10 +557,8 @@
                         </p>
                         <div class="service-desc">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Sint eligendi magnam quae aspernatur modi similique
-                                repellendus, earum neque adipisci quis ducimus ea quam vero
-                                dolore nesciunt
+                                we developed and prepared a competing online examination system for the market, which will help you to provide online examination solution
+                                for your students and users, either free or with fees, without any human intervention in a secure environment.
                             </p>
                         </div>
                     </div>
@@ -873,7 +879,7 @@
 <!-- Subscribe End -->
 @include('website.layouts.footer')
 @endsection
-@push('scripts') 
+@push('scripts')
 <script>
     $(document).ready(function
         ($) {
