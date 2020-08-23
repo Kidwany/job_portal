@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Company;
 
+use App\Traits\ProfileStrength;
 use Mail;
 use Hash;
 use File;
@@ -44,6 +45,7 @@ class CompanyController extends Controller
 
     use CompanyTrait;
     use Cron;
+    use ProfileStrength;
 
     /**
      * Create a new controller instance.
@@ -72,10 +74,12 @@ class CompanyController extends Controller
         $industries = DataArrayHelper::defaultIndustriesArray();
         $ownershipTypes = DataArrayHelper::defaultOwnershipTypesArray();
         $company = Company::findOrFail(Auth::guard('company')->user()->id);
+        $profile_strength = $this->companyProfileStrength($company);
         return view('company.edit_profile')
                         ->with('company', $company)
                         ->with('countries', $countries)
                         ->with('industries', $industries)
+                        ->with('profile_strength', $profile_strength)
                         ->with('ownershipTypes', $ownershipTypes);
     }
 

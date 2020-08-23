@@ -1,6 +1,6 @@
 @extends('website.layouts.layouts')
 @section('style')
-    <style>
+    {{--<style>
         #new_state_id, #new_city_id
         {
             width: 100%;
@@ -14,7 +14,7 @@
             font-size: 14px;
             border: none;
         }
-    </style>
+    </style>--}}
 @endsection
 
 @section('scripts')
@@ -242,6 +242,170 @@
                         ><span> Get a free consultation </span>
                     </p>
                     @include('website.layouts.messages')
+                    <form class="stepper-form" action="{{route('traveler.store')}}" method="post">
+                        <input type="hidden" name="type_id" value="1">
+                        @csrf
+                        <div class="step" data-step-index="0">
+                            <h1>
+                                Basic Information
+                            </h1>
+                            <div class="field-wrapper">
+                                <span class="helper-error"></span>
+                                <input
+                                        class="formInput"
+                                        type="text"
+                                        id="username"
+                                        name="first_name"
+                                        value="{{old('first_name')}}"
+                                        placeholder="Username"
+                                        required
+                                />
+                            </div>
+                            <div class="field-wrapper">
+                                <span class="helper-error"></span>
+                                <input class="formInput"
+                                       type="email"
+                                       id="email"
+                                       placeholder="Email"
+                                       required
+                                       name="email"
+                                       value="{{old('first_name')}}"
+                                />
+                            </div>
+                            <div class="field-wrapper">
+                                <span class="helper-error"></span>
+                                <input class="formInput"
+                                       type="tel"
+                                       id="phone"
+                                       name="phone"
+                                       value="{{old('phone')}}"
+                                       placeholder="Phone"
+                                       required
+                                />
+                            </div>
+                            <div class="field-wrapper">
+                                <span class="helper-error"></span>
+                                <input type="date" name="date_of_birth" value="{{old('date_of_birth')}}" placeholder="Date" />
+                            </div>
+                            <div class="field-wrapper">
+                                <span class="helper-error"></span>
+                                <select name="gender_id" id="">
+                                    <option value="">{{__('Select Gender')}}</option>
+                                    <option value="0">Male</option>
+                                    <option value="1">Female</option>
+                                </select>
+                            </div>
+                            <div class="field-wrapper">
+                                <span class="helper-error"></span>
+                                <select name="marital_status_id" id="">
+                                    <option value="">{{__('Marital Status')}}</option>
+                                    @if($maritalStatuses)
+                                        @foreach($maritalStatuses as $key=>$value)
+                                            <option value="{{$key}}">{{$value}}</option>
+                                        @endforeach
+                                    @endif
+                                </select>
+                            </div>
+                        </div>
+                        <div class="step" data-step-index="1">
+                            <h1>
+                                Address Information
+                            </h1>
+                            <div class="field-wrapper">
+                                <span class="helper-error"></span>
+                                <select name="country_id" id="new_country_id">
+                                    <option value="">{{__('Country')}}</option>
+                                    @if($countries)
+                                        @foreach($countries as $key=>$value)
+                                            <option value="{{$key}}">{{$value}}</option>
+                                        @endforeach
+                                    @endif
+                                </select>
+                            </div>
+                            <div class="field-wrapper">
+                                <span class="helper-error"></span>
+                                <select name="state_id" id="new_state_id">
+                                    <option value="">{{__('Select State')}}</option>
+                                </select>
+                            </div>
+                            <div class="field-wrapper">
+                                <span class="helper-error"></span>
+                                <select name="city_id" id="new_city_id">
+                                    <option value="">{{__('Select City')}}</option>
+                                </select>
+                            </div>
+                            <div class="field-wrapper">
+                                <span class="helper-error"></span>
+                                <select name="nationality_id" id="">
+                                    <option value="">{{__('Select Nationality')}}</option>
+                                    @if($nationalities)
+                                        @foreach($nationalities as $key=>$value)
+                                            <option value="{{$key}}">{{$value}}</option>
+                                        @endforeach
+                                    @endif
+                                </select>
+                            </div>
+                        </div>
+                        <div class="step" data-step-index="2">
+                            <h1>
+                                Career Information
+                            </h1>
+                            <div class="field-wrapper">
+                                <span class="helper-error"></span>
+                                <select name="functional_area_id" id="">
+                                    <option value="">Select Functional Area</option>
+                                    @if($functionalAreas)
+                                        @foreach($functionalAreas as $key=>$value)
+                                            <option value="{{$key}}">{{$value}}</option>
+                                        @endforeach
+                                    @endif
+                                </select>
+                            </div>
+                            <div class="field-wrapper">
+                                <span class="helper-error"></span>
+                                <select name="industry_id" id="">
+                                    <option value="">Select Industry</option>
+                                    @if($industries)
+                                        @foreach($industries as $key=>$value)
+                                            <option value="{{$key}}">{{$value}}</option>
+                                        @endforeach
+                                    @endif
+                                </select>
+                            </div>
+                            <div class="field-wrapper">
+                                <span class="helper-error"></span>
+                                <select name="degree_id" id="">
+                                    <option value="">Select Degree</option>
+                                    @if($degrees)
+                                        @foreach($degrees as $key=>$value)
+                                            <option value="{{$key}}">{{$value}}</option>
+                                        @endforeach
+                                    @endif
+                                </select>
+                            </div>
+                        </div>
+                        <div class="btns__indicators">
+                            <div class="btns">
+                                <button type="button" class="prev-btn">Previous</button>
+                                <button type="button" class="next-btn">Next</button>
+                                <button type="submit" class="stepper-submit-btn">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- ./stepper form -->
+
+            {{--<!-- stepper form -->
+            <div class="mfa-container">
+                <div class="stepper-form-wrapper">
+                    <p class="section-heading">
+                        <i class="linearicons-chart-growth"></i
+                        ><span> Get a free consultation </span>
+                    </p>
+                    @include('website.layouts.messages')
                     <form class="mfa-form stepper-form" onsubmit="submit()" method="post" action="{{route('traveler.store')}}">
                         @csrf
                         <input type="hidden" name="type_id" value="1">
@@ -439,7 +603,7 @@
                                     @endif
                                 </select>
                             </div>
-                            {{--<div class="form-div">
+                            <div class="form-div">
                                 <label for="address">
 										<span>
 											Adress
@@ -456,7 +620,7 @@
                                     <input class="formInput" type="text" id="idcard" required />
                                     <i class="feather icon-codepen"></i>
                                 </label>
-                            </div>--}}
+                            </div>
                         </div>
                         <div class="formBtns">
                             <button class="prevBtn">Previous</button>
@@ -472,7 +636,7 @@
                     </form>
                 </div>
             </div>
-            <!-- ./stepper form -->
+            <!-- ./stepper form -->--}}
         </div>
     </div>
     <!-- ./traveling to europe page -->

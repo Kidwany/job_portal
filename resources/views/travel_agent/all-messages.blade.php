@@ -61,7 +61,7 @@
 {
      $.ajax({
             type: "GET",
-            url: "{{route('travel-agent-change-message-status')}}",
+            url: "{{route('company-change-message-status')}}",
             data: { 
                 'sender_id': id, 
             },

@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 $all_users = ['allowed_roles' => ['SUP_ADM', 'SUB_ADM']];
 $sup_only = ['allowed_roles' => 'SUP_ADM'];
 Route::get('/home', array_merge(['uses' => 'Admin\HomeController@index'], $all_users))->name('admin.home');
@@ -57,4 +59,10 @@ Route::group(['namespace' => 'Admin'], function () {
     Route::get('/blog/remove_blog_feature_image/{blog}', 'BlogsController@remove_blog_feature_image');
     Route::get('/blog/get_blog_by_id/{blog}', 'BlogsController@get_blog_by_id');
     Route::get('/blog/edit-blog/{blog}', 'BlogsController@get_blog')->name('edit-blog');
+
+
+    Route::get('list-certificate-requests', 'CertificateController@index')->name('list.certificate.requests');
+
+    Route::get('consultation/{type}', 'ConsultationController@index')->name('list.consultations');
+
 });

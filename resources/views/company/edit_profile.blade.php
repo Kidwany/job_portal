@@ -11,7 +11,16 @@
         <div class="row">
             @include('includes.company_dashboard_menu')
 
-            <div class="col-md-9 col-sm-8"> 
+            <div class="col-md-9 col-sm-8">
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <p>Profile Strength (Average)</p>
+                        <p>{{$profile_strength}}%</p>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-{{\App\Helpers\MiscHelper::ProgressBarClass($profile_strength)}}" role="progressbar" style="width: {{$profile_strength}}%" aria-valuenow="{{$profile_strength}}" aria-valuemin="0" aria-valuemax="100">{{$profile_strength}}%</div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="userccount">

@@ -6,6 +6,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('company/register', 'Company\Auth\RegisterController@showRegistrationForm')->name('company.register');
 
 Route::get('company/login', 'Company\Auth\LoginController@showLoginForm')->name('company.login');
+
+Route::get('travel-agent/register', 'TravelAgent\Auth\RegisterController@showRegistrationForm')->name('travel.agent.register');
+
+Route::get('travel-agent/login', 'TravelAgent\Auth\LoginController@showLoginForm')->name('travel.agent.login');
 /*
 
   |--------------------------------------------------------------------------
@@ -166,7 +170,9 @@ Route::resource('traveler', 'TravelerController');
 
 Route::post('profile-review', 'ProfileReviewController@review');
 
-Route::get('certificate ', 'Certificate@index');
+Route::get('certificate', 'Certificate@index');
+
+Route::post('certificate/store', 'Certificate@store');
 
 /*Route::get('test', function (){
     //return \Illuminate\Support\Facades\Auth::id();

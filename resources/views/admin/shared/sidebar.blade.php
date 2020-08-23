@@ -89,14 +89,38 @@
 		
         <li class="heading">
             <h3 class="uppercase">Manage</h3>
-        </li>		 
+        </li>
+
         @include('admin/shared/side_bars/site_setting')   
 		@endif
-		
-		
-		
+
+        <li class="heading">
+            <h3 class="uppercase">Forms Requests</h3>
+        </li>
+        <li class="nav-item  "> <a href="javascript:;" class="nav-link nav-toggle"> <i class="fa fa-bar-chart" aria-hidden="true"></i> <span class="title">Certificate Registration</span> <span class="arrow"></span> </a>
+            <ul class="sub-menu">
+                <li class="nav-item  "> <a href="{{ route('list.certificate.requests') }}" class="nav-link "> <span class="title">Certificate Registration Requests</span> </a> </li>
+            </ul>
+        </li>
+        <li class="nav-item  "> <a href="javascript:;" class="nav-link nav-toggle"> <i class="fa fa-bar-chart" aria-hidden="true"></i> <span class="title">Consultation Requests</span> <span class="arrow"></span> </a>
+            <ul class="sub-menu">
+                <li class="nav-item  ">
+                    <a href="{{ url('admin/consultation/1') }}" class="nav-link ">
+                        <span class="title">Travelling To Europe</span>
+                    </a>
+                </li>
+                <li class="nav-item  ">
+                    <a href="{{ url('admin/consultation/2') }}" class="nav-link ">
+                        <span class="title">Talented</span>
+                    </a>
+                </li>
+                <li class="nav-item  ">
+                    <a href="{{ url('admin/consultation/3') }}" class="nav-link ">
+                        <span class="title">Youth Support</span></a>
+                </li>
+            </ul>
+        </li>
     </ul>
-    <!-- END SIDEBAR MENU -->
     <!-- END SIDEBAR MENU -->
 </div>
 <!-- END SIDEBAR -->

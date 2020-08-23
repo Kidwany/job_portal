@@ -150,13 +150,15 @@
                     </div>
 
                     <div class="sectionBody">
-                        <form class="mfa-form" action="{{ route('contact.us')}}" method="post" enctype="multipart/form-data">
+                        @include('website.layouts.messages')
+                        <form class="mfa-form" action="{{ url('certificate/store') }}" method="post" enctype="multipart/form-data">
+                            @csrf
                             <div class="form-div">
                                 <label for="name">
 										<span>
 											Full Name
 										</span>
-                                    <input type="text" id="name" required name="full_name"/>
+                                    <input type="text" id="name" required name="name" value="{{old('name')}}"/>
                                     <i class="feather icon-user"></i>
                                 </label>
                             </div>
@@ -165,7 +167,7 @@
 										<span>
 											Email
 										</span>
-                                    <input type="text" id="email" required name="email"/>
+                                    <input type="text" id="email" required name="email" value="{{old('email')}}"/>
                                     <i class="feather icon-mail"></i>
                                 </label>
                             </div>
@@ -174,7 +176,7 @@
 										<span>
 											Phone number
 										</span>
-                                    <input type="text" id="phone" required name="phone"/>
+                                    <input type="tel" id="phone" required name="phone" value="{{old('phone')}}"/>
                                     <i class="feather icon-phone"></i>
                                 </label>
                             </div>
@@ -183,12 +185,12 @@
 										<span>
 											Your address
 										</span>
-                                    <input type="text" id="address" required name="address"/>
+                                    <input type="text" id="address" required name="address" value="{{old('address')}}"/>
                                     <i class="feather icon-map"></i>
                                 </label>
                             </div>
                             <div class="fileWrapper">
-                                <input type="file" />
+                                <input type="file" name="file"/>
                             </div>
                             <button type="submit">
 									<span>

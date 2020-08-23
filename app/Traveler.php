@@ -90,4 +90,34 @@ class Traveler extends Model
         }
     }
 
+    public function country()
+    {
+        return $this->belongsTo(Country::class, 'country_id')->withDefault();
+    }
+
+    public function city()
+    {
+        return $this->belongsTo(City::class, 'city_id')->withDefault();
+    }
+
+    public function state()
+    {
+        return $this->belongsTo(State::class, 'state_id')->withDefault();
+    }
+
+    public function industry()
+    {
+        return $this->belongsTo(Industry::class, 'industry_id')->withDefault();
+    }
+
+    public function functionalArea()
+    {
+        return $this->belongsTo(FunctionalArea::class, 'functional_area_id')->withDefault();
+    }
+
+    public function degree()
+    {
+        return $this->belongsTo(DegreeLevel::class, 'degree_id')->withDefault();
+    }
+
 }

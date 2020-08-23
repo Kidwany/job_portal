@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <!-- Header start -->
-@include('includes.header')
+@include('website.layouts.header')
 <!-- Header end --> 
 <!-- Inner Page Title start -->
 @include('includes.inner_page_title', ['page_title'=>__('Report Abuse')])
@@ -38,12 +38,12 @@
                                     {!! Form::text('your_email', $your_email, array('class'=>'form-control', 'id'=>'your_email', 'placeholder'=>__('Your Email'), 'required'=>'required')) !!}                
                                     @if ($errors->has('your_email')) <span class="help-block"> <strong>{{ $errors->first('your_email') }}</strong> </span> @endif </div>
                             </div>
-                            <div class="col-md-12">
+                            {{--<div class="col-md-12">
                                 <div class="formrow{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
                                     {!! app('captcha')->display() !!}
                                     @if ($errors->has('g-recaptcha-response')) <span class="help-block"> <strong>{{ $errors->first('g-recaptcha-response') }}</strong> </span> @endif
                                 </div>
-                            </div>
+                            </div>--}}
                         </div>
                         <br>
                         <input type="submit" id="post_ad_btn" class="btn" value="{{__('Report')}}">
@@ -53,5 +53,5 @@
         </div>
     </div>
 </div>
-@include('includes.footer')
+@include('website.layouts.footer')
 @endsection
