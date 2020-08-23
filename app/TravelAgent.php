@@ -14,6 +14,47 @@ use Illuminate\Notifications\Notifiable;
 use App\Notifications\TravelAgentResetPassword;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+/**
+ * @property int $id
+ * @property string $name
+ * @property string $email
+ * @property string $type
+ * @property string $ceo
+ * @property int $industry_id
+ * @property string $description
+ * @property string $location
+ * @property int $no_of_offices
+ * @property string $website
+ * @property string $no_of_employees
+ * @property string $established_in
+ * @property string $fax
+ * @property string $phone
+ * @property string $logo
+ * @property int $country_id
+ * @property int $state_id
+ * @property int $city_id
+ * @property string $slug
+ * @property int $is_active
+ * @property int $is_featured
+ * @property int $verified
+ * @property int $verification_token
+ * @property string $password
+ * @property string $remember_token
+ * @property string $map
+ * @property string $created_at
+ * @property string $updated_at
+ * @property string $facebook
+ * @property string $twitter
+ * @property string $google_plus
+ * @property string $pinterest
+ * @property string $package_id
+ * @property string $package_start_date
+ * @property string $package_end_date
+ * @property string $jobs_quota
+ * @property string $availed_jobs_quota
+ * @property string $is_subscribed
+ **/
+
 class TravelAgent extends Authenticatable
 {
     use Active;

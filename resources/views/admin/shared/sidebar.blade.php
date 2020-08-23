@@ -122,6 +122,5 @@
         </li>
     </ul>
     <!-- END SIDEBAR MENU -->
-    <!-- END SIDEBAR MENU -->
 </div>
 <!-- END SIDEBAR -->

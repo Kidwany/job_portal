@@ -88,6 +88,24 @@
     </div>
 </div>
 
+<div class="page-content jobDetailsContent">
+    <div class="mfa-container">
+        <div class="detailsWrapper">
+            <div class="leftDetails">
+                <div class="moreBtns">
+                    @guest
+                        <a href="{{route('travel.agent.register')}}" class="addToFav">
+                            <i class="feather icon-minus"></i>
+                            Register As Travel Agent
+                        </a>
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 @include('website.layouts.footer')
 @endsection
 @push('styles')

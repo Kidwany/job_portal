@@ -7,6 +7,7 @@
     @include('includes.inner_page_title', ['page_title'=>__('Companies')])
     <!-- Inner Page Title end -->
 
+
     <!-- partners page -->
     <div class="partners-page">
         <div class="mfa-container">

@@ -69,9 +69,10 @@ use RegistersUsers;
      */
     public function showRegistrationForm()
     {
+        $companies = Company::orderBy('created_at', 'desc')->limit(10)->where('type', 'company')->get();
         $countries = DataArrayHelper::arabicLangCountriesArray();
         $industries = DataArrayHelper::defaultIndustriesArray();
-        return view('company_auth.register', compact('countries', 'industries'));
+        return view('company_auth.register', compact('countries', 'industries', 'companies'));
     }
 
     public function register(CompanyFrontRegisterFormRequest $request)

@@ -1,6 +1,9 @@
 
 <?php
 
+use Illuminate\Support\Facades\Route;
+
+
 Route::get('travel-agents', 'TravelAgent\TravelAgentsController@travel_agent_listing')->name('travel.agent.listing');
 
 Route::get('travel-agent-home', 'TravelAgent\TravelAgentController@index')->name('travel.agent.home');

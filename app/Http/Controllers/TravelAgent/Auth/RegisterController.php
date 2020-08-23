@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\TravelAgent\Auth;
 
+use App\Helpers\DataArrayHelper;
 use Auth;
 use App\TravelAgent;
 use App\Http\Requests;
@@ -30,6 +31,18 @@ class RegisterController extends Controller
 
     use RegistersUsers;
     use VerifiesUsers;
+
+    /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showRegistrationForm()
+    {
+        $countries = DataArrayHelper::arabicLangCountriesArray();
+        $industries = DataArrayHelper::defaultIndustriesArray();
+        return view('travel_agent.auth.register', compact('countries', 'industries'));
+    }
 
     /**
      * Where to redirect users after registration.
@@ -65,21 +78,26 @@ class RegisterController extends Controller
     {
         $travel_agent = new TravelAgent();
         $travel_agent->name = $request->input('name');
+        $travel_agent->type = 'travel_agent';
         $travel_agent->email = $request->input('email');
         $travel_agent->password = bcrypt($request->input('password'));
-        $travel_agent->is_active = 0;
+        $travel_agent->phone = $request->input('phone');
+        $travel_agent->website = $request->input('company_website');
+        $travel_agent->country_id = $request->input('country_id');
+        $travel_agent->industry_id = $request->input('industry_id');
+        $travel_agent->is_active = 1;
         $travel_agent->verified = 0;
-        $travel_agent->type = 'travel_agent';
         $travel_agent->save();
         /*         * ******************** */
         $travel_agent->slug = str_slug($travel_agent->name, '-') . '-' . $travel_agent->id;
         $travel_agent->update();
         /*         * ******************** */
 
-        event(new Registered($travel_agent));
+        /*event(new Registered($travel_agent));
         event(new TravelAgentRegistered($travel_agent));
         $this->guard()->login($travel_agent);
-        UserVerification::generate($travel_agent);
+        UserVerification::generate($travel_agent);*/
+        $this->guard()->login($travel_agent);
         // UserVerification::send($travel_agent, 'Travel Agent Verification', config('mail.recieve_to.address'), config('mail.recieve_to.name'));
         return $this->registered($request, $travel_agent) ?: redirect($this->redirectPath());
     }
